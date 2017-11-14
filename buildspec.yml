@@ -16,7 +16,7 @@ phases:
             - ng build --env=${BUILD_ENV}
     post_build:
          commands:
-            - aws s3 cp dist s3://${S3_BUCKET} --recursive --region s3-website-ap-south-1.amazonaws.com
+            - aws s3 cp dist s3://${S3_BUCKET} --recursive --region s3-website-us-east-1.amazonaws.com
             - echo Build completed on `date`
 artifacts:
     files:
