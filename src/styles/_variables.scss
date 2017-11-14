@@ -1,0 +1,14 @@
+//At the top of the bootstrap imports we have variables and mixins. By having our own variables file imported at the beginning of the file, we will be able to override any bootstrap variable.
+//Add src/styles/_variables.scss and add it as an import at the top of vendor.scss
+//@import "variables";
+//To see all available variables navigate to node_modules/bootstrap/scss/_variables.scss
+
+/**
+ * Custom variables that are available everywhere
+ *
+ * @See node_modules/bootstrap/scss/_variables.scss
+ */
+
+$brand-primary: crimson;
+
+$enable-rounded: false;
