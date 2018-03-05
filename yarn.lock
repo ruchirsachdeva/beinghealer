@@ -2,6 +2,12 @@
 # yarn lockfile v1
 
 
+"@angular/animations@4.3.1":
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-4.3.1.tgz#1f7e0bb803efc21c608246e6765a1c647f3d1a5f"
+  dependencies:
+    tslib "^1.7.1"
+
 "@angular/cli@1.0.4":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-1.0.4.tgz#507c0b977ad43b02edad4b3ad32d745d599f9129"
@@ -128,6 +134,10 @@
   resolved "https://registry.yarnpkg.com/@angular/tsc-wrapped/-/tsc-wrapped-4.4.6.tgz#16787cbbf50bdc7e738123b19c32527f244e178d"
   dependencies:
     tsickle "^0.21.0"
+
+"@ng-bootstrap/ng-bootstrap@1.0.0-beta.4":
+  version "1.0.0-beta.4"
+  resolved "https://registry.yarnpkg.com/@ng-bootstrap/ng-bootstrap/-/ng-bootstrap-1.0.0-beta.4.tgz#18ffd662a4c77305213e76f6ae47b0ffda03bb7c"
 
 "@ngtools/json-schema@1.0.9":
   version "1.0.9"
@@ -618,12 +628,9 @@ boom@5.x.x:
   dependencies:
     hoek "4.x.x"
 
-bootstrap@4.0.0-alpha.6:
-  version "4.0.0-alpha.6"
-  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.0.0-alpha.6.tgz#4f54dd33ac0deac3b28407bc2df7ec608869c9c8"
-  dependencies:
-    jquery ">=1.9.1"
-    tether "^1.4.0"
+bootstrap@4.0.0-beta:
+  version "4.0.0-beta"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.0.0-beta.tgz#dc5928175d2e71310bc668cf9e05a907211b72a6"
 
 boxen@^1.2.1:
   version "1.2.2"
@@ -2767,7 +2774,7 @@ jasminewd2@^2.1.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/jasminewd2/-/jasminewd2-2.2.0.tgz#e37cf0b17f199cce23bea71b2039395246b4ec4e"
 
-jquery@>=1.9.1:
+jquery@3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.2.1.tgz#5c4d9de652af6cd0a770154a631bba12b015c787"
 
@@ -2857,6 +2864,10 @@ jsprim@^1.2.2:
     extsprintf "1.3.0"
     json-schema "0.2.3"
     verror "1.10.0"
+
+jw-bootstrap-switch-ng2@1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/jw-bootstrap-switch-ng2/-/jw-bootstrap-switch-ng2-1.0.3.tgz#c13bb1a8f2415e70db1985eb05192d02914e236f"
 
 karma-chrome-launcher@~2.1.1:
   version "2.1.1"
@@ -3299,6 +3310,10 @@ negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
 
+ng2-nouislider@1.6.1:
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/ng2-nouislider/-/ng2-nouislider-1.6.1.tgz#0c2f6e97ce15e8ed26bcdb365b91a32b9fd0799c"
+
 no-case@^2.2.0:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/no-case/-/no-case-2.3.2.tgz#60b813396be39b3f1288a4c1ed5d1e7d28b464ac"
@@ -3434,6 +3449,10 @@ normalize-url@^1.4.0:
     prepend-http "^1.0.0"
     query-string "^4.1.0"
     sort-keys "^1.0.0"
+
+nouislider@9.2.0:
+  version "9.2.0"
+  resolved "https://registry.yarnpkg.com/nouislider/-/nouislider-9.2.0.tgz#e87c507de2b0b4d075038b5a42547c7dbbebaf69"
 
 npm-run-path@^2.0.0:
   version "2.0.2"
@@ -3715,6 +3734,10 @@ pinkie-promise@^2.0.0:
 pinkie@^2.0.0, pinkie@^2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/pinkie/-/pinkie-2.0.4.tgz#72556b80cfa0d48a974e80e77248e80ed4f7f870"
+
+popper.js@^1.12.3:
+  version "1.12.9"
+  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.12.9.tgz#0dfbc2dff96c451bb332edcfcfaaf566d331d5b3"
 
 portfinder@^1.0.9, portfinder@~1.0.12:
   version "1.0.13"
@@ -5045,10 +5068,6 @@ term-size@^1.2.0:
   resolved "https://registry.yarnpkg.com/term-size/-/term-size-1.2.0.tgz#458b83887f288fc56d6fffbfad262e26638efa69"
   dependencies:
     execa "^0.7.0"
-
-tether@^1.4.0:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/tether/-/tether-1.4.1.tgz#78112ef21adf2aea68cd90e72185f43d9ffc44e8"
 
 through@X.X.X, through@^2.3.6:
   version "2.3.8"
