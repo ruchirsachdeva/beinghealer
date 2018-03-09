@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app.routing';
 import {RouterModule} from "@angular/router";
 import {FooterComponent} from "./shared/footer/footer.component";
 import {NavbarComponent} from "./shared/navbar/navbar.component";
+import {CoreModule} from "./core/core.module";
 
 
 @NgModule({
@@ -26,7 +27,9 @@ import {NavbarComponent} from "./shared/navbar/navbar.component";
     FormsModule,
     HttpModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+
+    CoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
