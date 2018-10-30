@@ -1,0 +1,13 @@
+<div [hidden]="!authenticated()">
+  <h1>Welcome to the PD Social App</h1>
+  <app-user></app-user>
+  <app-therapy-list></app-therapy-list>
+</div>
+
+<div [hidden]="authenticated()">
+  <h1>Login to the PD Social App</h1>
+  <p>Login using Google for Doctor role.</p>
+  <p>Login using Facebook for Researcher role.</p>
+  <p>Login using Linkedin for Patient role.</p>
+</div>
+
