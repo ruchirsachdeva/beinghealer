@@ -15,3 +15,9 @@ export interface UserParams {
   name?: string;
   token?: any;
 }
+
+export interface MailParams {
+  from?: string;
+  name?: string;
+  message?: string;
+}

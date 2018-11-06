@@ -23,7 +23,7 @@ export class UserService {
   }
 
   get(id: string|number): Observable<User> {
-    return this.http.get(`${url}/${id}`)
+    return this.http.get('${url}/${id}')
       .map(res => res.json())
       ;
   }
@@ -35,7 +35,7 @@ export class UserService {
   }
 
   updateMe(userParam: UserParams): Observable<Response> {
-    return this.http.patch(`${url}/me`, userParam);
+    return this.http.patch('${url}/me', userParam);
   }
 
 }

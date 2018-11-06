@@ -4,6 +4,7 @@ import {XHRBackend, RequestOptions, Http, HttpModule} from "@angular/http";
 import {JsonHttp} from "./services/json-http";
 import {Optional, SkipSelf} from "@angular/core";
 import {UserService} from "./services/user.service";
+import {MailService} from "./services/mail.service";
 
 
 export function createJsonHttp(xhrBackend: XHRBackend, requestOptions: RequestOptions) {
@@ -22,7 +23,8 @@ export function createJsonHttp(xhrBackend: XHRBackend, requestOptions: RequestOp
       useFactory: createJsonHttp,
       deps: [XHRBackend, RequestOptions]
     },
-    UserService
+    UserService,
+    MailService
   ],
   declarations: []
 })
