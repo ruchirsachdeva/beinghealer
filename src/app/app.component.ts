@@ -1,72 +1,63 @@
-import {Component} from '@angular/core';
-import {AppService} from './service/app.service';
-import {Router} from '@angular/router';
-import 'rxjs/add/operator/finally';
-import {
-  AuthService, LinkedinLoginProvider, GoogleLoginProvider,
-  FacebookLoginProvider
-} from "angular5-social-auth";
-import {UserService} from "./shared/user/user.service";
-
+import { Component, OnInit, Inject, Renderer, ElementRef, ViewChild } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
+import { Subscription } from 'rxjs/Subscription';
+import 'rxjs/add/operator/filter';
+import { DOCUMENT } from '@angular/platform-browser';
+import { LocationStrategy, PlatformLocation, Location } from '@angular/common';
+import { NavbarComponent } from './shared/navbar/navbar.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  constructor(private app: AppService, private userService: UserService, private router: Router, private socialAuthService: AuthService) {
-  }
+export class AppComponent implements OnInit {
+  private _router: Subscription;
+  @ViewChild(NavbarComponent) navbar: NavbarComponent;
 
-
-  authenticated() {
-    return localStorage.getItem('jwt');
-  }
-  logout() {
-    if (this.authenticated()) {
-      this.socialAuthService.signOut();
-      this.app.logout();
-    }
-    this.router.navigateByUrl('/login');
-  }
-
-
-  public socialSignIn(socialPlatform: string) {
-    let socialPlatformProvider;
-    if (socialPlatform == "facebook") {
-      socialPlatformProvider = FacebookLoginProvider.PROVIDER_ID;
-    } else if (socialPlatform == "google") {
-      socialPlatformProvider = GoogleLoginProvider.PROVIDER_ID;
-    } else if (socialPlatform == "linkedin") {
-      socialPlatformProvider = LinkedinLoginProvider.PROVIDER_ID;
-    }
-    /**
-     this.app.authenticateSocial(() => {
-      console.log(" sign in data google *******: ");
-      this.router.navigateByUrl('/');
-    })
-     **/
-// this.socialAuthService.signOut();
-    this.socialAuthService.signIn(socialPlatformProvider).then(
-      (userData) => {
-
-
-        console.log(socialPlatform + " sign in data : ", userData);
-
-        var credentials = {provider: socialPlatformProvider, token: userData['token']};
-        console.log(credentials + " credentials *******");
-        this.app.authenticateSocial(credentials, () => {
-          this.router.navigate(['/']);
-        });
-
-
+  constructor( private renderer : Renderer, private router: Router, @Inject(DOCUMENT,) private document: any, private element : ElementRef, public location: Location) {}
+  ngOnInit() {
+    var navbar : HTMLElement = this.element.nativeElement.children[0].children[0];
+    this._router = this.router.events.filter(event => event instanceof NavigationEnd).subscribe((event: NavigationEnd) => {
+      if (window.outerWidth > 991) {
+        window.document.children[0].scrollTop = 0;
+      }else{
+        window.document.activeElement.scrollTop = 0;
       }
-    );
+      this.navbar.sidebarClose();
+    });
+    this.renderer.listenGlobal('window', 'scroll', (event) => {
+      const number = window.scrollY;
+      if (number > 150 || window.pageYOffset > 150) {
+        // add logic
+        navbar.classList.remove('navbar-transparent');
+      } else {
+        // remove logic
+        navbar.classList.add('navbar-transparent');
+      }
+    });
+    var ua = window.navigator.userAgent;
+    var trident = ua.indexOf('Trident/');
+    if (trident > 0) {
+      // IE 11 => return version number
+      var rv = ua.indexOf('rv:');
+      var version = parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+    }
+    if (version) {
+      var body = document.getElementsByTagName('body')[0];
+      body.classList.add('ie-background');
+
+    }
+
   }
-
-
-  redirect(pagename: string) {
-    this.router.navigate(['/' + pagename]);
+  removeFooter() {
+    var titlee = this.location.prepareExternalUrl(this.location.path());
+    titlee = titlee.slice( 1 );
+    if(titlee === 'signup' || titlee === 'nucleoicons'){
+      return false;
+    }
+    else {
+      return true;
+    }
   }
-
 }
