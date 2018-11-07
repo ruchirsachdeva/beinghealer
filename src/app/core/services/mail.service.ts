@@ -5,7 +5,7 @@ import {Response} from "@angular/http";
 import {JsonHttp} from "./json-http";
 import {MailParams} from "../dto";
 
-const url = '//localhost:8080/api/email';
+const url = 'https://beinghealer-server.herokuapp.com/api/email';
 
 @Injectable()
 export class MailService {
