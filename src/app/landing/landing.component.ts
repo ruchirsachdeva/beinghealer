@@ -57,6 +57,7 @@ export class LandingComponent implements OnInit {
     this.mailService.sendMail(omitBy(params, isEmpty))
       .subscribe(response => {
         console.log('landing.component.ts#send()->response'+response);
+        this.myForm.reset();
       }, e => {
         console.log('landing.component.ts#send()->exception'+e);
       })
