@@ -2,7 +2,7 @@
 version: 0.1
 environment_variables:
     plaintext:
-        S3_BUCKET: "www.beinghealer.com"
+        S3_BUCKET: "www.cypher.co.in"
         BUILD_ENV: "prod"
 phases:
     install:
@@ -23,3 +23,17 @@ artifacts:
         - '**/*'
     base-directory: 'dist*'
     discard-paths: yes
+  http://www.cypher.co.in.s3-website.ap-south-1.amazonaws.com
+
+  {
+    "Version": "2020-07-13",
+    "Statement": [
+    {
+      "Sid": "2",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::www.cypher.co.in/*"
+    }
+    ]
+  }
