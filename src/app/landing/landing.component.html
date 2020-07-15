@@ -17,7 +17,7 @@
     <div class="container">
       <div class="section text-center">
         <div class="container">
-<!--          <h2 class="title">Latest products</h2>-->
+          <!--          <h2 class="title">Latest products</h2>-->
           <div class="row">
             <div class="col-md-8 mr-auto ml-auto">
               <!--          <h2 class="title">CYPHER</h2>-->
@@ -28,135 +28,137 @@
               <br>
               <!--          <a href="#paper-kit" class="btn btn-danger btn-round">See Details</a>-->
             </div>
-          <div class="row">
-            <div class="col-md-4">
-              <div class="card card-profile card-plain">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card card-profile card-plain">
                   <div class="card-avatar">
-                      <a href="#avatar"><img src="../../assets/images/microscope.jpg" alt="..."></a>
+                    <a href="#avatar"><img src="../../assets/images/microscope.jpg" alt="..."></a>
                   </div>
                   <div class="card-block">
-                      <a href="#paper-kit">
-                          <div class="author">
-                              <h4 class="card-category">It's Authentic</h4>
-                          </div>
-                      </a>
-                      <p class="card-description text-center">
-                       We use a combination of machine learning and a physical verification process
-                        to guarantee authenticity.</p>
+                    <a href="#paper-kit">
+                      <div class="author">
+                        <h4 class="card-category">It's Authentic</h4>
+                      </div>
+                    </a>
+                    <p class="card-description text-center">
+                      We use a combination of machine learning and a physical verification process
+                      to guarantee authenticity.</p>
                   </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card card-profile card-plain">
-                <div class="card-avatar">
-                  <a href="#avatar"><img src="../../assets/images/shipping-box.jpg" alt="..."></a>
-                </div>
-                <div class="card-block">
-                  <a href="#paper-kit">
-                    <div class="author">
-                      <h4 class="card-category">It's Secure</h4>
-                    </div>
-                  </a>
-                  <p class="card-description text-center">
-                    Being ardent sneakerheads ourselves, we respect the game more than anything. We know that copping a
-                    pair of sneakers is special, which is why we secure every transaction with end to end buyer-seller
-                    protection.</p>
                 </div>
               </div>
-            </div>
 
-            <div class="col-md-4">
-              <div class="card card-profile card-plain">
-                <div class="card-avatar">
-                  <a href="#avatar"><img src="../../assets/images/blue-ribbon.jpg" alt="..."></a>
+              <div class="col-md-4">
+                <div class="card card-profile card-plain">
+                  <div class="card-avatar">
+                    <a href="#avatar"><img src="../../assets/images/shipping-box.jpg" alt="..."></a>
+                  </div>
+                  <div class="card-block">
+                    <a href="#paper-kit">
+                      <div class="author">
+                        <h4 class="card-category">It's Secure</h4>
+                      </div>
+                    </a>
+                    <p class="card-description text-center">
+                      Being ardent sneakerheads ourselves, we respect the game more than anything. We know that copping
+                      a
+                      pair of sneakers is special, which is why we secure every transaction with end to end buyer-seller
+                      protection.</p>
+                  </div>
                 </div>
-                <div class="card-block">
-                  <a href="#paper-kit">
-                    <div class="author">
-                      <h4 class="card-category">It's Simple</h4>
-                    </div>
-                  </a>
-                  <p class="card-description text-center">
-                    Take your passion to the bank, easily. Hustle with CYPHER’s effortless buy and sell process, turn your
-                    interests into income.</p>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card card-profile card-plain">
+                  <div class="card-avatar">
+                    <a href="#avatar"><img src="../../assets/images/blue-ribbon.jpg" alt="..."></a>
+                  </div>
+                  <div class="card-block">
+                    <a href="#paper-kit">
+                      <div class="author">
+                        <h4 class="card-category">It's Simple</h4>
+                      </div>
+                    </a>
+                    <p class="card-description text-center">
+                      Take your passion to the bank, easily. Hustle with CYPHER’s effortless buy and sell process, turn
+                      your
+                      interests into income.</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+
       </div>
+    </div>
+
+    <ul class="users list-unstyled">
+      <li *ngFor="let u of users" class="clearfix">
+        {{u.name}}
+      </li>
+    </ul>
 
 
-
+    <div class="page-header text-center" style="background-image: url('../../assets/images/bottom.jpg');">
 
     </div>
-  </div>
 
-  <ul class="users list-unstyled">
-    <li *ngFor="let u of users" class="clearfix">
-      {{u.name}}
-    </li>
-  </ul>
-
-
-  <div class="page-header text-center" style="background-image: url('../../assets/images/bottom.jpg');">
-
-  </div>
-
-  <div class="container">
-    <div class="col-md-8 mr-auto ml-auto">
-      <h2 class="text-center text-blue">BE A PART OF THE CYPHER NATION</h2>
-      <form [formGroup]="myForm" (submit)="send(myForm.value)" novalidate class="contact-form">
-        <div class="row">
-          <div class="col-md-12 form-group"
-               [class.has-danger]="!from.valid && from.touched">
-            <!--              <label class="col-form-label" for="fromInput">Email</label>-->
-            <div class="input-group">
+    <div class="container">
+      <div class="col-md-8 mr-auto ml-auto">
+        <h2 class="text-center text-blue">BE A PART OF THE CYPHER NATION</h2>
+        <form [formGroup]="myForm" (submit)="send(myForm.value)" novalidate class="contact-form">
+          <div class="row">
+            <div class="col-md-12 form-group"
+                 [class.has-danger]="!from.valid && from.touched">
+              <!--              <label class="col-form-label" for="fromInput">Email</label>-->
+              <div class="input-group">
                                     <span class="input-group-addon">
                                         <i class="nc-icon nc-email-85"></i>
                                     </span>
-              <input
-                type="email"
-                class="form-control form-control-danger"
-                id="fromInput"
-                placeholder="Email"
-                maxlength="30"
-                formControlName="from"/>
-              <div *ngIf="from.hasError('required') && from.touched"
-                   class="form-control-feedback">Email is required
-              </div>
-              <div *ngIf="from.hasError('pattern') && from.touched"
-                   class="form-control-feedback">Invalid format
+                <input
+                  type="email"
+                  class="form-control form-control-danger"
+                  id="fromInput"
+                  placeholder="Email"
+                  maxlength="30"
+                  formControlName="from"/>
+                <div *ngIf="from.hasError('required') && from.touched"
+                     class="form-control-feedback">Email is required
+                </div>
+                <div *ngIf="from.hasError('pattern') && from.touched"
+                     class="form-control-feedback">Invalid format
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4 mr-auto ml-auto">
-            <button class="btn btn-lg btn-blue " >Sign up</button>
+          <div class="row">
+            <div class="col-md-4 mr-auto ml-auto">
+              <button class="btn btn-lg btn-blue ">Sign up</button>
+            </div>
           </div>
-        </div>
-      </form>
+        </form>
 
+      </div>
     </div>
-  </div>
 
-  <div class="section landing-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 mr-auto ml-auto">
-          <h5 class="text-center description">Nikes on my feet keep my CYPHER complete; Mac Miller knew what he was talking about,
-            and so do we.
-            <br/>
-            We strive to create seamless shared experiences between buyers and sellers to organise the
-            hype culture in India. <br/>
-            The Streets in our country are taking off like MJ from the free throw line, don’t
-            miss out. Get your skin in the game.</h5>
+    <div class="section landing-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mr-auto ml-auto">
+            <h5 class="text-center description">Nikes on my feet keep my CYPHER complete; Mac Miller knew what he was
+              talking about,
+              and so do we.
+              <br/>
+              We strive to create seamless shared experiences between buyers and sellers to organise the
+              hype culture in India. <br/>
+              The Streets in our country are taking off like MJ from the free throw line, don’t
+              miss out. Get your skin in the game.</h5>
+          </div>
         </div>
       </div>
     </div>
+
+
   </div>
-
-
 </div>
