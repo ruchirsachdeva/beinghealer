@@ -255,17 +255,23 @@
   <!-- Our Doctors -->
   <section class="section our-doctors">
     <div class="container">
+      <div class="row justify-content-center">
       <div class="text-center">
         <h2 class="section-title">Our Doctors</h2>
         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab.</p>
       </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
       <div class="doctor-slider slider">
         <ngx-slick-carousel class="carousel" #slickModal3="slick-carousel" [config]="slideConfig3">
           <div ngxSlickItem *ngFor="let slide of slides">
             <!-- Doctor Widget -->
             <div class="doc-profile-widgets">
-              <div class="doc-image-show">
-                <img src="{{slide.img}}" class="img-fluid" alt=".."/>
+              <div class="doc-img">
+                <a [routerLink]="'/patients/doctor-profile'">
+                  <img class="img-fluid" alt="User Image" src="{{slide.img}}">
+                </a>
               </div>
               <div class="card">
                 <div class="pro-content">
@@ -306,6 +312,11 @@
             <!-- /Doctor Widget -->
           </div>
         </ngx-slick-carousel>
+      </div>
+          <div class="col-12 col-md-12 text-center pt-3">
+            <a [routerLink]="'/patients/search-doctor'" class="view-all">View All</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
