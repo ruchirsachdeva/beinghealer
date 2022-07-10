@@ -5,7 +5,7 @@
 						<div class="col-md-12">
 							<div class="banner-header">
 								<h3>Be Hear Healthy</h3>
-								<h1>The correct assistance 
+								<h1>The correct assistance
 									at the perfect time</h1>
 								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indstandard dummy text ever</p>
 								<a class="btn btn-primary mt-5 me-1">Read More</a>
@@ -24,7 +24,7 @@
 						<h3 class="top-title">Our Benefits</h3>
 						<h2 class="section-title">Choose Our Physcatrist Treatment for Your Solutions</h2>
 						<p class="mb-4">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</p>
-						
+
 						<div class="row">
 							<div class="col-md-6 mb-3">
 								<h4>BEST PROCEDURES</h4>
@@ -68,7 +68,7 @@
 						<p class="mt-2">That’s why your first consultation with us is FREE.</p>
 						<div>
 							<a href="#" class="btn btn-secondary mt-3">Contact Us</a>
-						</div>						
+						</div>
 					</div>
 				</div>
 			</section>
@@ -142,51 +142,110 @@
 			<!-- /Our Solutions -->
 
 			<!-- Our Team -->
-			<section class="our-team">
-				<div class="container">
-					<h3 class="top-title">Qualified Professional</h3>
-					<h2 class="section-title">Our Team</h2>
-					<div class="row mt-5">
-						<div class="col-sm-6 col-md-3">
-							<div class="card">
-								<img src="assets/img/our-team-01.jpg" class="card-img-top" alt="Our Team">
-								<div class="card-body">
-								  <a class="card-title" [routerLink]="'/patients/doctor-profile'">John Wolff</a>
-								  <p class="card-text">Chief Psychiatrist</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-3">
-							<div class="card">
-								<img src="assets/img/our-team-02.jpg" class="card-img-top" alt="Our Team">
-								<div class="card-body">
-								  <a class="card-title" [routerLink]="'/patients/doctor-profile'">Gordon Johnson</a>
-								  <p class="card-text">Chief Psychiatrist</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-3">
-							<div class="card">
-								<img src="assets/img/our-team-03.jpg" class="card-img-top" alt="Our Team">
-								<div class="card-body">
-								  <a class="card-title" [routerLink]="'/patients/doctor-profile'">Lisa Clark</a>
-								  <p class="card-text">Chief Psychiatrist</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-3">
-							<div class="card">
-								<img src="assets/img/our-team-01.jpg" class="card-img-top" alt="Our Team">
-								<div class="card-body">
-								  <a class="card-title" [routerLink]="'/patients/doctor-profile'">John Wolff</a>
-								  <p class="card-text">Chief Psychiatrist</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+<!--			<section class="our-team">-->
+<!--				<div class="container">-->
+<!--					<h3 class="top-title">Qualified Professional</h3>-->
+<!--					<h2 class="section-title">Our Team</h2>-->
+<!--					<div class="row mt-5">-->
+<!--						<div class="col-sm-6 col-md-3">-->
+<!--							<div class="card">-->
+<!--								<img src="assets/img/our-team-01.jpg" class="card-img-top" alt="Our Team">-->
+<!--								<div class="card-body">-->
+<!--								  <a class="card-title" [routerLink]="'/patients/doctor-profile'">John Wolff</a>-->
+<!--								  <p class="card-text">Chief Psychiatrist</p>-->
+<!--								</div>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--						<div class="col-sm-6 col-md-3">-->
+<!--							<div class="card">-->
+<!--								<img src="assets/img/our-team-02.jpg" class="card-img-top" alt="Our Team">-->
+<!--								<div class="card-body">-->
+<!--								  <a class="card-title" [routerLink]="'/patients/doctor-profile'">Gordon Johnson</a>-->
+<!--								  <p class="card-text">Chief Psychiatrist</p>-->
+<!--								</div>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--						<div class="col-sm-6 col-md-3">-->
+<!--							<div class="card">-->
+<!--								<img src="assets/img/our-team-03.jpg" class="card-img-top" alt="Our Team">-->
+<!--								<div class="card-body">-->
+<!--								  <a class="card-title" [routerLink]="'/patients/doctor-profile'">Lisa Clark</a>-->
+<!--								  <p class="card-text">Chief Psychiatrist</p>-->
+<!--								</div>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--						<div class="col-sm-6 col-md-3">-->
+<!--							<div class="card">-->
+<!--								<img src="assets/img/our-team-01.jpg" class="card-img-top" alt="Our Team">-->
+<!--								<div class="card-body">-->
+<!--								  <a class="card-title" [routerLink]="'/patients/doctor-profile'">John Wolff</a>-->
+<!--								  <p class="card-text">Chief Psychiatrist</p>-->
+<!--								</div>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</section>-->
 			<!-- /Our Team -->
+
+  <!-- Our Doctors -->
+  <section class="section our-doctors">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-title">Our Doctors</h2>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab.</p>
+      </div>
+      <div class="doctor-slider slider">
+        <ngx-slick-carousel class="carousel" #slickModal3="slick-carousel" [config]="slideConfig3">
+          <div ngxSlickItem *ngFor="let slide of slides">
+            <!-- Doctor Widget -->
+            <div class="doc-profile-widgets">
+              <div class="doc-image-show">
+                <img src="{{slide.img}}" class="img-fluid" alt=".."/>
+              </div>
+              <div class="card">
+                <div class="pro-content">
+                  <h3 class="title">
+                    <a [routerLink]="'/patients/doctor-profile'">{{slide.name}}</a>
+                  </h3>
+                  <p class="speciality">{{slide.degree}}</p>
+                  <div class="rating">
+                    <i class="fas fa-star filled"></i>
+                    <i class="fas fa-star filled"></i>
+                    <i class="fas fa-star filled"></i>
+                    <i class="fas fa-star filled"></i>
+                    <i class="far fa-star filled"></i>
+                    <span class="d-inline-block average-rating">{{slide.reviews}}</span>
+                  </div>
+                  <ul class="available-info">
+                    <li>
+                      <i class="fas fa-map-marker-alt"></i>{{slide.address}}
+                    </li>
+                    <li>
+                      <i class="fas fa-calendar-check"></i> {{slide.date}}
+                    </li>
+                    <li>
+                      <i class="fas fa-wallet"></i> {{slide.amount}}
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-btn">
+                  <a [routerLink]="'/patients/doctor-profile'" class="btn btn-view">
+                    View Profile
+                  </a>
+                  <a [routerLink]="'/patients/booking'" class="btn btn-book-now">
+                    Book Now
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- /Doctor Widget -->
+          </div>
+        </ngx-slick-carousel>
+      </div>
+    </div>
+  </section>
+  <!-- /Our Doctors -->
 
 			<!-- Testimonial -->
 			<section class="testimonial">
@@ -210,11 +269,11 @@
 												<div class="d-flex justify-content-between align-items-center">
 													<img src="assets/img/testimonial/testi-01.jpg" alt="User Pic" />
 													<h4 class="patient-name">Bruce Matis</h4>
-												</div>												
+												</div>
 												<i class="fas fa-quote-left"></i>
 											</div>
 											<div class="card-body">
-												<p>It has survived not only five centuries, but also the  
+												<p>It has survived not only five centuries, but also the
 													leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem </p>
 											</div>
 										</div>
@@ -226,11 +285,11 @@
 												<div class="d-flex justify-content-between align-items-center">
 													<img src="assets/img/testimonial/testi-02.jpg" alt="User Pic" />
 													<h4 class="patient-name">Violet Johnson</h4>
-												</div>												
+												</div>
 												<i class="fas fa-quote-left"></i>
 											</div>
 											<div class="card-body">
-												<p>It has survived not only five centuries, but also the  
+												<p>It has survived not only five centuries, but also the
 													leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem </p>
 											</div>
 										</div>
@@ -242,11 +301,11 @@
 												<div class="d-flex justify-content-between align-items-center">
 													<img src="assets/img/testimonial/testi-03.jpg" alt="User Pic" />
 													<h4 class="patient-name">Terrence Smith</h4>
-												</div>												
+												</div>
 												<i class="fas fa-quote-left"></i>
 											</div>
 											<div class="card-body">
-												<p>It has survived not only five centuries, but also the  
+												<p>It has survived not only five centuries, but also the
 													leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem </p>
 											</div>
 										</div>
@@ -261,11 +320,11 @@
 												<div class="d-flex justify-content-between align-items-center">
 													<img src="assets/img/testimonial/testi-01.jpg" alt="User Pic" />
 													<h4 class="patient-name">Bruce Matis</h4>
-												</div>												
+												</div>
 												<i class="fas fa-quote-left"></i>
 											</div>
 											<div class="card-body">
-												<p>It has survived not only five centuries, but also the  
+												<p>It has survived not only five centuries, but also the
 													leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem </p>
 											</div>
 										</div>
@@ -277,11 +336,11 @@
 												<div class="d-flex justify-content-between align-items-center">
 													<img src="assets/img/testimonial/testi-02.jpg" alt="User Pic" />
 													<h4 class="patient-name">Violet Johnson</h4>
-												</div>												
+												</div>
 												<i class="fas fa-quote-left"></i>
 											</div>
 											<div class="card-body">
-												<p>It has survived not only five centuries, but also the  
+												<p>It has survived not only five centuries, but also the
 													leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem </p>
 											</div>
 										</div>
@@ -293,11 +352,11 @@
 												<div class="d-flex justify-content-between align-items-center">
 													<img src="assets/img/testimonial/testi-03.jpg" alt="User Pic" />
 													<h4 class="patient-name">Terrence Smith</h4>
-												</div>												
+												</div>
 												<i class="fas fa-quote-left"></i>
 											</div>
 											<div class="card-body">
-												<p>It has survived not only five centuries, but also the  
+												<p>It has survived not only five centuries, but also the
 													leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem </p>
 											</div>
 										</div>
@@ -312,11 +371,11 @@
 												<div class="d-flex justify-content-between align-items-center">
 													<img src="assets/img/testimonial/testi-01.jpg" alt="User Pic" />
 													<h4 class="patient-name">Bruce Matis</h4>
-												</div>												
+												</div>
 												<i class="fas fa-quote-left"></i>
 											</div>
 											<div class="card-body">
-												<p>It has survived not only five centuries, but also the  
+												<p>It has survived not only five centuries, but also the
 													leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem </p>
 											</div>
 										</div>
@@ -328,11 +387,11 @@
 												<div class="d-flex justify-content-between align-items-center">
 													<img src="assets/img/testimonial/testi-02.jpg" alt="User Pic" />
 													<h4 class="patient-name">Violet Johnson</h4>
-												</div>												
+												</div>
 												<i class="fas fa-quote-left"></i>
 											</div>
 											<div class="card-body">
-												<p>It has survived not only five centuries, but also the  
+												<p>It has survived not only five centuries, but also the
 													leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem </p>
 											</div>
 										</div>
@@ -344,11 +403,11 @@
 												<div class="d-flex justify-content-between align-items-center">
 													<img src="assets/img/testimonial/testi-03.jpg" alt="User Pic" />
 													<h4 class="patient-name">Terrence Smith</h4>
-												</div>												
+												</div>
 												<i class="fas fa-quote-left"></i>
 											</div>
 											<div class="card-body">
-												<p>It has survived not only five centuries, but also the  
+												<p>It has survived not only five centuries, but also the
 													leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem </p>
 											</div>
 										</div>
@@ -368,7 +427,7 @@
 						<div class="col-md-3 mb-3">
 							<h2 class="white-text">560+</h2>
 							<h6 class="white-text mb-0">Satisfied Patients</h6>
-						</div>						
+						</div>
 						<div class="col-md-3 mb-3">
 							<h2 class="white-text">17+</h2>
 							<h6 class="white-text mb-0">Professional Doctors</h6>

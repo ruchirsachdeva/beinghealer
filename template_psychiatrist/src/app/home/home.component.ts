@@ -99,7 +99,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
 
 // Slick Slider
-    
+
   if($('.our-service-slider').length > 0) {
     $('.our-service-slider').slick({
       dots: false,
@@ -323,29 +323,25 @@ export class HomeComponent implements OnInit {
   };
 
   slideConfig3 = {
-    dots: true,
-    autoplay: false,
+    dots: false,
+    autoplay:false,
     infinite: true,
-    prevArrow: false,
-    nextArrow: false,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    responsive: [
-      {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
+    variableWidth: true,
+    responsive:{
+      0:{
+        items:1,
+        nav:true
       },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
+      600:{
+        items:2,
+        nav:true
       },
-    ],
+      1000:{
+        items:3,
+        nav:true,
+        loop:false
+      }
+    }
   };
 
   next() {
