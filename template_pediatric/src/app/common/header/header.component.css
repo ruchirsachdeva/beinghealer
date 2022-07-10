@@ -1,0 +1,15 @@
+.min-header {
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    background-color: transparent;
+}
+.min {
+    padding: 15px 0;
+    background-color: transparent;
+}
