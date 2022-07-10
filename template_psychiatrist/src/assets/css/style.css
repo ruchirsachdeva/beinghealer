@@ -2546,6 +2546,91 @@ html.menu-opened body {
 	width: 30px;
     border-radius: 12px;
 }
+.client-says {
+  background-color: #fffbf2;
+  padding: 60px 0px;
+}
+.w-80 p {
+  width: 80%;
+  margin: 0 auto;
+}
+.client-says .rating {
+  border: none;
+}
+/*.client-says .rating i.filled {*/
+/*  color: #ba6596;*/
+/*}*/
+.client-says .carousel-inner {
+  overflow: initial;
+}
+.client-says .card-testi {
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 0.1);
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+.client-says .card-testi img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid #ffba00;
+}
+.card-testi h4 {
+  color: #ffba00;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 10px 0px 5px;
+}
+.client-says .carousel-control-next-icon {
+  background-image: none;
+}
+.client-says .carousel-control-next-icon::before {
+  content: "\f105";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  right: 43%;
+  margin-right: 0px;
+  position: absolute;
+  top: 46%;
+  color: #ffba00;
+  width: 27px;
+  height: 27px;
+  background-color: #fff;
+  border: 3px solid #ffba00;
+  border-radius: 50px;
+}
+.client-says .carousel-control-prev-icon {
+  background-image: none;
+}
+.client-says .carousel-control-prev-icon::before {
+  content: "\f104";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  left: 43%;
+  margin-right: 0px;
+  position: absolute;
+  top: 46%;
+  color: #959595;
+  width: 27px;
+  height: 27px;
+  background-color: #fff;
+  border: 3px solid #959595;
+  border-radius: 50px;
+}
+.client-says .carousel-indicators li {
+  background-color: #ffba00;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: 4px;
+  position: relative;
+}
 .count-info {
 	background-color: #ff9600;
 	padding: 60px 0 40px;
@@ -7421,6 +7506,10 @@ html.menu-opened body {
 	.card-testi h4 {
 		font-size: 16px;
 	}
+  .client-says .rating {
+    margin-bottom: 0px;
+    padding-bottom: 3px;
+  }
 	.contact-us {
 		background-image: none;
 	}
