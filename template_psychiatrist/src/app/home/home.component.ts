@@ -215,22 +215,22 @@ export class HomeComponent implements OnInit {
 
   slides = [
     {
-      name: "Denby Cathey",
+      name: "Anita Sachdeva",
       img: "assets/img/doctors/doctor-05.jpg",
-      degree: "MBBS, MD - Ophthalmology",
+      degree: "Clinical Hypnotherapist, Doctor of Naturopathy, Reiki Master",
       reviews: "(66)",
-      address: "Michigan, USA",
+      address: "Panipat, India",
       date: "Available on Fri, 20 Mar",
-      amount: "$50 - $700",
+      amount: "₹2000 per Hour",
     },
     {
-      name: "Orali Fisher",
+      name: "Adarsh Sachdeva",
       img: "assets/img/doctors/doctor-01.jpg",
-      degree: "BDS - Dental Cosmetology",
+      degree: "Reiki Master",
       reviews: "(23)",
-      address: "Florida, USA",
-      date: "Available on Mon, 22 Sep",
-      amount: "$150 - $220",
+      address: "Panipat, India",
+      date: "Available on Fri, 20 Mar",
+      amount: "₹1500 per Hour",
     },
     {
       name: "Gennaro Weiner",

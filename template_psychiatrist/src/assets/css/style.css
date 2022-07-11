@@ -1604,10 +1604,10 @@ button.bg-danger:hover {
   font-size: 10px;
   line-height: 1;
   opacity: .75;
-  color: #f3c41b;
+  color: #ff9600;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  border: solid #f3c41b;
+  border: solid #ff9600;
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 4px;
@@ -2096,8 +2096,16 @@ button.bg-danger:hover {
     border-bottom: 1px solid #f0f0f0;
 	display: none;
 }
-.menu-logo img {
-    height: 40px;
+.menu-logo, .logo {
+  max-width: 100px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 50%;
+  transition: all .2s;
+  float: left;
+}
+.menu-logo, .logo img {
+  height: 60px;
 }
 .menu-close {
 	font-size: 18px;
@@ -2427,11 +2435,11 @@ html.menu-opened body {
   font-size: 12px;
 }
 .service-section {
-  padding: 60px 0;
+  padding: 20px 0;
   background-color: #ffffff;
 }
 .service-wrapper .service-tabs {
-  padding-top: 40px;
+  padding-top: 5px;
 }
 .service-wrapper .nav-tabs.nav-tabs-solid {
   background-color: #fff;
@@ -2476,6 +2484,7 @@ html.menu-opened body {
 .service-wrapper .tab-content h3, .service-wrapper .tab-content p {
   margin-bottom: 20px;
 }
+.text-orange { color: #ff9600; }
 .btn-border-orange {
   border: 2px solid #ff9600;
   color: #ff9600;
@@ -2515,9 +2524,9 @@ html.menu-opened body {
     color: #0e8a8a;
     font-weight: 600;
 }
-.section {
-  padding: 60px 0;
-}
+/*.section {*/
+/*  padding: 60px 0;*/
+/*}*/
 .our-doctors {
   background-color: #fff;
   padding: 60px 0px;
@@ -2535,7 +2544,7 @@ html.menu-opened body {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  border-bottom: 3px solid #f3c41b;
+  border-bottom: 3px solid #ff9600;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 }
@@ -3168,7 +3177,7 @@ html.menu-opened body {
 .view-all {
   text-transform: uppercase;
   font-size: 18px;
-  color: #f3c41b;
+  color: #ff9600;
   font-weight: 700;
 }
 
@@ -7248,9 +7257,9 @@ html.menu-opened body {
   .btn-red, .btn-border-orange {
     font-size: 16px;
   }
-  .section {
-    padding: 40px 0;
-  }
+  /*.section {*/
+  /*  padding: 40px 0;*/
+  /*}*/
   .doctors-col .slick-slider {
     padding-bottom: 30px;
     margin-top: 0;
@@ -7612,7 +7621,7 @@ html.menu-opened body {
     padding: 30px 0 0;
   }
   .service-wrapper .service-tabs {
-    padding-top: 30px;
+    padding-top: 1px;
   }
   .btn-red, .btn-border-orange {
     font-size: 16px;
@@ -7721,7 +7730,7 @@ html.menu-opened body {
 		margin-right: 0;
 	}
 	.navbar-brand.logo img {
-		height: 30px;
+		height: 60px;
 	}
 	.search-box form {
 		display: block;

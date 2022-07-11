@@ -8,11 +8,11 @@
                             <ul class="d-flex justify-content-between align-items-center">
                                 <li>
                                     <i class="fas fa-phone-alt"></i>
-                                    Contact Number : 090 98763456
+                                    Contact Number : +91-9560387009
                                 </li>
                                 <li>
                                     <i class="fas fa-map-marker-alt"></i>
-                                    Location : 22, South Wales, New York
+                                    Location : C-1189, Ansal Sushant City, Panipat, India
                                 </li>
                             </ul>
                             <ul class="d-flex justify-content-between align-items-center">
@@ -35,8 +35,7 @@
                                                 <div class="form-group">
                                                     <select class="form-control form-select" id="exampleFormControlSelect1">
                                                         <option>English</option>
-                                                        <option>Arabic</option>
-                                                        <option>Turkish</option>
+                                                        <option>Hindi</option>
                                                     </select>
                                                 </div>
                                             </li>
@@ -114,8 +113,8 @@
                         </ul>
                     </li>
 
-                    <li [class.active]="base === 'voice-call' || base === 'video-call' || base === 'calender' || base === 'blank' || base === 'login-page' 
-                    || base === 'Register' || base === 'forgot-password' 
+                    <li [class.active]="base === 'voice-call' || base === 'video-call' || base === 'calender' || base === 'blank' || base === 'login-page'
+                    || base === 'Register' || base === 'forgot-password'
                     || (base === 'patients' && page === 'component') || (base === 'doctor' && page === 'invoice') || base === 'invoice-details'"class="has-submenu" (click)="addStyle('pages')">
                         <a href="javascript:void(0)">Pages <i class="fas fa-chevron-down"></i></a>
                         <ul class="submenu" id = 'pages'>
@@ -136,12 +135,12 @@
                             <li [class.active]="base === 'Register'"><a [routerLink]="'Register'">Register</a></li>
                             <li [class.active]="base === 'forgot-password'"><a [routerLink]="'forgot-password'">Forgot Password</a></li>
                         </ul>
-                    </li> 
+                    </li>
                     <li class="has-submenu" (click)="addStyle('blog')" [class.active]="base === 'blog' || base === 'blog-grid' || base === 'blog-details'">
                         <a href="javascript:void(0)">Blog <i class="fas fa-chevron-down"></i></a>
                         <ul class="submenu" id = "blog">
                             <li [class.active]="base === 'blog'"><a [routerLink]="'blog'">Blog List</a></li>
-                            <li [class.active]="base === 'blog-grid'"><a [routerLink]="'blog-grid'">Blog Grid</a></li> 
+                            <li [class.active]="base === 'blog-grid'"><a [routerLink]="'blog-grid'">Blog Grid</a></li>
                             <li [class.active]="base === 'blog-details'"><a [routerLink]="'blog-details'">Blog Details</a></li>
                         </ul>
                     </li>
@@ -189,7 +188,7 @@
                     </div>
                 </li>
                     <!-- /User Menu -->
-                        
+
             </ul>
 
 
