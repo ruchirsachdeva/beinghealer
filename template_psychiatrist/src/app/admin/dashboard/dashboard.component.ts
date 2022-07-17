@@ -76,13 +76,13 @@ export class DashboardComponent implements OnInit {
     stroke: {
       curve: 'smooth',
       width: 2,
-      colors: ['#0e8a8a', '#019b87', '#DFE5FC'],
+      colors: ['#A0BCE4', '#019b87', '#DFE5FC'],
     },
     markers: {
       size: 3,
     },
     fill: {
-      colors: ['#0e8a8a', '#019b87', '#DFE5FC'],
+      colors: ['#A0BCE4', '#019b87', '#DFE5FC'],
     },
     legend: {
       position: 'top',
@@ -169,6 +169,6 @@ export class DashboardComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    
+
   }
 }
