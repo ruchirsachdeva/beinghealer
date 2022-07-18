@@ -468,8 +468,10 @@ button.bg-danger:hover {
     color: #757575 !important;
 }
 .btn-primary {
-	background-color: #C18C5D;
-    border: 1px solid #C18C5D;
+	/*background-color: #C18C5D;*/
+    /*border: 1px solid #C18C5D;*/
+  background-color: black;
+  border: 1px solid black;
     border-radius: 8px;
     color: #fff;
     padding: 12px 30px 9px;
@@ -522,7 +524,7 @@ button.bg-danger:hover {
 	background-color: #fff;
     border: 1px solid #ffff;
     border-radius: 8px;
-    color: #C18C5D!important;
+    color: black!important;
     padding: 12px 30px 9px;
     font-weight: 600;
     font-size: 14px;
@@ -1752,7 +1754,8 @@ button.bg-danger:hover {
 -----------------------*/
 
 .top-header {
-	background-color: #A0BCE4;
+	/*background-color: #A0BCE4;*/
+  background-color: black;
 	padding: 7px 0;
 }
 .top-header ul {
@@ -1949,8 +1952,10 @@ button.bg-danger:hover {
 	background-color: #fff;
 }
 .header-navbar-rht li a.header-login {
-	background-color: #C18C5D;
-    border: 2px solid #C18C5D;
+	/*background-color: #C18C5D;*/
+  /*  border: 2px solid #C18C5D;*/
+  background-color: black;
+  border: 2px solid black;
     padding: 10px 15px !important;
     text-align: center;
     font-size: 15px;
@@ -2300,7 +2305,7 @@ html.menu-opened body {
 
 .home-banner {
 	background-image: url('../img/home-bg.png');
-    min-height: 450px;
+    min-height: 520px;
 	background-size: cover;
 	background-repeat: no-repeat;
     position: relative;
@@ -2337,7 +2342,8 @@ html.menu-opened body {
     width: 60%;
     margin: 0 auto;
     text-align: center;
-    padding: 50px 30px;
+    /*padding: 50px 30px;*/
+  margin-top: 340px;
 }
 .banner-wrapper .banner-header h3 {
     font-weight: 500;
@@ -2347,7 +2353,7 @@ html.menu-opened body {
 	/*margin: 20px 0px;*/
     font-size: 56px;
     font-weight: 600;
-    color: #fff;
+    color: black;
     line-height: 50px;
     font-family: 'Flamante-sten';
     margin-top: 28px;
@@ -2486,7 +2492,7 @@ html.menu-opened body {
 .service-wrapper .tab-content h3, .service-wrapper .tab-content p {
   margin-bottom: 20px;
 }
-.text-orange { color: #C18C5D; }
+.text-blue { color: #A0BCE4; }
 .btn-border-orange {
   border: 2px solid #C18C5D;
   color: #C18C5D;
@@ -7147,9 +7153,9 @@ html.menu-opened body {
 	#mobile_btn {
 		display: inline-block;
 	}
-	.home-banner {
-		min-height: 330px;
-	}
+	/*.home-banner {*/
+	/*	min-height: 330px;*/
+	/*}*/
 	.section-specialities {
 		padding: 50px 0;
 	}
@@ -7347,6 +7353,9 @@ html.menu-opened body {
 	.chat-window .chat-cont-right .chat-header .media .media-body {
 		display: none;
 	}
+  .banner-header .btn-primary, .banner-header .btn-outline-primary, .banner-header .btn-secondary, .banner-header .btn-outline-secondary {
+    padding: 1px 1px!important;
+  }
 	.banner-wrapper .banner-header h1 {
 		font-size: 2rem;
 	}
@@ -7906,10 +7915,9 @@ html.menu-opened body {
 	.banner-header .btn-primary, .banner-header .btn-outline-primary, .banner-header .btn-secondary, .banner-header .btn-outline-secondary {
 		margin: 0px !important;
 		font-size: 12px !important;
-		padding: 8px 18px!important;
 	}
 	.home-banner {
-		min-height: 270px !important;
+		min-height: 450px;
 		padding: 30px 15px !important;
 	}
 	.xs-b {
@@ -7963,11 +7971,21 @@ html.menu-opened body {
   }
 }
 
+@media only screen and (max-width:525px) {
+  .home-banner {
+    min-height: 380px;
+    padding: 30px 15px;
+  }
+  .banner-wrapper .banner-header {
+    margin-top: 245px;
+  }
+}
+
 @media only screen and (max-width:479px) {
-	.home-banner {
-		min-height: 410px;
-		padding: 30px 15px;
-	}
+	/*.home-banner {*/
+	/*	min-height: 410px;*/
+	/*	padding: 30px 15px;*/
+	/*}*/
 	.speicality-img {
 		width: 120px;
 		height: 120px;
@@ -8056,9 +8074,33 @@ html.menu-opened body {
 	}
 }
 
+@media only screen and (max-width:440px) {
+  .home-banner {
+    min-height: 320px;
+  }
+  .banner-wrapper .banner-header {
+    margin-top: 195px;
+  }
+}
+
 @media only screen and (max-width:420px) {
   .banner-wrapper .banner-header h1 {
     margin-top: 88px;
+  }
+}
+
+@media only screen and (max-width:380px) {
+  .home-banner {
+    min-height: 300px;
+  }
+}
+
+@media only screen and (max-width:330px) {
+  .home-banner {
+    min-height: 280px;
+  }
+  .banner-wrapper .banner-header {
+    margin-top: 165px;
   }
 }
 
