@@ -84,6 +84,8 @@ export class HomeComponent implements OnInit {
       name: "Switzerland",
     },
   ];
+  showModal: boolean = false;
+  modalPath: String = ""
   constructor(
     public router: Router,
     public commonService: CommonServiceService
@@ -206,6 +208,22 @@ export class HomeComponent implements OnInit {
       });
     });
   }
+
+  show(event: any)
+  {
+    var target = event.target || event.srcElement || event.currentTarget;
+    var srcAttr = target.attributes.src;
+    var path = srcAttr.nodeValue;
+    this.showModal = true; // Show-Hide Modal Check
+    this.modalPath = path;
+  }
+  //Bootstrap Modal Close event
+  hide()
+  {
+    this.showModal = false;
+    this.modalPath = "";
+  }
+
   private _filterEmployees(value: string): Doctors[] {
     const filterValue = value.toLowerCase();
     return this.doctors.filter(
