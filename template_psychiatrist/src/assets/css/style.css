@@ -2304,7 +2304,7 @@ html.menu-opened body {
 -----------------------*/
 
 .home-banner {
-	background-image: url('../img/home-bg.png');
+	background-image: url('../img/home-bg.gif');
     min-height: 520px;
 	background-size: cover;
 	background-repeat: no-repeat;
