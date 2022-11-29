@@ -415,7 +415,10 @@ export class HomeComponent implements OnInit {
 
   getblogs() {
     this.commonService.getBlogs().subscribe((res) => {
-      this.blogs = res;
+      this.blogs = res
+        .filter(x=>{return x.id != 1})
+        .filter(x=>x.id != 3)
+        .filter(x=>x.id != 5);
     });
   }
 

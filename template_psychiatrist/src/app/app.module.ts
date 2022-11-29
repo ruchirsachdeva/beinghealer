@@ -17,9 +17,10 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { FormsModule } from "@angular/forms";
 import { SlickCarouselModule } from "ngx-slick-carousel";
 import { LinkService } from "./link.service";
+import { PaginationComponent } from './common/pagination/pagination.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, PaginationComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
