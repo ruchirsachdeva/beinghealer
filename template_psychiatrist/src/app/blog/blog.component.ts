@@ -1,31 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonServiceService } from '../common-service.service';
+import {PaginationComponent} from "../common/pagination/pagination.component";
 
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.css'],
 })
-export class BlogComponent implements OnInit {
+export class BlogComponent extends PaginationComponent implements OnInit {
   blogs: any = [];
-  firstBlock: any = [];
-  constructor(public commonService: CommonServiceService) {}
+  constructor(public commonService: CommonServiceService) {
+    super(3);
+  }
 
-  ngOnInit(): void {
+  override ngOnInit(): void {
     this.getBlogs();
-    this.getBlogdetails();
-    window.scrollTo(0, 0);
+    super.ngOnInit();
+    this.goToTopOfPage();
   }
 
   getBlogs() {
     this.commonService.getBlogs().subscribe((result) => {
       this.blogs = result;
-    });
-  }
-
-  getBlogdetails() {
-    this.commonService.getBlogsDetails(1).subscribe((res) => {
-      this.firstBlock = res;
-    });
+      this.setItemCount(result.length)
+    })
   }
 }

@@ -15,10 +15,10 @@
 		</div>
 	</div>
 	<!-- /Breadcrumb -->
-	
+
 	<!-- Page Content -->
 	<div class="content">
-		<div class="container">				
+		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 col-md-12">
 					<div class="blog-view">
@@ -26,7 +26,7 @@
 							<div class="blog-image">
 								<a href="javascript:void(0);"><img src="{{blogdetails.img}}" *ngIf="blogdetails.img" class="img-fluid"></a>
 							</div>
-							<h3 class="blog-title">{{blogdetails.title}}</h3>								
+							<h3 class="blog-title">{{blogdetails.title}}</h3>
 							<div class="blog-info clearfix">
 								<div class="post-left">
 									<ul>
@@ -42,11 +42,11 @@
 								</div>
 							</div>
 							<div class="blog-content">
-								<p>{{blogdetails.description}}</p>
-								
+								<p [innerHTML]="blogdetails.description"></p>
+
 							</div>
 						</div>
-						
+
 						<div class="card blog-share clearfix">
 							<div class="card-header">
 								<h4 class="card-title">Share the post</h4>
@@ -172,7 +172,7 @@
 							</ul>
 						</div>
 						</div>
-						
+
 						<div class="card new-comment clearfix">
 							<div class="card-header">
 								<h4 class="card-title">Leave Comment</h4>
@@ -197,10 +197,10 @@
 								</form>
 							</div>
 						</div>
-						
+
 					</div>
 				</div>
-			
+
 				<!-- Blog Sidebar -->
 				<div class="col-lg-4 col-md-12 sidebar-right theiaStickySidebar">
 					<div class="sticky-grid">
@@ -294,9 +294,9 @@
 					</div>
 				</div>
 				<!-- /Blog Sidebar -->
-				
+
 		</div>
 		</div>
 
-	</div>		
+	</div>
 	<!-- /Page Content -->

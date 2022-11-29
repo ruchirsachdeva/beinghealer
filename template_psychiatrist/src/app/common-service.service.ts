@@ -121,7 +121,7 @@ export class CommonServiceService {
   }
 
   getBlogs() {
-    return this.http.get(this.SERVER_URL + 'blogs');
+    return this.http.get<any[]>(this.SERVER_URL + 'blogs');
   }
 
   getBlogsDetails(id:any) {
