@@ -47,11 +47,13 @@ export class PaginationComponent implements OnInit {
     this.pageNumbers = Array.from(new Array(numberOfPages), (x, i) => i+1)
   }
 
-
   protected setItemRangeIndexesForPage() {
     this.itemStartIndex = (this.currentPage - 1) * this.pageSize;
     this.itemEndIndex = this.currentPage * this.pageSize;
+  }
 
+  public slice(items: any[]): any[] {
+    return items.slice(this.itemStartIndex, this.itemEndIndex)
   }
 
   protected goToTopOfPage() {

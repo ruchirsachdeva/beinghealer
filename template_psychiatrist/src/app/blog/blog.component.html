@@ -24,7 +24,7 @@
 
 			<div class="col-lg-8 col-md-12">
 				<!-- Blog Post -->
-				<div class="blog" *ngFor="let blog of blogs.slice(itemStartIndex,itemEndIndex) | filter: filterTerm">
+				<div class="blog" *ngFor="let blog of this.slice(blogs | filter:filterTerm)">
 					<div class="blog-image">
 						<a  [routerLink]="'/blog-details'" [queryParams]="{id: blog.id}"><img class="img-fluid" src="{{blog.img}}" alt="Post Image"></a>
 					</div>

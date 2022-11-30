@@ -9,13 +9,14 @@ import {PaginationComponent} from "../common/pagination/pagination.component";
 })
 export class BlogComponent extends PaginationComponent implements OnInit {
   blogs: any[] = [];
-  filterTerm!: string;
+  filterTerm: string = "";
 
   constructor(public commonService: CommonServiceService) {
     super(3);
   }
 
   override ngOnInit(): void {
+    this.filterTerm = ""
     this.getBlogs();
     super.ngOnInit();
     this.goToTopOfPage();
