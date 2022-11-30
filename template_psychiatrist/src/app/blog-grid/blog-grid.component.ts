@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonServiceService } from '../common-service.service';
 import {PaginationComponent} from "../common/pagination/pagination.component";
+import {filter} from "rxjs";
 
 @Component({
   selector: 'app-blog-grid',
@@ -8,7 +9,9 @@ import {PaginationComponent} from "../common/pagination/pagination.component";
   styleUrls: ['./blog-grid.component.css'],
 })
 export class BlogGridComponent extends PaginationComponent implements OnInit {
-  blogs: any = [];
+  blogs: any[] = [];
+  filterTerm!: string;
+
   constructor(public commonService: CommonServiceService) {
     super(4);
   }
@@ -25,4 +28,5 @@ export class BlogGridComponent extends PaginationComponent implements OnInit {
       this.setItemCount(result.length)
     })
   }
+
 }

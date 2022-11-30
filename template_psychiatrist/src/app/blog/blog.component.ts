@@ -8,7 +8,9 @@ import {PaginationComponent} from "../common/pagination/pagination.component";
   styleUrls: ['./blog.component.css'],
 })
 export class BlogComponent extends PaginationComponent implements OnInit {
-  blogs: any = [];
+  blogs: any[] = [];
+  filterTerm!: string;
+
   constructor(public commonService: CommonServiceService) {
     super(3);
   }

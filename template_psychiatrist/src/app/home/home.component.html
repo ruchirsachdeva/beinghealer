@@ -665,7 +665,7 @@
 								<div class="card-body">
 								  <h5 class="card-title">{{blog.type}}</h5>
 								    <h3>{{blog.title}}</h3>
-								  <p class="card-text"[innerHTML] = "blog.description.slice(0,blog.description.indexOf('<br'))"></p>
+								  <p class="card-text"[innerHTML] = "blog.description.slice(0, blog.description.slice(0, 500).lastIndexOf('.'))"></p>
 								  <h6>Posted By: {{blog.doctor_name}}</h6>
 								  <a [routerLink]="'/blog-details'" [queryParams]="{id: blog.id}" class="read-more-text">Read more</a>
 								</div>

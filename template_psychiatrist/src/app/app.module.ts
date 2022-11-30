@@ -18,6 +18,7 @@ import { FormsModule } from "@angular/forms";
 import { SlickCarouselModule } from "ngx-slick-carousel";
 import { LinkService } from "./link.service";
 import { PaginationComponent } from './common/pagination/pagination.component';
+import {Ng2SearchPipeModule} from "ng2-search-filter";
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent, PaginationComponent],
@@ -30,7 +31,8 @@ import { PaginationComponent } from './common/pagination/pagination.component';
     HttpClientInMemoryWebApiModule.forRoot(DataService),
     BrowserAnimationsModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    Ng2SearchPipeModule
   ],
   providers: [LinkService],
   bootstrap: [AppComponent],
