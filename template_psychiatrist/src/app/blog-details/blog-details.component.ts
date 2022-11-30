@@ -12,6 +12,9 @@ export class BlogDetailsComponent implements OnInit {
   id:any;
   blogdetails: any = [];
   blogs: any = [];
+  categories: Map<string, number> = new Map([]);
+  tags: string[] = [];
+
   comments: any = [];
   name = '';
   email = '';
@@ -41,6 +44,26 @@ export class BlogDetailsComponent implements OnInit {
   getBlogs() {
     this.commonService.getBlogs().subscribe((result) => {
       this.blogs = result;
+
+      this.categories = result
+        .reduce<Map<string, number>>((p,c,i,a)=>{
+          if(p.has(c.type)) {
+            // @ts-ignore
+            p.set(c.type, p.get(c.type) + 1)
+          } else {
+            p.set(c.type, 1)
+          }
+          return p
+        },  new Map([]))
+
+      this.tags = [...new Set(result.flatMap(r=>r.tags))]
+    });
+  }
+
+  navigateToBlogGridSearchResult(key: string) {
+    // alert(key);
+    this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+      this.router.navigateByUrl('/blog-grid?filterTerm=' + key);
     });
   }
 
