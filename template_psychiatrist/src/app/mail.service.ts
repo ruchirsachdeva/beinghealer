@@ -28,6 +28,11 @@ export class MailService {
   }
 
   send(message: Message): Promise<string> {
+    if(!this.validEmail(message.email)) {
+      return new Promise<string>(()=>{
+        throw "Invalid email address"
+      })
+    }
     this.params = {
       from_name: message.name,
       to_name: 'Being healer team',
@@ -37,10 +42,21 @@ export class MailService {
     return emailjs.send('ruchir-gmail', 'template_y5dkc0b', this.params)
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
-        return ('SUCCESS!' + response.status + response.text)
+        return ('SUCCESS!')
       }, (err) => {
         console.log('FAILED...', err);
-        return ('FAILED!' + err)
+        throw 'FAILED...'
       });
+  }
+
+  public validEmail(email: string) {
+    if(email!=''){
+      const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      console.log(re.test(String(email).toLowerCase()))
+      if (re.test(String(email).toLowerCase())) {
+        return true
+      }
+    }
+    return false;
   }
 }

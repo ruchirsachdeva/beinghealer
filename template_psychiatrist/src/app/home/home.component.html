@@ -225,8 +225,6 @@
           <button type="button" class="btn btn-default m-r-0" data-dismiss="modal" (click) = "hideContactModalWindow()">Close</button>
         </div>
         <div class="modal-body">
-<!--          <img [src]="modalPath" id="contactreview" style="width: 100%;">-->
-<!--          <div class="card-body">-->
             <form>
               <div>
                 <label>Name <span class="text-danger">*</span></label>
@@ -240,14 +238,10 @@
                 <label>Message <span class="text-danger">*</span></label>
                 <textarea rows="4" class="form-control" name="usercomment" [(ngModel)]="usercomment"></textarea>
               </div>
-<!--              <div class="submit-section">-->
-<!--                <button class="btn btn-primary submit-btn" type="submit" (click)="comment()">Submit</button>-->
-<!--              </div>-->
             </form>
-<!--          </div>-->
         </div>
         <div class="modal-footer contact-modal-footer">
-          <button class="btn btn-primary submit-btn" type="submit" (click)="comment()">Submit</button>
+          <button class="btn btn-primary submit-btn" type="submit" (click)="sendMessage()">Submit</button>
           <button type="button" class="btn btn-default" data-dismiss="modal" (click) = "hideContactModalWindow()">Close</button>
         </div>
       </div>

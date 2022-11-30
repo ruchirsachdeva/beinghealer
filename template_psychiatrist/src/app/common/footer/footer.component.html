@@ -30,8 +30,8 @@
 						</div>
 
 						<div class="input-group mb-3">
-							<input type="text" class="form-control" placeholder="Your Email">
-							<button class="btn btn-primary" type="button">Subscribe</button>
+							<input type="text" class="form-control" placeholder="Your Email" [(ngModel)]="email">
+							<button class="btn btn-primary" type="button" (click)="sendMessage()">Subscribe</button>
 						</div>
 
 						<ul class="footer-nav">
