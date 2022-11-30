@@ -2102,7 +2102,8 @@ button.bg-danger:hover {
 	display: none;
 }
 .menu-logo, .logo {
-  max-width: 100px;
+  /*max-width: 100px;*/
+  max-width: 60px;
   margin: auto;
   overflow: hidden;
   border-radius: 50%;
@@ -7260,7 +7261,7 @@ html.menu-opened body {
 		display: none;
 	}
 	.speak-expert-img {
-		display: none;
+		display: block;
 	}
   .service-section {
     padding: 40px 0;
@@ -7949,7 +7950,7 @@ html.menu-opened body {
 		padding: 0px;
 	}
 	.speak-expert-img {
-		display: none;
+		display: block;
 	}
 	.our-solutions {
 		padding: 30px 0px;
