@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { CommonServiceService } from '../common-service.service';
 import { ToastrService } from 'ngx-toastr';
+import {MailService} from "../mail.service";
 
 @Component({
   selector: 'app-blog-details',
@@ -23,6 +24,7 @@ export class BlogDetailsComponent implements OnInit {
   constructor(
     private toastr: ToastrService,
     public commonService: CommonServiceService,
+    public mailService: MailService,
     private route: ActivatedRoute,
     public router: Router
   ) {}
@@ -83,19 +85,37 @@ export class BlogDetailsComponent implements OnInit {
     if (this.name === '' || this.email === '' || this.usercomment === '') {
       this.toastr.error('', 'Please enter mandatory field');
     } else {
+
+
       let params = {
-        id: this.comments.length + 1,
         name: this.name,
-        email: this.email,
-        comment: this.usercomment,
-      };
-      this.commonService.createComment(params).subscribe((res) => {
-        this.toastr.success('', 'Comment successfully!');
+        message: "Request to add the comment for post with id " + this.id + " . Comment is: " + this.usercomment,
+        email: this.email
+      }
+      this.mailService.send(params).then((response) => {
+        this.toastr.success(response, 'Comment has been sent for review!');
         this.name = '';
         this.email = '';
         this.usercomment = '';
-        this.getComments();
+      }, (err) => {
+        this.toastr.error('There was a problem in adding comment!' + "  " + err);
       });
+
+
+      // TODO Uncomment this after connecting backend
+      // let params = {
+      //   id: this.comments.length + 1,
+      //   name: this.name,
+      //   email: this.email,
+      //   comment: this.usercomment,
+      // };
+      // this.commonService.createComment(params).subscribe((res) => {
+      //   this.toastr.success('', 'Comment successfully!');
+      //   this.name = '';
+      //   this.email = '';
+      //   this.usercomment = '';
+      //   this.getComments();
+      // });
     }
   }
 }

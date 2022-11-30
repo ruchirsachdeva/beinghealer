@@ -245,10 +245,12 @@ export class HomeComponent implements OnInit {
   hideContactModalWindow()
   {
     this.showContactModal = false;
-    // this.modalPath = "";
+    this.name = '';
+    this.email = '';
+    this.usercomment = '';
   }
 
-  comment() {
+  sendMessage() {
     if (this.name === '' || this.email === '' || this.usercomment === '') {
       this.toastr.error('', 'Please enter mandatory field');
     } else {
@@ -257,17 +259,14 @@ export class HomeComponent implements OnInit {
         message: this.usercomment,
         email: this.email
       }
-      this.mailService.send(params).then((res) => {
-        this.toastr.success(res, 'Comment successfully!');
-        this.name = '';
-        this.email = '';
-        this.usercomment = '';
+      this.mailService.send(params).then((response) => {
+        this.toastr.success(response, 'Message sent successfully!');
+        this.hideContactModalWindow();
+      }, (err) => {
+        this.toastr.error('There was a problem in sending message!' + "  " + err);
       });
     }
 
-
-    // this.mailService.send(params);
-    this.hideContactModalWindow();
   }
 
 
