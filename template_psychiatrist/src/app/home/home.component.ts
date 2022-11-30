@@ -5,6 +5,8 @@ import { FormControl } from "@angular/forms";
 import { Observable } from "rxjs";
 import { map, startWith } from "rxjs/operators";
 import { SlickCarouselComponent } from "ngx-slick-carousel";
+import {MailService} from "../mail.service";
+import {ToastrService} from "ngx-toastr";
 declare const $: any;
 
 export interface Doctors {
@@ -86,9 +88,16 @@ export class HomeComponent implements OnInit {
   ];
   showModal: boolean = false;
   modalPath: String = ""
+
+  showContactModal: boolean = false;
+  name: string = "";
+  email: string = "";
+  usercomment: string = "";
   constructor(
     public router: Router,
-    public commonService: CommonServiceService
+    public commonService: CommonServiceService,
+    public mailService: MailService,
+    private toastr: ToastrService
   ) {
     this.filteredEmployee = this.employeeCtrl.valueChanges.pipe(
       startWith(""),
@@ -214,7 +223,7 @@ export class HomeComponent implements OnInit {
     var target = event.target || event.srcElement || event.currentTarget;
     var srcAttr = target.attributes.src;
     var path = srcAttr.nodeValue;
-    this.showModal = true; // Show-Hide Modal Check
+    this.showModal = true; // Show-Hide Image Modal Check
     this.modalPath = path;
   }
   //Bootstrap Modal Close event
@@ -223,6 +232,44 @@ export class HomeComponent implements OnInit {
     this.showModal = false;
     this.modalPath = "";
   }
+
+  showContactModalWindow(event: any)
+  {
+    // var target = event.target || event.srcElement || event.currentTarget;
+    // var srcAttr = target.attributes.src;
+    // var path = srcAttr.nodeValue;
+    this.showContactModal = true; // Show-Hide Contact Modal Check
+    // this.modalPath = path;
+  }
+  //Bootstrap Contact Modal Close event
+  hideContactModalWindow()
+  {
+    this.showContactModal = false;
+    // this.modalPath = "";
+  }
+
+  comment() {
+    if (this.name === '' || this.email === '' || this.usercomment === '') {
+      this.toastr.error('', 'Please enter mandatory field');
+    } else {
+      let params = {
+        name: this.name,
+        message: this.usercomment,
+        email: this.email
+      }
+      this.mailService.send(params).then((res) => {
+        this.toastr.success(res, 'Comment successfully!');
+        this.name = '';
+        this.email = '';
+        this.usercomment = '';
+      });
+    }
+
+
+    // this.mailService.send(params);
+    this.hideContactModalWindow();
+  }
+
 
   private _filterEmployees(value: string): Doctors[] {
     const filterValue = value.toLowerCase();
@@ -496,6 +543,7 @@ export class HomeComponent implements OnInit {
         "Lorem Ipsum is simply dummy text  the printing and typesetting industry.",
     },
   ];
+
   nextslide() {
     this.slickModal2.slickNext();
   }

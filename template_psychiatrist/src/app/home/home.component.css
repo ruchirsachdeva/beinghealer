@@ -112,3 +112,21 @@
   top: auto;
   bottom: -7px;
 }
+
+.contact-modal-header {
+  padding: 0.3rem 0.3rem;
+}
+
+.contact-modal-footer {
+  padding: 0.25rem;
+}
+
+.contact-modal-content {
+  top: 100px
+}
+
+@media (max-width: 450px) {
+  .contact-modal-content {
+    top: 200px
+  }
+}
