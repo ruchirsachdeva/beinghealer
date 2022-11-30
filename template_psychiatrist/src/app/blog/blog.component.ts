@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonServiceService } from '../common-service.service';
 import {PaginationComponent} from "../common/pagination/pagination.component";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-blog',
@@ -9,14 +10,16 @@ import {PaginationComponent} from "../common/pagination/pagination.component";
 })
 export class BlogComponent extends PaginationComponent implements OnInit {
   blogs: any[] = [];
-  filterTerm: string = "";
+  filterTerm!: string;
 
-  constructor(public commonService: CommonServiceService) {
+  constructor(public commonService: CommonServiceService,
+              private route: ActivatedRoute,
+              public router: Router) {
     super(3);
   }
 
   override ngOnInit(): void {
-    this.filterTerm = ""
+    this.filterTerm = this.route.snapshot.queryParams['filterTerm'];
     this.getBlogs();
     super.ngOnInit();
     this.goToTopOfPage();
