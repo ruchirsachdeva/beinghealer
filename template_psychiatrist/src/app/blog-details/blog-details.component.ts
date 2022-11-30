@@ -16,6 +16,7 @@ export class BlogDetailsComponent implements OnInit {
   name = '';
   email = '';
   usercomment = '';
+  filterTerm!: string;
   constructor(
     private toastr: ToastrService,
     public commonService: CommonServiceService,
