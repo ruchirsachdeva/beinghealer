@@ -8,7 +8,7 @@
 <!--								<h3>It is time for a better life</h3>-->
 <!--								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indstandard dummy text ever</p>-->
 <!--								<a class="btn btn-primary mt-10 me-1">Read More</a>-->
-								<a class="btn btn-primary mt-3">Contact Us</a>
+								<a (click)="showContactModalWindow($event)" class="btn btn-primary mt-3">Contact Us</a>
 <!--                <div class="row">-->
 <!--                  <p>Convenient, affordable, private, in-person or online healing anytime, anywhere</p>-->
 <!--                </div>-->
@@ -208,12 +208,52 @@
 
         <p class="mt-2">That’s why your first healing session with us is FREE.</p>
         <div>
-          <a href="#" class="btn btn-secondary mt-3">Contact Us</a>
+          <a (click)="showContactModalWindow($event)" class="btn btn-secondary mt-3">Contact Us</a>
         </div>
       </div>
     </div>
   </section>
   <!-- /Speak to Expert -->
+
+
+  <!-- Creates the bootstrap modal where the contact us form will appear -->
+  <div [style.display]="showContactModal ? 'block' : 'none'" class="modal" id="contactmodal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content contact-modal-content">
+        <div class="modal-header contact-modal-header">
+          <h4 class="modal-title" id="contactModalLabel">Contact us</h4>
+          <button type="button" class="btn btn-default m-r-0" data-dismiss="modal" (click) = "hideContactModalWindow()">Close</button>
+        </div>
+        <div class="modal-body">
+<!--          <img [src]="modalPath" id="contactreview" style="width: 100%;">-->
+<!--          <div class="card-body">-->
+            <form>
+              <div>
+                <label>Name <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" name="name" [(ngModel)]="name">
+              </div>
+              <div>
+                <label>Your Email Address <span class="text-danger">*</span></label>
+                <input type="email" class="form-control" name="email"  [(ngModel)]="email">
+              </div>
+              <div>
+                <label>Message <span class="text-danger">*</span></label>
+                <textarea rows="4" class="form-control" name="usercomment" [(ngModel)]="usercomment"></textarea>
+              </div>
+<!--              <div class="submit-section">-->
+<!--                <button class="btn btn-primary submit-btn" type="submit" (click)="comment()">Submit</button>-->
+<!--              </div>-->
+            </form>
+<!--          </div>-->
+        </div>
+        <div class="modal-footer contact-modal-footer">
+          <button class="btn btn-primary submit-btn" type="submit" (click)="comment()">Submit</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal" (click) = "hideContactModalWindow()">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /Our Client Say's -->
 
 			<!-- Our Team -->
 <!--			<section class="our-team">-->
@@ -339,7 +379,7 @@
     <div class="container">
       <div class="text-center w-80">
         <h2 class="section-title">Our Client Says</h2>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto accusantium beatae.</p>
+        <p>See our client testimonials below. Please click the image below to view the original testimonial.</p>
       </div>
 
       <div id="carouselExampleIndicators" class="carousel">
