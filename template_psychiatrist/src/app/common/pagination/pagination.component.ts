@@ -35,6 +35,7 @@ export class PaginationComponent implements OnInit {
 
   protected setItemCount(count: number) {
     this.count = count
+    this.resetCurrentPage();
     this.setPageNumbers()
   }
 
@@ -58,6 +59,11 @@ export class PaginationComponent implements OnInit {
 
   protected goToTopOfPage() {
     window.scrollTo(0, 0);
+  }
+
+  protected resetCurrentPage() {
+    this.currentPage = 1;
+    this.setItemRangeIndexesForPage();
   }
 
 }
