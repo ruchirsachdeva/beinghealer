@@ -1060,8 +1060,76 @@ export class DataService implements InMemoryDbService {
     }
 ]
 
-
-
+    let services = [
+      {
+        id: 1,
+        title: "Hypno therapy",
+        description: "<p>Hypnosis is an effective and natural approach that allows for access to your subconscious mind by relaxing and bypassing the conscious (thinking, logical) mind. Hypnotherapy is the 'therapy' carried out during this altered state of awareness,\n" +
+          "which can be used to help you gain control over patterns, behaviors, fears, thoughts, feelings, and actions. It can be a guide to past experiences and clarify causes/reasons. It can help you gain a better understanding of yourself and your relationships with others and it can provide a glimpse into future life experiences, goals, and life purpose. </p>",
+        image: "assets/img/service-img1.jpg",
+        service: "Hypnotherapy"
+      },
+      {
+        id: 2,
+        title: "Past Life Regression",
+        description: "<p>PLR is a safe, intuitive, and healing way to gain a better understanding of self in this lifetime as it relates to previous life experiences. PLR is based on the idea of reincarnation. In essence, we are all pure and magical beings who come to the earth plane in order to learn lessons, gain experience, connect with our soul families and attain our true purpose, as well as to experience karmic lessons in order to grow and evolve. PLR is explored through hypnotic trance induction and you are guided through the experience in order to process and integrate.</p>",
+        image: "assets/img/service-img2.jpg",
+        service: "Past Life Regression"
+      },
+      {
+        id: 3,
+        title: "Ancestral Healing",
+        description: "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
+        image: "assets/img/service-img3.jpg",
+        service: "Ancestral Healing"
+      },
+      {
+        id: 4,
+        title: "Family Constellation",
+        description: "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
+        image: "assets/img/service-img4.jpg",
+        service: "Family Constellation"
+      },
+      {
+        id: 5,
+        title: "Inner Child",
+        description: "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
+        image: "assets/img/service-img4.jpg",
+        service: "Inner Child"
+      },
+      {
+        id: 6,
+        title: "Reiki Healing",
+        description: "<p>Reiki and energy healing is an ancient-inspired, modern method of healing emotional and physical problems.\n" +
+          "There are seven main chakras, which you can think of as energy centers, which align the spine, starting from the base of the spine up to the crown of the head. Chakras filter energy continuously in and out of the body.\n" +
+          "If any of the chakras become congested or completely blocked, then the fresh, positive, balancing energy that the mind, body & spirit needs to function properly cannot flow efficiently throughout our body.\n" +
+          "Blockages in chakras and energy flow can lead to a variety of emotional, behavioral, and physical symptoms.\n" +
+          "The goal of Reiki healing is to balance chakras to clear out any congestion or blockages in the chakras, thus reaching a healthy place of balance between mind, body, spirit, earth, health, universality, and grounding.</p>\n",
+        image: "assets/img/service-img4.jpg",
+        service: "Reiki"
+      },
+      {
+        id: 7,
+        title: "Crystal Healing",
+        description: "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
+        image: "assets/img/service-img4.jpg",
+        service: "Crystal Healing"
+      },
+      {
+        id: 8,
+        title: "Sound Therapy",
+        description: "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
+        image: "assets/img/service-img4.jpg",
+        service: "Sound Therapy"
+      },
+      {
+        id: 9,
+        title: "Breath Work",
+        description: "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
+        image: "assets/img/service-img4.jpg",
+        service: "Breathwork"
+      }
+      ]
 
   let transactions = [
       {
@@ -1165,7 +1233,7 @@ export class DataService implements InMemoryDbService {
           status : 'paid'
       }
   ]
-    return {transactions:transactions,comments:comments,favourites:favourites,blogs:blogs,specialityList:specialityList,appointments:appointments,patientsAppointment:patientsAppointment,doctors:doctors,patients:patients,reviews:reviews};
+    return {transactions:transactions,comments:comments,favourites:favourites,blogs:blogs,specialityList:specialityList,appointments:appointments,patientsAppointment:patientsAppointment,doctors:doctors,patients:patients,reviews:reviews,services:services};
 
    }
 }
