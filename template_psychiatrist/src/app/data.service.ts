@@ -740,8 +740,26 @@ export class DataService implements InMemoryDbService {
   ]
 
   let blogs = [
+   {
+     id : 1,
+     title : "What is Hypnotherapy and how does it work?",
+     description : "Hypnosis is an effective and natural approach that allows for access to your subconscious mind by relaxing and bypassing the conscious (thinking, logical) mind. Hypnotherapy is the 'therapy' carried out during this altered state of awareness, which can be used to help you gain control over patterns, behaviors, fears, thoughts, feelings, and actions. It can be a guide to past experiences and clarify causes/reasons. It can help you gain a better understanding of yourself and your relationships with others and it can provide a glimpse into future life experiences, goals, and life purpose." +
+       "<br>Hypnosis itself is not a form of treatment. Instead, a therapy called hypnotherapy or hypno-psychotherapy is carried out while the patient is in hypnotic state. Hypnosis is a state of deep relaxation and focus combined with heightened awareness brought on by suggestion. It is a natural trance state, similar to daydreaming, where time moves very quickly and one experiences good feelings of profound body and mind relaxation." +
+       "<br>The foundation of hypnotherapy is the idea that the mind and body are interdependent. The therapist's goal in guiding a person to hypnotic state, is to activate the body's hidden subconscious mechanisms for both mental and physical self-healing." +
+       "<br>Anyone can be guided into a hypnotic state; the patient's gullibility or suggestibility is not a requirement. Practitioners of hypnotherapy assert that the relaxed and focused state it brings about is a natural result of the mind at work." +
+       "<br>Patients who receive hypnotherapy are awake and aware but receptive to the influence of suggestion. Nothing can be forced upon them against their will. Through hypnotherapy, patients can explore repressed, unpleasant emotions or feelings that are lodged in their subconscious minds. This may result in a profound and lasting change where the client is better equipped to handle stressors like discomfort, rejection, fear, or anxiety." +
+       "<br> Hypnotherapy has been proven to be successful in treating a variety of conditions, including addictions, stress, phobias, anxiety, and chronic pain brought on by medical conditions, addiction, relationship/family/work conflicts, sleep disorders, anxiety, depression, Post-Traumatic Stress Disorder (PTSD), grief and loss of a loved one, cessation of smoking, weight loss, and many more.",
+     createdBy : "Anita Sachdeva",
+     createdAt : "Wed May 27 2020 09:41:48 GMT+0530 (India Standard Time)",
+     comments : 12,
+     type : "Hypnotherapy",tags: ["Hypnotherapy", "Benefits"],
+     status : "active",
+     img : "assets/img/blog/hypno-blog.jpg",
+     doctor_name : "Anita Sachdeva",
+     doctor_pic : "assets/img/doctors/doctor-thumb-07.jpg"
+   },
   {
-    id : 1,
+    id : 2,
     title : "Every Anxiety Has A Story Which Wants To Be Discovered",
     description : "The secret to a life without anxiety is to travel back in time to discover the story of your anxiety. We fear rejection, exposure, and judgement when we experience anxiety, an overwhelming and uncontrollable feeling. Everyone's default state should be one of being able to face life without fear. Momentary bouts of fear or anxiety are normal and not cause for concern, but when they interfere with your ability to function normally, then there may be a problem. When you wake up in the morning feeling anxious, you know that something needs to be done. In severe cases, the symptoms may even be physical. You can't approach your day the way other people do when you're anxious. It seems as though you are imprisoned by a large monster. Fortunately, finding the root of irrational anxiety is not difficult and, even better, it can be eliminated once you understand how your anxiety began." +
       "<br><br>A sense of impending danger, nervousness, restlessness, rapid breathing, sweating, trembling, feeling weak or exhausted, and trouble concentrating are just a few of the typical symptoms of anxiety. Anxiety can make it difficult for you to focus, concentrate, sleep, and enjoy life. It can have a negative impact on both your physical and mental health. A healthy level of anxiety is a normal part of our lives, but when it becomes excessive, extreme, or persistent, it can be harmful to our physical and mental health. When that occurs, it's critical to make an effort to comprehend what is causing our anxiety so that we can address it." +
@@ -760,7 +778,7 @@ export class DataService implements InMemoryDbService {
 
   },
   {
-    id : 2,
+    id : 3,
     title : "Hypnotherapy For Anger",
     description : "All of us have experienced anger. You are motivated to act, exert effort, or let out suppressed emotion by the powerful, crimson tide of emotion. It's a typical and beneficial emotion. But if it happens too frequently or isn't handled properly, it can be extremely damaging. But one of the most difficult emotions to control is anger, and as children, we are frequently not taught healthy ways to control our anger. Therefore, if you notice that you lose control when you become angry, if trivial things make you angry, or if you often act in ways that you later regret, you may need help controlling your anger." +
       "<br><br>It can be challenging to define anger because you have to have felt it to understand it. Fortunately, by the time we are five years old, the majority of us have experienced anger. Although it is intense and challenging to deal with, anger is necessary to help us process our emotions and the environment around us. It most frequently occurs when something has gone wrong or when someone has wronged you, and it frequently travels with feelings of stress, frustration, and irritability. We can express our negative emotions and become more motivated to solve problems when we are angry. However, persistent or excessive anger can lead to issues." +
@@ -809,7 +827,7 @@ export class DataService implements InMemoryDbService {
     doctor_pic : "assets/img/doctors/doctor-thumb-02.jpg"
   },
   {
-    id : 3,
+    id : 4,
     title : "Can Hypnotherapy Help With Low Self-Esteem?",
     description : "Is your lack of self-confidence preventing you from advancing in life? Stopping you from even attempting to reach your full potential in your work or personal life? And even if you do try, do you find that you constantly criticise yourself?" +
       "<br>What if I tell you that you are not the only one in there!" +
@@ -833,7 +851,7 @@ export class DataService implements InMemoryDbService {
     doctor_pic : "assets/img/doctors/doctor-thumb-03.jpg"
   },
   {
-    id : 4,
+    id : 5,
     title : "Does Hypnotherapy Work Online?",
     description : "Unbelievable as it may seem, the pandemic has had some really positive effects. It has aided us in rediscovering a sense of neighbourhood pride, brought friends and families together, and allowed us to reconnect with former acquaintances. And everything was done through screens." +
       "<br><br>Since we've been trying to maintain distance and haven't really been able to meet in person for more than a year, the pandemic has indeed changed the way we meet, chat, and form connections. This implies that all of our meetings are now held online and using tools like Zoom is the new standard. In fact, it's so commonplace that many people are hesitant to immediately return to in-person communication! Online meetings are more practical, enable participants to accomplish more in a day, eliminate the need for extensive, expensive, and time-consuming travel, and are generally equally productive to in-person meetings." +
@@ -861,8 +879,8 @@ export class DataService implements InMemoryDbService {
     doctor_pic : "assets/img/doctors/doctor-thumb-04.jpg"
   },
   {
-    id : 5,
-    title : "What is Reiki anyway?",
+    id : 6,
+    title : "What is Reiki?",
     description : "Reiki is, first and foremost, energy. Everything is made of energy. You are accustomed to energy moving through your body if you engage in physical activities like tai chi, yoga, or meditation. You already possess that energy, and it belongs to you. Reiki energy establishes a link between our higher selves and the outside world. In an effort to find healing, it brings what is outside of us inside of us." +
       "<br><br>You already possess the ability to use Reiki if you have ever been able to notice a change in someone's energy through their body language or tone, or even through the plugged-in or unplugged state of an electrical appliance. Although I've always sensed energy shifting within and around me, learning Reiki has only made it easier for me to do so." +
       "<br><br>I've always needed to physically use my hands and felt a connection to the earth. Now that I have the ability and knowledge to do so energetically. I had to work on myself before I could see a need for healing in someone else's energetic field and physical body. I was able to see, feel, and comprehend where my own chakra blockages were thanks to Reiki Healing Level 1. I was able to investigate the physical stagnations of my classmates on Level 2. (Please read the separate blog about chakras to learn more about what they are.)" +
@@ -880,7 +898,7 @@ export class DataService implements InMemoryDbService {
     doctor_pic : "assets/img/doctors/doctor-thumb-05.jpg"
   },
   {
-    id : 6,
+    id : 7,
     title : "Energy blocks and the healing chakras",
     description : "The word 'chakra', which means 'wheel' in Sanskrit, describes the numerous energy vortices that penetrate both the aura and the physical body. There are seven major chakras, 21 minor chakras, and numerous smaller chakras. Over time, more are coming to light. The lesser chakras located in the soles of the feet and the palms of the hands are the most frequently used." +
       "<br><br>The chakras are generally easier to feel than to see. Holding the hand a few inches from the physical body will allow you to feel them the simplest. It is rarely necessary to take off any clothing in order to receive healing because the presence of clothing has no detrimental effect on the energy or the ease with which it can be felt." +
@@ -924,7 +942,7 @@ export class DataService implements InMemoryDbService {
     doctor_pic : "assets/img/doctors/doctor-thumb-06.jpg"
   },
   {
-    id : 7,
+    id : 8,
     title : "What is long-distance Reiki and does it work?",
     description : "Three symbols are covered in Reiki training, one of which is the 'distance symbol.' This symbol is believed to enable the practitioner to send healing Reiki energy throughout time and space when used. The process of giving 'distance Reiki' and what to expect from a long-distance reiki session are described here." +
       "<br>Any distance in time or space can be crossed using the distance symbol. It enables practitioners to carry out reiki on a person who is not physically present and to remove blocks from someone's past. Distance The Hermetic Law of Similarity, an antiquated theory that asserts that because we are all made of energy and a part of a greater whole, we are all connected, is the basis for how Reiki operates. During a distance Reiki session, the practitioner can connect to the recipient's energy field by using this law.<br>" +
@@ -939,8 +957,111 @@ export class DataService implements InMemoryDbService {
     img : "assets/img/blog/blog-07.jpg",
     doctor_name : "Adarsh Sachdeva",
     doctor_pic : "assets/img/doctors/doctor-thumb-07.jpg"
-  }
+  },
+  {
+    id : 9,
+    title : "What is Past Life Regression Therapy ?",
+    description : "Past life regression is a mild form of hypnotherapy that involves taking a person back in time to their prior lives, also known as incarnations. This is accomplished by accessing memories and experiences that are typically buried deep inside the subconscious mind of the individual being treated. These recollections are typically buried deep beneath the clamour of one's day-to-day thoughts due to the fact that modern life is so hectic and noisy. " +
+      "<br>A subcategory of hypnotherapy known as past-life regression therapy asserts that we bring with us into this life emotional, psychic, and even, on occasion, physical evidence that is connected to previous incarnations. Past-life regression allows us to access these memories and work through them to find solutions to problems in the here-and-now." +
+      "<br>The lessons we've learned, the perspectives we've adopted, and the dynamics of our relationships from past lifetimes are all unwittingly woven into our present lives. Remembering these events can help us dissipate the negative energy and emotions that have been holding us back. A typical past life regression therapy session consists of the therapist walking the client through the life's major events, the death experience, and a 'life review'.Here, from a more transcendental vantage point, one considers one's life's meaning, lessons, and choices." +
+      "<br>Healing from past lives can have a positive effect on our present lives. Past life regression can help us see through the fog of this life. Past life regression allows us to heal and transform on the level of your higher consciousness, and it is typically far more rapid and effective than other forms of healing. Similarly, you can get in touch with your inner guidance and your identity's blueprint." +
+      "<br>During a PLR session, you will be led away from the background noise and into a profoundly calm and serene condition. In this environment, it will be much simpler for you to access the memories that are stored in your subconscious mind. In this setting, it will be much easier for you to access the memories that are stored in your subconscious mind. This will make it easier for you to access and relive your birth, early childhood, and past lives. I can help you go back in time to the events that triggered the issues you're facing now, so you can finally resolve them. Healing occurs more rapidly when the patient has a thorough comprehension of the nature and origin of the problem. These moments of clarity can be life-changing and pave the way for rapid development here and now. It reveals parts of ourselves that were hidden in our unconscious, and when you do this, your whole view of life can change in a very deep way.",
+    createdBy : "Anita Sachdeva",
+    createdAt : "Wed May 27 2020 09:41:48 GMT+0530 (India Standard Time)",
+    comments : 12,
+    type : "Past Life Regression",tags: ["Past Life Regression" , "PLR", "Hypnotherapy"],
+    status : "active",
+    img : "assets/img/blog/blog-08.jpg",
+    doctor_name : "Anita Sachdeva",
+    doctor_pic : "assets/img/doctors/doctor-thumb-07.jpg"
+  },
+    {
+      id : 10,
+      title : "When should you explore the Past Life Regression Therapy ?",
+      description : "One possible motivation for investigating a possible past life or lifetimes is to learn how a person's experiences from earlier times are influencing their current existence." +
+        "<br><br>What difficulties do you have right now that might have their origins in a past existence?" +
+        "<br>Have you been having trouble in your personal relationships? Do you have a problem with addiction?" +
+        "<br>Are you mending the scars of your ancestors?" +
+        "<br>Do you hope to end a reoccurring pattern of abuse in your life?" +
+        "<br><br>All of these are very compelling arguments in favour of trying a Past Life Regression session. Your search for evidence of your past lives may also be motivated by a desire to reconnect with a dormant talent or a lost aspect of your personality. Perhaps you've forgotten your own strengths and talents, or you simply need a reminder of what they are before you can put them to use." +
+        "<br>It is possible that a person is suffering from an illness or medical condition that has not yet been identified. Finding the origin of a problem in this life by investigating a possible prior existence is possible. A person may be able to let go of the suffering or illness they've been carrying into this existence after they have insight into their prior lives." +
+        "<br><br>By clearing out negative energy patterns, PLRT can help people experience greater mental and emotional clarity, which can lead to greater insight into how to find fulfilment in this and future lives." +
+        "<br>Traditional applications of past-life therapy include some of the most important topics, such as::"+
+        "<br><br><ul>" +
+        "  <li>Unhealthy patterns of thought and action that have persisted despite repeated efforts to reform</li><br>" +
+        "  <li>Interpersonal relations that appear to take on a life of their own (strong feelings of attraction or dislike, ingrained conflicts that refuse to be resolved).</li><br>" +
+        "  <li>Extreme worries, such as a dread of heights or water, that don't seem to have any rational basis in the here-and-now are known as phobias.</li><br>" +
+        "  <li>Instances of persistent discomfort felt throughout the body.</li><br>" +
+        "  <li>Persistent mental or emotional states that appear to follow you around.</li><br>" +
+        "  <li>Irrational convictions like 'I have to do everything by myself', 'No one understands me', 'Life isn't fair', and 'Leave me alone'.</li><br>" +
+        "</ul>",
+
+      createdBy : "Anita Sachdeva",
+      createdAt : "Wed May 27 2020 09:41:48 GMT+0530 (India Standard Time)",
+      comments : 12,
+      type : "Past Life Regression",tags: ["Past Life Regression" , "PLR", "Hypnotherapy"],
+      status : "active",
+      img : "assets/img/blog/blog-08.jpg",
+      doctor_name : "Anita Sachdeva",
+      doctor_pic : "assets/img/doctors/doctor-thumb-07.jpg"
+    },
+    {
+      id : 11,
+      title : "What are the benefits of Past Life Regression Therapy ?",
+      description : "If you're interested in Past Life Therapy for whatever reason, you're bound to find some insights that help. Insight into specifics of this life and how a prior life or lives may be affecting you will be provided, albeit it may not come in the form you expect. The method creates a safe environment for accessing difficult emotions. The relaxed state of hypnosis might make a person feel more open to addressing their inner lives." +
+        "<br><br>The effects of past life regression therapy (PLRT) are numerous and often transformative. PLRT can heal deeper and get results much more quickly than many other therapeutic approaches." +
+        "<br><br>With the aid of past life regression, you may be able to:"+
+        "<br><br><ul>" +
+        "  <li>Get in touch with your prior selves.</li><br>" +
+        "  <li>Give you insight into the meaning behind your emotional attachment to specific locations.</li><br>" +
+        "  <li>Learn more about your current Soulmate and past life experiences.</li><br>" +
+        "  <li>Recognize any physical problems you're experiencing; these may be relics from this or a previous existence.</li><br>" +
+        "  <li>Investigate the buried feelings that have followed you into this life and given rise to irrational worries and convictions.</li><br>" +
+        "  <li>Appreciate and implement the most important insights gained from their experiences.Appreciate and implement the most important insights gained from their experiences.</li><br>" +
+        "  <li>Clear up emotional stress, physical problems, and trauma.</li><br>" +
+        "  <li>Calm down anxious and/or sad feelings.</li><br>" +
+        "  <li>Fix relationships that are hurting.</li><br>" +
+        "  <li>Learn about and change habits, patterns, and routines.</li><br>" +
+        "  <li>Find gifts and talents from a past life that have been dormant and use them in this life.</li><br>" +
+        "  <li>Show you souls from past lives that you know from this life.</li><br>" +
+        "  <li>Bring together your past life experiences and your soul's life lessons on a mental, emotional, and spiritual level.</li><br>" +
+        "  <li>Find your spiritual centre again.</li><br>" +
+        "  <li>Get spiritual direction and guidance.</li><br>" +
+        "  <li>Find peace and wisdom that we don't always have access to in our earthly bodies.</li><br>" +
+        "</ul>",
+      createdBy : "Anita Sachdeva",
+      createdAt : "Wed May 27 2020 09:41:48 GMT+0530 (India Standard Time)",
+      comments : 12,
+      type : "Past Life Regression",tags: ["Past Life Regression" , "PLR", "Hypnotherapy"],
+      status : "active",
+      img : "assets/img/blog/blog-08.jpg",
+      doctor_name : "Anita Sachdeva",
+      doctor_pic : "assets/img/doctors/doctor-thumb-07.jpg"
+    },
+    {
+      id : 12,
+      title : "What to expect from a Past Life Regression Therapy session?",
+      description : "A session of Past Life Regression Therapy can last between 2 and 3 hours. Most sessions have the following parts, which naturally fit together to make a full regression therapy experience." +
+        "<br><br>We will start with a pre-consultation session, in which we will talk about your current life problems and what you want to get out of your PLRT session. We will talk about hypnotherapy and the process of past life regression therapy, and you are welcome to ask questions." +
+        "<br><br>In the next session, PLRT will begin. You will be led to a past life that has something to do with your current problem. You will be able to see your body from a past life, the place you lived, the people you knew, and the important events and milestones of that life. We will look into any special issues we talked about ahead of time or that come up in the course of our conversation. You will be able to say what you see, what you hear, and how you feel. You will look at important life events, feelings, and relationships." +
+        "<br><br>After the death of the past life, you will rise up and move into a higher level of spiritual awareness. From this more spiritual vantage point, you'll be able to see the bigger picture and understand what your past life was all about. You'll learn more about yourself and find out if your past life is affecting your present one." +
+        "<br><br>We'll also walk you through the transformation process, where you'll be able to let go of all the stuck energy from traumas, events, etc., and lessen the effect that those things have on your life now." +
+        "<br><br>At this point, sometimes the client's spirit guides, angels, or ancestors show up. You might be able to see how your past life has affected the growth of your soul and get other information that is important to your life now." +
+        "<br><br>The session of past life regression therapy will end on its own, and we will go back to the present. We will also help you figure out how to use what you've learned and the energy of transformation in your everyday life to solve problems." +
+        "<br>",
+      createdBy : "Anita Sachdeva",
+      createdAt : "Wed May 27 2020 09:41:48 GMT+0530 (India Standard Time)",
+      comments : 12,
+      type : "Past Life Regression",tags: ["Past Life Regression" , "PLR", "Hypnotherapy"],
+      status : "active",
+      img : "assets/img/blog/blog-08.jpg",
+      doctor_name : "Anita Sachdeva",
+      doctor_pic : "assets/img/doctors/doctor-thumb-07.jpg"
+    }
 ]
+
+
+
 
   let transactions = [
       {
