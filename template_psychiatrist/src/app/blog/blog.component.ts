@@ -30,7 +30,8 @@ export class BlogComponent extends PaginationComponent implements OnInit {
   getBlogs() {
     this.commonService.getBlogs().subscribe((result) => {
       this.blogs = result;
-      this.setItemCount(result.length)
+
+      this.updateItemCountForBlogs(result);
 
       this.categories = result
         .reduce<Map<string, number>>((p,c,i,a)=>{
@@ -49,6 +50,17 @@ export class BlogComponent extends PaginationComponent implements OnInit {
 
   updateFilterTerm(key: string) {
     this.filterTerm = key;
+    this.updateItemCount();
     this.goToTopOfPage();
+  }
+
+  updateItemCount() {
+    this.updateItemCountForBlogs(this.blogs)
+  }
+
+  private updateItemCountForBlogs(blogs: any[]) {
+    this.setItemCount(blogs.filter(x=>{
+      return this.filterTerm === undefined || JSON.stringify(x).indexOf(this.filterTerm) > -1
+    }).length)
   }
 }
