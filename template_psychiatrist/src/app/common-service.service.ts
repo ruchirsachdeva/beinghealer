@@ -187,4 +187,20 @@ export class CommonServiceService {
   deleteReview(id:any) {
     return this.http.delete(`${this.SERVER_URL + 'reviews'}/${id}`);
   }
+
+  createServices(data:any) {
+    return this.http.post(`${this.SERVER_URL + 'services'}`, data);
+  }
+
+  getServices() {
+    return this.http.get<any[]>(this.SERVER_URL + 'services');
+  }
+
+  updateServices(data:any, id:any) {
+    return this.http.put(`${this.SERVER_URL + 'services'}/${id}`, data);
+  }
+
+  deleteServices(id:any) {
+    return this.http.delete(`${this.SERVER_URL + 'services'}/${id}`);
+  }
 }

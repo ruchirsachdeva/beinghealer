@@ -27,6 +27,7 @@ export class HomeComponent implements OnInit {
   @ViewChild("slickModal1") slickModal1!: SlickCarouselComponent;
   @ViewChild("slickModal2") slickModal2!: SlickCarouselComponent;
   @ViewChild("slickModal3") slickModal3!: SlickCarouselComponent;
+  services: any[] =[]
   specialityList: any = [];
   doctors: any = [];
   slidepage: any;
@@ -165,6 +166,7 @@ export class HomeComponent implements OnInit {
     this.getspeciality();
     this.getDoctors();
     this.getblogs();
+    this.getServices();
 
     // User's voice slider
     $(".testi-slider").each( () => {
@@ -267,6 +269,12 @@ export class HomeComponent implements OnInit {
       });
     }
 
+  }
+
+  getServices() {
+    this.commonService.getServices().subscribe((res) => {
+      this.services = res
+    });
   }
 
 
@@ -557,5 +565,24 @@ export class HomeComponent implements OnInit {
 
   prevpage() {
     this.slickModal3.slickPrev();
+  }
+
+  navigateToBlogGridSearchResult(key: string) {
+    // alert(key);
+    this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+      this.router.navigateByUrl('/blog-grid?filterTerm=' + key);
+    });
+  }
+
+  // Set this service item as the first item in services array
+  sendServiceItemToTop(service: any) {
+    // let firstItem = this.services.shift();
+    //
+    // const fromIndex = this.services.indexOf(service)
+    // const element = this.services.splice(fromIndex,1, firstItem)[0];
+    //
+    // // this.services.
+    // // Array.splice(position,0,new_element_1,new_element_2,...);
+    // this.services.unshift(element);
   }
 }

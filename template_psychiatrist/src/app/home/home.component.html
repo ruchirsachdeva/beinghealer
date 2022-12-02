@@ -59,48 +59,55 @@
 			<section class="our-solutions">
 				<div class="container">
 					<h2 class="section-title">WE HEAL YOU TO: </h2>
-
 					<div class="row">
             <div class="col-6 col-sm-6 col-md-4 col-lg-4">
 							<div class="card">
-                <h5>Cure Fears & Phobias</h5>
-                <p>Overcome your biggest fears and phobias allowing you to live a better life</p>
-<!--                <a href="#" class="read-more-text">Read more</a>-->
+                <h5 data-bs-toggle="collapse" data-bs-target="#problem1" role="button">Cure Phobias</h5>
+                <div id="problem1" class="collapse">
+                  <p>Overcome your biggest fears and phobias allowing you to live a better life</p>
+                </div>
               </div>
 						</div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-4">
               <div class="card">
-                <h5>Overcome Stress & Anxiety</h5>
-                <p>Reduce stress and anxiety and focus on a more relaxing and productive life</p>
+                <h5 data-bs-toggle="collapse" data-bs-target="#problem2" role="button">Overcome Anxiety</h5>
+                <div id="problem2" class="collapse">
+                  <p>Reduce stress and anxiety and focus on a more relaxing and productive life</p>
+                </div>
 <!--                <a href="#" class="read-more-text">Read more</a>-->
               </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-4">
               <div class="card">
-                <h5>Manage Emotions</h5>
-                <p>Manage waves of emotion, physical symptoms and to help gain closure</p>
-<!--                <a href="#" class="read-more-text">Read more</a>-->
+                <h5 data-bs-toggle="collapse" data-bs-target="#problem3" role="button">Manage Emotions</h5>
+                <div id="problem3" class="collapse">
+                  <p>Manage waves of emotion, physical symptoms and to help gain closure</p>
+                </div>
               </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-4">
               <div class="card">
-                <h5>Gain Confidence</h5>
-                <p>Build a foundation of confidence, which enables you to be the person you really wish to be.</p>
-<!--                <a href="#" class="read-more-text">Read more</a>-->
+                <h5 data-bs-toggle="collapse" data-bs-target="#problem4" role="button">Gain Confidence</h5>
+                <div id="problem4" class="collapse">
+                  <p>Build a foundation of confidence, which enables you to be the person you really wish to be.</p>
+                </div>
               </div>
             </div>
             <div class="col-6 col-sm-6 col-md-4 col-lg-4">
               <div class="card">
-                <h5>Fix Relationship Issues</h5>
-                <p>Create healthier relationships. Break unwanted patterns and see relationships through new eyes</p>
-<!--                <a href="#" class="read-more-text">Read more</a>-->
+                <h5 data-bs-toggle="collapse" data-bs-target="#problem5" role="button">Fix Relationships</h5>
+                <div id="problem5" class="collapse">
+                  <p>Create healthier relationships. Break unwanted patterns and see relationships through new eyes</p>
+                </div>
+
               </div>
             </div>
 						<div class="col-6 col-sm-6 col-md-4 col-lg-4">
 							<div class="card">
-                <h5>Eliminate Bad Habits & Addictions</h5>
-                <p>If you are ready to quit addiction, then it can be much easier than you think</p>
-<!--                <a href="#" class="read-more-text">Read more</a>-->
+                <h5 data-bs-toggle="collapse" data-bs-target="#problem6" role="button">Manage Addiction</h5>
+                <div id="problem6" class="collapse">
+                  <p>If you are ready to quit addiction, then it can be much easier than you think</p>
+                </div>
               </div>
 						</div>
 						</div>
@@ -114,7 +121,10 @@
       <!-- Section Header -->
       <div class="section-header text-center">
         <h2>How We <span class="text-blue">Heal</span></h2>
-        <p class="sub-title">Being healer is a holistic healing platform, providing services both online and in-person. We change the way people get help with facing life's challenges by providing convenient, discreet and affordable access to licensed healers.
+        <p class="sub-title">
+          There are times in our lives when we feel confused, stuck and seem not to move forward? We feel as if sabotaging ourselves and unable to understand how to get what feel like to have.
+          <br><br>Being Healer helps to understand, WHY it is happening; WHAT are the root causes behind all this and HOW to connect with ourselves and be our own healer. These roots are seeded in the subconscious mind in the form of our behaviour Pattern, and this is WHERE Hypnotherapy works. It helps us bypass the analytical conscious mind and learn to connect to deep inner mind.  When we understand false core beliefs that we hold with us and their affects on our life, then we get ready to change it which gives us sense of calm and gain peace of mind. In order to follow the path of selflessness with contentment, peace and self-connectedness, we provide different techniques and modalities at 'Being Healer' (BH) to help our clients reach their goals. BH uses many tools based on clients’ needs and personal preferences to provide solution for those which are beyond the scope of medical sciences, astrology, nadi shastra, palmistry, occult etc.  In addition to individual client sessions, we also provide Group Workshops and Children's Services.
+          <br><br>Being healer is a holistic healing platform, providing services both online and in-person. We change the way people get help with facing life's challenges by providing convenient, discreet and affordable access to licensed healers.
         We offer a wide range of holistic healing and therapy services.</p>
 
       </div>
@@ -124,63 +134,21 @@
           <div class="service-wrapper">
             <div class="service-tabs">
               <ul class="nav nav-tabs nav-tabs-solid nav-justified">
-                <li class="nav-item"><a class="nav-link active" href="#solid-justified-tab1" data-bs-toggle="tab">Hypnotherapy</a></li>
-                <li class="nav-item"><a class="nav-link" href="#solid-justified-tab2" data-bs-toggle="tab">Past Life Regression Therapy</a></li>
-                <li class="nav-item"><a class="nav-link" href="#solid-justified-tab3" data-bs-toggle="tab">Reiki & Energy Healing</a></li>
-                <li class="nav-item"><a class="nav-link" href="#solid-justified-tab4" data-bs-toggle="tab">Other Therapies</a></li>
+                <li class="nav-item" *ngFor="let service of services; let i = index">
+                  <a class="nav-link" [ngClass]="{'active': service.service === 'Hypnotherapy'}" href="#solid-justified-tab{{i+1}}" data-bs-toggle="tab">{{service.title}}
+                  </a>
+                </li>
               </ul>
               <div class="tab-content">
-                <div class="tab-pane show active" id="solid-justified-tab1">
+                <div *ngFor="let service of services; let i = index" class="tab-pane show" [ngClass]="{'active': service.service === 'Hypnotherapy'}" id="solid-justified-tab{{i+1}}">
                   <div class="row align-items-center">
                     <div class="col-12 col-md-6">
-                      <img src="assets/img/service-img1.jpg" class="tab-img" alt="">
+                      <img src="{{service.image}}" class="tab-img" alt="">
                     </div>
                     <div class="col-12 col-md-6">
-                      <h3>Hypnotherapy</h3>
-                      <p>Hypnosis is an effective and natural approach that allows for access to your subconscious mind by relaxing and bypassing the conscious (thinking, logical) mind. Hypnotherapy is the 'therapy' carried out during this altered state of awareness,
-                        which can be used to help you gain control over patterns, behaviors, fears, thoughts, feelings, and actions. It can be a guide to past experiences and clarify causes/reasons. It can help you gain a better understanding of yourself and your relationships with others and it can provide a glimpse into future life experiences, goals, and life purpose. </p>
-                      <a href="#" class="btn-border-orange">Get More Details</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="tab-pane" id="solid-justified-tab2">
-                  <div class="row align-items-center">
-                    <div class="col-12 col-md-6">
-                      <img src="assets/img/service-img2.jpg" class="tab-img" alt="">
-                    </div>
-                    <div class="col-12 col-md-6">
-                      <h5>Past Life Regression Therapy</h5>
-                      <p>PLR is a safe, intuitive, and healing way to gain a better understanding of self in this lifetime as it relates to previous life experiences. PLR is based on the idea of reincarnation. In essence, we are all pure and magical beings who come to the earth plane in order to learn lessons, gain experience, connect with our soul families and attain our true purpose, as well as to experience karmic lessons in order to grow and evolve. PLR is explored through hypnotic trance induction and you are guided through the experience in order to process and integrate.</p>
-                      <a href="#" class="btn-border-orange">Get More Details</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="tab-pane" id="solid-justified-tab3">
-                  <div class="row align-items-center">
-                    <div class="col-12 col-md-6">
-                      <img src="assets/img/service-img4.jpg" class="tab-img" alt="">
-                    </div>
-                    <div class="col-12 col-md-6">
-                      <h3>Reiki & Energy Healing</h3>
-                      <p>
-                        Reiki and energy healing is an ancient-inspired, modern method of healing emotional and physical problems.
-                        There are seven main chakras, which you can think of as energy centers, which align the spine, starting from the base of the spine up to the crown of the head. Chakras filter energy continuously in and out of the body.
-                        If any of the chakras become congested or completely blocked, then the fresh, positive, balancing energy that the mind, body & spirit needs to function properly cannot flow efficiently throughout our body.
-                        Blockages in chakras and energy flow can lead to a variety of emotional, behavioral, and physical symptoms.
-                        The goal of Reiki healing is to balance chakras to clear out any congestion or blockages in the chakras, thus reaching a healthy place of balance between mind, body, spirit, earth, health, universality, and grounding.</p>
-                      <a href="#" class="btn-border-orange">Get More Details</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="tab-pane" id="solid-justified-tab4">
-                  <div class="row align-items-center">
-                    <div class="col-12 col-md-6">
-                      <img src="assets/img/service-img3.jpg" class="tab-img" alt="">
-                    </div>
-                    <div class="col-12 col-md-6">
-                      <h3>Other Therapies</h3>
-                      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                      <a href="#" class="btn-border-orange">Get More Details</a>
+                      <h3>{{service.title}}</h3>
+                      <p [innerHTML]="service.description"></p>
+                      <a  (click)="navigateToBlogGridSearchResult(service.service)" class="btn-gradient" role="button">Get More Details</a>
                     </div>
                   </div>
                 </div>
