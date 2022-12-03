@@ -1057,6 +1057,53 @@ export class DataService implements InMemoryDbService {
       img : "assets/img/blog/blog-08.jpg",
       doctor_name : "Anita Sachdeva",
       doctor_pic : "assets/img/doctors/doctor-thumb-07.jpg"
+    },
+    {
+      id : 13,
+      title : "What is Family Constellation?",
+      description : "Family Constellation is a powerful therapy that can help you see complicated connections in your family of origin as well as in the family or relationship you have now. FC reveals hidden dynamics in relationship systems, exposes ingrained patterns, and shows \"sticky\" relationships or situations. It changes the way people think about where problems come from and gives them ideas for how to move forward in ways that are strong and build." +
+        "<br><br>Those who hold the issue can benefit from a new understanding, a different way of looking at things, a different set of options, or even a paradigm shift, thanks to the new viewpoints that become available." +
+        "<br><br>In short, a constellation tries to get a system or person to move or focus on taking action instead of being stuck." +
+        "<br><br>Bert Hellinger, a German psychologist, is the one who came up with the idea of family constellations. In the 1950s, when he was a missionary, Hellinger went to South Africa. He became interested in the Zulu way of life and a ceremony they used to communicate with each other. In Zulu culture, ancestors are holy, and healing the wounds of ancestors is important for strong family ties. He saw people in his family talk to each other honestly, without being passive-aggressive or getting angry. He wasn't used to seeing things like this in his own family back home." +
+        "<br><br>This was not the final version of the family constellations method, but it was where the idea came from. Hellinger went back to Germany, where he spent the rest of his life studying how our family stories shape who we are. Most people who believe in family constellations are religious: It's more than just therapy to them. It's a way of life. It's seeing people from a different point of view and being okay with what you see (for example: learning to see your mother as a human being)." +
+        "<br><br>In this kind of therapy, we look at each person as a part of a bigger system, like a family, rather than as a separate person. The way he acts, feels, and thinks as an individual must be understood in the context of this larger group. The person getting therapy chooses other people in the group to act as his or her real family members. The family constellation is a group with these people in it. The people who stand in for the person getting therapy hear about their family history or the problem that worries them. Then, the people playing the family members are asked to talk about how they feel or what they think about the relationship between the person getting therapy and the family members they are playing. This process often makes people feel like they understand and care about each other more.",
+      createdBy : "Anita Sachdeva",
+      createdAt : "Wed May 27 2020 09:41:48 GMT+0530 (India Standard Time)",
+      comments : 12,
+      type : "Family Constellation",tags: ["Family Constellation", "Hypnotherapy"],
+      status : "active",
+      img : "assets/img/blog/blog-09.jpg",
+      doctor_name : "Anita Sachdeva",
+      doctor_pic : "assets/img/doctors/doctor-thumb-07.jpg"
+    },
+    {
+      id : 14,
+      title : "When should you explore the Family Constellation Therapy?",
+      description : "Your repeated problems follow a pattern. At some point, it becomes clear that you have some serious problems, and you start to realise that these problems have deeper causes." +
+        "<br><br>Constellation work is a great way to figure out why things are going wrong in your life. Most of the time, these things happen because of a crazy family or because you were close to a crazy family member." +
+        "<br><br>You might have a problem like depression or anxiety, and it might be because of your genes." +
+        "<br><br>Family problems make you feel stuck in your life and put you in a tough spot. You can't grow and move forward in life because someone else isn't doing well." +
+        "<br><br>Family Constellation Therapy looks at the family as a system and the person's role in that system. This can lead to a discussion about how family relationships from the past affect the present. Families often have rules or laws that aren't said out loud, and when someone doesn't follow them, it can cause problems. These are where our beliefs come from, even if they don't work for us anymore, aren't good for us, or aren't true." +
+        "<br><br>This kind of therapy can be especially helpful for people who are depressed, anxious, or who use drugs. People often talk about a genetic predisposition to these problems or learned behaviours that can be passed down from one generation to the next. In Family Constellation Therapy, you might find that problems and behaviours you have now have roots in your ancestors that you didn't know about." +
+        "<br><br>We think that family constellations work is most useful for dealing with problems that affect the whole system, be it worries about family of origin, problems between parents and children, or problems in close relationships. It could be used as a form of therapy for people who want to change the way they do things." +
+        "<br>This is good for those who –" +
+        "<br><br><ul>" +
+        "  <li>Are trying to fix bad or harmful patterns in their relationships.</li><br>" +
+        "  <li>Want to change their romantic relationship, work out family problems, or do both.</li><br>" +
+        "  <li>Want to get rid of inner turmoil Have been through a big loss or trauma.</li><br>" +
+        "  <li>Want to do well in their personal and professional lives.</li><br>" +
+        "  <li>Deal with money problems.</li><br>" +
+        "  <li>Family patterns or traumas from the past.</li><br>" +
+        "</ul>" +
+        "Family constellation therapy can also be used for more specific physical, mental, social, or spiritual problems, such as depression, anxiety, addictions, bad habits, failure at work, negative relationship patterns, family dysfunction, trauma, grief, obsessive thoughts, physical illnesses, financial problems, phobias, excessive guilt, etc.",
+      createdBy : "Anita Sachdeva",
+      createdAt : "Wed May 27 2020 09:41:48 GMT+0530 (India Standard Time)",
+      comments : 12,
+      type : "Family Constellation",tags: ["Family Constellation", "Hypnotherapy"],
+      status : "active",
+      img : "assets/img/blog/blog-09.jpg",
+      doctor_name : "Anita Sachdeva",
+      doctor_pic : "assets/img/doctors/doctor-thumb-07.jpg"
     }
 ]
 
