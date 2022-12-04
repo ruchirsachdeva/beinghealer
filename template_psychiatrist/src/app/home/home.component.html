@@ -203,7 +203,7 @@
                 <input type="email" class="form-control" name="email"  [(ngModel)]="email">
               </div>
               <div>
-                <label>Message <span class="text-danger">*</span></label>
+                <label>Message <span class="text-danger">(optional)</span></label>
                 <textarea rows="4" class="form-control" name="usercomment" [(ngModel)]="usercomment"></textarea>
               </div>
             </form>
@@ -279,42 +279,42 @@
         <div class="col-lg-12">
       <div class="doctor-slider slider">
         <ngx-slick-carousel class="carousel" #slickModal3="slick-carousel" [config]="slideConfig3">
-          <div ngxSlickItem *ngFor="let slide of slides">
+          <div ngxSlickItem *ngFor="let doctor of doctors">
             <!-- Doctor Widget -->
             <div class="doc-profile-widgets">
               <div class="doc-img">
-                <a [routerLink]="'/patients/doctor-profile'">
-                  <img class="img-fluid" alt="User Image" src="{{slide.img}}">
+                <a [routerLink]="'/patients/doctor-profile'" [queryParams]="{id: doctor.id}">
+                  <img class="img-fluid" alt="User Image" src="{{doctor.profile}}">
                 </a>
               </div>
               <div class="card">
                 <div class="pro-content">
                   <h3 class="title">
-                    <a [routerLink]="'/patients/doctor-profile'">{{slide.name}}</a>
+                    <a [routerLink]="'/patients/doctor-profile'" [queryParams]="{id: doctor.id}">{{doctor.doctor_name}}</a>
                   </h3>
-                  <p class="speciality">{{slide.degree}}</p>
+                  <p class="speciality">{{doctor.Education}}</p>
                   <div class="rating">
                     <i class="fas fa-star filled"></i>
                     <i class="fas fa-star filled"></i>
                     <i class="fas fa-star filled"></i>
                     <i class="fas fa-star filled"></i>
                     <i class="far fa-star filled"></i>
-                    <span class="d-inline-block average-rating">{{slide.reviews}}</span>
+                    <span class="d-inline-block average-rating">{{doctor.reviews}}</span>
                   </div>
                   <ul class="available-info">
                     <li>
-                      <i class="fas fa-map-marker-alt"></i>{{slide.address}}
+                      <i class="fas fa-map-marker-alt"></i>{{doctor.location}}
                     </li>
                     <li>
-                      <i class="fas fa-calendar-check"></i> {{slide.date}}
+                      <i class="fas fa-calendar-check"></i> {{doctor.Available}}
                     </li>
                     <li>
-                      <i class="fas fa-wallet"></i> {{slide.amount}}
+                      <i class="fas fa-wallet"></i> {{doctor.consulting_fees}}
                     </li>
                   </ul>
                 </div>
                 <div class="card-btn">
-                  <a [routerLink]="'/patients/doctor-profile'" class="btn btn-view">
+                  <a [routerLink]="'/patients/doctor-profile'" [queryParams]="{id: doctor.id}" class="btn btn-view">
                     View Profile
                   </a>
                   <a [routerLink]="'/patients/booking'" class="btn btn-book-now">
@@ -327,9 +327,10 @@
           </div>
         </ngx-slick-carousel>
       </div>
-          <div class="col-12 col-md-12 text-center pt-3">
-            <a [routerLink]="'/patients/search-doctor'" class="view-all">View All</a>
-          </div>
+<!--          TODO Uncomment me-->
+<!--          <div class="col-12 col-md-12 text-center pt-3">-->
+<!--            <a [routerLink]="'/patients/search-doctor'" class="view-all">View All</a>-->
+<!--          </div>-->
         </div>
       </div>
     </div>
