@@ -15,22 +15,22 @@
 				</div>
 			</div> -->
 			<!-- /Breadcrumb -->
-			
+
 			<!-- Page Content -->
 			<div class="content">
 				<div class="container">
-				
+
 					<div class="row">
 						<div class="col-12">
-						
+
 							<div class="card">
 								<div class="card-body">
 									<div class="booking-doc-info" *ngIf="doctorDetails">
-										<a [routerLink]="'/patients/doctor-profile'" class="booking-doc-img">
+										<a [routerLink]="'/patients/doctor-profile'"  [queryParams]="{id: doctorDetails.id}" class="booking-doc-img">
 											<img src={{doctorDetails.profile}} alt="User Image">
 										</a>
 										<div class="booking-info">
-											<h4><a [routerLink]="'/patients/doctor-profile'">{{doctorDetails.doctor_name}}</a></h4>
+											<h4><a [routerLink]="'/patients/doctor-profile'"  [queryParams]="{id: doctorDetails.id}">{{doctorDetails.doctor_name}}</a></h4>
 											<div class="rating">
 												<i class="fas fa-star filled me-1"></i>
 												<i class="fas fa-star filled me-1"></i>
@@ -46,10 +46,11 @@
 							</div>
 							<div class="row">
 								<div class="col-12 col-sm-4 col-md-6">
-									<h4 class="mb-1">11 November 2019</h4>
-									<p class="text-muted">Monday</p>
+									<h4 class="mb-1">{{getCurrentDateString()}}</h4>
+									<p class="text-muted">{{getCurrentDayName()}}</p>
 								</div>
 								<div class="col-12 col-sm-8 col-md-6 text-sm-end">
+                  <span>Choose date range to request available time slots</span>
 									<div class="bookingrange btn btn-white btn-sm mb-3">
 										<i class="far fa-calendar-alt me-2"></i>
 										<span></span>
@@ -66,169 +67,190 @@
                             </div>
 							<!-- Schedule Widget -->
 							<div class="card booking-schedule schedule-widget">
-							
+
 								<!-- Schedule Header -->
-								<div class="schedule-header">
-									<div class="row">
-										<div class="col-md-12">
-										
-											<!-- Day Slot -->
-											<div class="day-slot">
-												<ul>
-													<li class="left-arrow">
-														<a >
-															<i class="fa fa-chevron-left"></i>
-														</a>
-													</li>
-													<li>
-														<span>Mon</span>
-														<span class="slot-date">11 Nov <small class="slot-year">2019</small></span>
-													</li>
-													<li>
-														<span>Tue</span>
-														<span class="slot-date">12 Nov <small class="slot-year">2019</small></span>
-													</li>
-													<li>
-														<span>Wed</span>
-														<span class="slot-date">13 Nov <small class="slot-year">2019</small></span>
-													</li>
-													<li>
-														<span>Thu</span>
-														<span class="slot-date">14 Nov <small class="slot-year">2019</small></span>
-													</li>
-													<li>
-														<span>Fri</span>
-														<span class="slot-date">15 Nov <small class="slot-year">2019</small></span>
-													</li>
-													<li>
-														<span>Sat</span>
-														<span class="slot-date">16 Nov <small class="slot-year">2019</small></span>
-													</li>
-													<li>
-														<span>Sun</span>
-														<span class="slot-date">17 Nov <small class="slot-year">2019</small></span>
-													</li>
-													<li class="right-arrow">
-														<a >
-															<i class="fa fa-chevron-right"></i>
-														</a>
-													</li>
-												</ul>
-											</div>
-											<!-- /Day Slot -->
-											
-										</div>
-									</div>
-								</div>
+<!--								<div class="schedule-header">-->
+<!--									<div class="row">-->
+<!--										<div class="col-md-12">-->
+
+<!--											&lt;!&ndash; Day Slot &ndash;&gt;-->
+<!--											<div class="day-slot">-->
+<!--												<ul>-->
+<!--													<li class="left-arrow">-->
+<!--														<a >-->
+<!--															<i class="fa fa-chevron-left"></i>-->
+<!--														</a>-->
+<!--													</li>-->
+<!--&lt;!&ndash;                          <li *ngFor="let dayDetail of get7DayDetails()">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <span>{{dayDetail.day}}</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <span class="slot-date">{{dayDetail.dateMonth}}<small class="slot-year">{{dayDetail.year}}</small></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                          </li>&ndash;&gt;-->
+<!--													<li>-->
+<!--														<span>Mon</span>-->
+<!--														<span class="slot-date">11 Nov <small class="slot-year">2019</small></span>-->
+<!--													</li>-->
+<!--													<li>-->
+<!--														<span>Tue</span>-->
+<!--														<span class="slot-date">12 Nov <small class="slot-year">2019</small></span>-->
+<!--													</li>-->
+<!--													<li>-->
+<!--														<span>Wed</span>-->
+<!--														<span class="slot-date">13 Nov <small class="slot-year">2019</small></span>-->
+<!--													</li>-->
+<!--													<li>-->
+<!--														<span>Thu</span>-->
+<!--														<span class="slot-date">14 Nov <small class="slot-year">2019</small></span>-->
+<!--													</li>-->
+<!--													<li>-->
+<!--														<span>Fri</span>-->
+<!--														<span class="slot-date">15 Nov <small class="slot-year">2019</small></span>-->
+<!--													</li>-->
+<!--													<li>-->
+<!--														<span>Sat</span>-->
+<!--														<span class="slot-date">16 Nov <small class="slot-year">2019</small></span>-->
+<!--													</li>-->
+<!--													<li>-->
+<!--														<span>Sun</span>-->
+<!--														<span class="slot-date">17 Nov <small class="slot-year">2019</small></span>-->
+<!--													</li>-->
+<!--													<li class="right-arrow">-->
+<!--														<a >-->
+<!--															<i class="fa fa-chevron-right"></i>-->
+<!--														</a>-->
+<!--													</li>-->
+<!--												</ul>-->
+<!--											</div>-->
+<!--											&lt;!&ndash; /Day Slot &ndash;&gt;-->
+
+<!--										</div>-->
+<!--									</div>-->
+<!--								</div>-->
 								<!-- /Schedule Header -->
-								
+
 								<!-- Schedule Content -->
-								<div class="schedule-cont">
-									<div class="row">
-										<div class="col-md-12">
-										
-											<!-- Time Slot -->
-											<div class="time-slot">
-												<ul class="clearfix">
-													<li>
-														<a class="timing">
-															<span>9:00</span><span class="ms-1">AM</span>
-														</a>
-														<a class="timing">
-															<span>10:00</span><span class="ms-1">AM</span>
-														</a>
-														<a class="timing">
-															<span>11:00</span><span class="ms-1">AM</span>
-														</a>
-													</li>
-													<li>
-														<a class="timing">
-															<span>12:00</span><span class="ms-1">AM</span>
-														</a>
-														<a class="timing">
-															<span>01:00</span><span class="ms-1">PM</span>
-														</a>
-														<a class="timing">
-															<span>02:00</span><span class="ms-1">PM</span>
-														</a>
-													</li>
-													<li>
-														<a class="timing">
-															<span>03:00</span><span class="ms-1">PM</span>
-														</a>
-														<a class="timing">
-															<span>04:00</span><span class="ms-1">PM</span>
-														</a>
-														<a class="timing">
-															<span>05:00</span><span class="ms-1">PM</span>
-														</a>
-													</li>
-													<li>
-														<a class="timing">
-															<span>06:00</span><span class="ms-1">PM</span>
-														</a>
-														<a class="timing">
-															<span>07:00</span><span class="ms-1">PM</span>
-														</a>
-														<a class="timing">
-															<span>08:00</span><span class="ms-1">PM</span>
-														</a>
-													</li>
-													<li>
-														<a class="timing">
-															<span>09:00</span><span class="ms-1">PM</span>
-														</a>
-														<a class="timing selected">
-															<span>10:00</span><span class="ms-1">PM</span>
-														</a>
-														<a class="timing">
-															<span>11:00</span><span class="ms-1">PM</span>
-														</a>
-													</li>
-													<li>
-														<a class="timing">
-															<span>9:00</span><span class="ms-1">AM</span>
-														</a>
-														<a class="timing">
-															<span>10:00</span><span class="ms-1">AM</span>
-														</a>
-														<a class="timing">
-															<span>11:00</span><span class="ms-1">AM</span>
-														</a>
-													</li>
-													<li>
-														<a class="timing">
-															<span>9:00</span><span class="ms-1">AM</span>
-														</a>
-														<a class="timing">
-															<span>10:00</span><span class="ms-1">AM</span>
-														</a>
-														<a class="timing">
-															<span>11:00</span><span class="ms-1">AM</span>
-														</a>
-													</li>
-												</ul>
-											</div>
-											<!-- /Time Slot -->
-											
-										</div>
-									</div>
-								</div>
+<!--								<div class="schedule-cont">-->
+<!--									<div class="row">-->
+<!--										<div class="col-md-12">-->
+
+<!--											&lt;!&ndash; Time Slot &ndash;&gt;-->
+<!--											<div class="time-slot">-->
+<!--												<ul class="clearfix">-->
+<!--													<li>-->
+<!--														<a class="timing">-->
+<!--															<span>9:00</span><span class="ms-1">AM</span>-->
+<!--														</a>-->
+<!--														<a class="timing">-->
+<!--															<span>10:00</span><span class="ms-1">AM</span>-->
+<!--														</a>-->
+<!--														<a class="timing">-->
+<!--															<span>11:00</span><span class="ms-1">AM</span>-->
+<!--														</a>-->
+<!--													</li>-->
+<!--													<li>-->
+<!--														<a class="timing">-->
+<!--															<span>12:00</span><span class="ms-1">AM</span>-->
+<!--														</a>-->
+<!--														<a class="timing">-->
+<!--															<span>01:00</span><span class="ms-1">PM</span>-->
+<!--														</a>-->
+<!--														<a class="timing">-->
+<!--															<span>02:00</span><span class="ms-1">PM</span>-->
+<!--														</a>-->
+<!--													</li>-->
+<!--													<li>-->
+<!--														<a class="timing">-->
+<!--															<span>03:00</span><span class="ms-1">PM</span>-->
+<!--														</a>-->
+<!--														<a class="timing">-->
+<!--															<span>04:00</span><span class="ms-1">PM</span>-->
+<!--														</a>-->
+<!--														<a class="timing">-->
+<!--															<span>05:00</span><span class="ms-1">PM</span>-->
+<!--														</a>-->
+<!--													</li>-->
+<!--													<li>-->
+<!--														<a class="timing">-->
+<!--															<span>06:00</span><span class="ms-1">PM</span>-->
+<!--														</a>-->
+<!--														<a class="timing">-->
+<!--															<span>07:00</span><span class="ms-1">PM</span>-->
+<!--														</a>-->
+<!--														<a class="timing">-->
+<!--															<span>08:00</span><span class="ms-1">PM</span>-->
+<!--														</a>-->
+<!--													</li>-->
+<!--													<li>-->
+<!--														<a class="timing">-->
+<!--															<span>09:00</span><span class="ms-1">PM</span>-->
+<!--														</a>-->
+<!--														<a class="timing selected">-->
+<!--															<span>10:00</span><span class="ms-1">PM</span>-->
+<!--														</a>-->
+<!--														<a class="timing">-->
+<!--															<span>11:00</span><span class="ms-1">PM</span>-->
+<!--														</a>-->
+<!--													</li>-->
+<!--													<li>-->
+<!--														<a class="timing">-->
+<!--															<span>9:00</span><span class="ms-1">AM</span>-->
+<!--														</a>-->
+<!--														<a class="timing">-->
+<!--															<span>10:00</span><span class="ms-1">AM</span>-->
+<!--														</a>-->
+<!--														<a class="timing">-->
+<!--															<span>11:00</span><span class="ms-1">AM</span>-->
+<!--														</a>-->
+<!--													</li>-->
+<!--													<li>-->
+<!--														<a class="timing">-->
+<!--															<span>9:00</span><span class="ms-1">AM</span>-->
+<!--														</a>-->
+<!--														<a class="timing">-->
+<!--															<span>10:00</span><span class="ms-1">AM</span>-->
+<!--														</a>-->
+<!--														<a class="timing">-->
+<!--															<span>11:00</span><span class="ms-1">AM</span>-->
+<!--														</a>-->
+<!--													</li>-->
+<!--												</ul>-->
+<!--											</div>-->
+<!--											&lt;!&ndash; /Time Slot &ndash;&gt;-->
+
+<!--										</div>-->
+<!--									</div>-->
+<!--								</div>-->
 								<!-- /Schedule Content -->
-								
+
+                <form>
+                  <div>
+                    <label>Name <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" name="name" [(ngModel)]="name">
+                  </div>
+                  <div>
+                    <label>Your Email Address <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" name="email"  [(ngModel)]="email">
+                  </div>
+                  <div>
+                    <label>Message <span class="text-info">(Optional)</span></label>
+                    <textarea rows="4" class="form-control" name="usercomment" [(ngModel)]="usercomment"></textarea>
+                  </div>
+                </form>
+
 							</div>
 							<!-- /Schedule Widget -->
-							
+
 							<!-- Submit Section -->
-							<div class="submit-section proceed-btn text-end">
-								<a [routerLink]="'/patients/checkout'" class="btn btn-primary submit-btn">Proceed to Pay</a>
-							</div>
+<!--							<div class="submit-section proceed-btn text-end">-->
+<!--								<a [routerLink]="'/patients/checkout'" class="btn btn-primary submit-btn">Proceed to Pay</a>-->
+<!--							</div>-->
+              <div class="submit-section proceed-btn text-end">
+                <button class="btn btn-primary submit-btn" type="submit" (click)="sendMessage()">Request available slots</button>
+              </div>
 							<!-- /Submit Section -->
-							
+
 						</div>
 					</div>
 				</div>
 
-			</div>		
+			</div>
 			<!-- /Page Content -->
-   

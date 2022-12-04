@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { CommonServiceService } from './../../common-service.service'
-import { FormsModule } from '@angular/forms';
 
 
 @Component({

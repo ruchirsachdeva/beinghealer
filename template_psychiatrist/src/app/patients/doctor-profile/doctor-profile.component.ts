@@ -11,11 +11,13 @@ import { ToastrService } from 'ngx-toastr';
 export class DoctorProfileComponent implements OnInit {
   id:any;
   doctorDetails:any;
+
   constructor(
     public commonService: CommonServiceService,
     private route: ActivatedRoute,
-    private toastr: ToastrService
-  ) {}
+    private toastr: ToastrService,
+  ) {
+  }
   images = [
     {
       path: 'assets/img/features/feature-01.jpg',
@@ -42,6 +44,7 @@ export class DoctorProfileComponent implements OnInit {
     }
     this.commonService.getDoctorDetails(this.id).subscribe((res) => {
       this.doctorDetails = res;
+      // alert(this.doctorDetails.work_experience["title"])
     });
   }
 
@@ -49,5 +52,15 @@ export class DoctorProfileComponent implements OnInit {
     this.commonService.createFav(this.doctorDetails).subscribe((res) => {
       this.toastr.success('', 'Added to favourite successfully!');
     });
+  }
+
+  toMap(jsonObject: any) {
+    alert(JSON.stringify(jsonObject))
+    let map = new Map<string, string>()
+    for (var value in jsonObject) {
+      map.set(value,jsonObject[value])
+    }
+    alert(map)
+    return map
   }
 }
