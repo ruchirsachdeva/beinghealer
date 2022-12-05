@@ -11,10 +11,8 @@ import { CommonServiceService } from './../../common-service.service'
 })
 export class SearchDoctorComponent implements OnInit {
   doctors: any = [];
-  specialityList: any = [];
-  type:any;
-  specialist:any = "";
-  speciality:any;
+  specialityList: any[] = [];
+  types: any[] = []
   selDate:any;
   constructor(public commonService: CommonServiceService, public router: Router) { }
   images = [
@@ -33,54 +31,40 @@ export class SearchDoctorComponent implements OnInit {
   ];
   ngOnInit(): void {
     this.getDoctors();
-    this.getspeciality();
+    // this.getspeciality();
   }
 
   getDoctors() {
     this.commonService.getDoctors().subscribe(res => {
       this.doctors = res;
+
+      this.specialityList = this.toCheckedLabels(res, r => r.specializations)
+      this.types = this.toCheckedLabels(res, r => r.type)
     })
   }
 
-  getspeciality() {
-    this.commonService.getSpeciality().subscribe(res => {
-      this.specialityList = res;
-    })
+  private toCheckedLabels(res: any[], callback: (r: any) => any) {
+    return [...new Set(res.flatMap(callback))].map(s => {
+      return {label: s, isChecked: true}
+    });
   }
 
-  checkType(event:any) {
-    if (event.target.checked) {
-      this.type = event.target.value;
-    } else {
-      this.type = "";
-    }
+  intersects(arr1: number[], arr2: number[]): boolean {
+
+    return arr1.find((val1) => {
+      for (let val2 of arr2) {
+        if (val1 === val2) {
+          return true;
+        }
+      }
+      return false;
+    }) !== undefined
+
   }
 
   search() {
-    if (this.type && this.speciality) {
-      this.doctors = this.doctors.filter((a:any) => a.type === this.type && a.speciality === this.speciality)
-    } else {
-      this.getDoctors();
-    }
-
-  }
-
-  checkSpeciality(event:any) {
-    if (event.target.checked) {
-      this.speciality = event.target.value;
-    } else {
-      this.speciality = "";
-    }
-
-    var filter = this.specialityList.filter((a:any) => a.speciality === event.target.value);
-    if (filter.length != 0) {
-      filter[0]['checked'] = true;
-    }
-    this.specialityList.forEach((index:any) => {
-      if (index.speciality != event.target.value) {
-        index['checked'] = false;
-      }
-    })
+    this.doctors = this.doctors.filter((a:any) => this.types.filter(t=>t.isChecked).map(t=>t.label).includes(a.type) &&
+      this.intersects(this.specialityList.filter(s=>s.isChecked).map(t=>t.label), a.specializations))
   }
 
   bookAppointment(id:any) {
