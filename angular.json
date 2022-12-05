@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "template": {
+    "beinghealer": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/template",
+            "outputPath": "dist/beinghealer",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -30,26 +30,26 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/ngx-toastr/toastr.css",
               "node_modules/select2/dist/css/select2.min.css",
-              "src/assets/plugins/daterangepicker/daterangepicker.css", 
+              "src/assets/plugins/daterangepicker/daterangepicker.css",
               "src/assets/plugins/bootstrap-tagsinput/css/bootstrap-tagsinput.css",
               "node_modules/datatables.net-bs4/css/dataTables.bootstrap4.css"
             ],
-            "scripts": [  
-              "node_modules/jquery/dist/jquery.min.js",  
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js", 
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
               "src/assets/plugins/bootstrap-tagsinput/js/bootstrap-tagsinput.js",
-              "src/assets/js/slick.js", 
+              "src/assets/js/slick.js",
               "node_modules/datatables.net/js/jquery.dataTables.js",
-              "node_modules/datatables.net-bs4/js/dataTables.bootstrap4.js",             
-              "node_modules/moment/min/moment.min.js",  
-              "src/assets/js/moment.min.js",  
-              "src/assets/plugins/daterangepicker/daterangepicker.js",            
+              "node_modules/datatables.net-bs4/js/dataTables.bootstrap4.js",
+              "node_modules/moment/min/moment.min.js",
+              "src/assets/js/moment.min.js",
+              "src/assets/plugins/daterangepicker/daterangepicker.js",
               "./src/assets/js/circle-progress.min.js",
-              "./src/assets/admin/plugins/slimscroll/jquery.slimscroll.min.js",                         
+              "./src/assets/admin/plugins/slimscroll/jquery.slimscroll.min.js",
               "./src/assets/js/script.js",
               "node_modules/select2/dist/js/select2.min.js",
               "node_modules/slick-carousel/slick/slick.min.js",
-              "node_modules/raphael/raphael.js" 
+              "node_modules/raphael/raphael.js"
             ]
           },
           "configurations": {
@@ -57,13 +57,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "1mb",
+                  "maximumError": "2mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "200kb",
+                  "maximumError": "400kb"
                 }
               ],
               "fileReplacements": [
