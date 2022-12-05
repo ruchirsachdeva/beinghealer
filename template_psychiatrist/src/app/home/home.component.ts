@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewEncapsulation, ViewChild } from "@angular/core";
-import { Router } from "@angular/router";
+import {Component, OnInit, ViewEncapsulation, ViewChild, AfterViewInit, AfterContentChecked} from "@angular/core";
+import {ActivatedRoute, NavigationEnd, Router} from "@angular/router";
 import { CommonServiceService } from "../common-service.service";
 import { FormControl } from "@angular/forms";
 import { Observable } from "rxjs";
@@ -23,7 +23,7 @@ export interface Doctors {
   styleUrls: ["./home.component.css"],
   // encapsulation : ViewEncapsulation.None
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit , AfterContentChecked{
   @ViewChild("slickModal1") slickModal1!: SlickCarouselComponent;
   @ViewChild("slickModal2") slickModal2!: SlickCarouselComponent;
   @ViewChild("slickModal3") slickModal3!: SlickCarouselComponent;
@@ -94,12 +94,28 @@ export class HomeComponent implements OnInit {
   name: string = "";
   email: string = "";
   usercomment: string = "";
+
+  fragment!: string | null;
+  scrolled = false; // To avoid multiple scrolls because ngAfterContentChecked
+
+  previousUrl!: string;
+  currentUrl!: string;
+
   constructor(
     public router: Router,
+    private activatedRoute: ActivatedRoute,
     public commonService: CommonServiceService,
     public mailService: MailService,
     private toastr: ToastrService
   ) {
+
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.previousUrl = this.currentUrl;
+        this.currentUrl = event.url;
+      };
+    });
+
     this.filteredEmployee = this.employeeCtrl.valueChanges.pipe(
       startWith(""),
       map((employee) =>
@@ -108,7 +124,41 @@ export class HomeComponent implements OnInit {
     );
   }
 
+  // This is to move to fragment section when called from another route like 'blog' etc.
+  ngAfterContentChecked(): void {
+    if(
+      // Make sure we call this method to scroll only when the activated route has a fragment
+      this.fragment !== null &&
+      // Make sure we do not call this method when previous url was already on the same route (i.e home)
+      //In that case, app-routing-module's anchorScrolling: 'enabled' will automatically do the scrolling,
+      // so we can avoid invoking this method, which has a limitation to slow does the scrolling smootheness coz it waits for ngAfterContentChecked
+      this.previousUrl === undefined &&
+      // Make sure we do not scroll the page after it is already scrolled, since ngAfterContentChecked keeps getting called after pagescroll etc.
+      !this.scrolled) {
+      console.log('hi' + this.fragment);
+      try {
+        const target = document.querySelector('#' + this.fragment);
+        // @ts-ignore
+        target.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"}); // Scroll to the component
+
+        // Wait for the browser to figure out where the component is after lazy loading is done, then Scroll.
+        // We need to do this, so that scrollIntoView is able to find the exact position where to scroll too, which will only be accurate after page elements/images etc all all loaded.
+        setTimeout(() => {
+          // @ts-ignore
+          target.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+          this.scrolled = true;
+        }, 1000); // Adjust wait time as needed
+      } catch (e) {
+      }
+    }
+  }
+
   ngOnInit() {
+    this.activatedRoute.fragment.subscribe(
+      (value) => {
+        this.fragment = value;
+      }
+    )
 
 // Slick Slider
 
