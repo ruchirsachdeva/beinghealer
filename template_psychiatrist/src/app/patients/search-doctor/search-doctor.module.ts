@@ -7,6 +7,7 @@ import { NgSelect2Module } from 'ng-select2';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CrystalLightboxModule } from '@crystalui/angular-lightbox';
 import { TooltipModule } from 'ng2-tooltip-directive';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [SearchDoctorComponent],
@@ -17,6 +18,7 @@ import { TooltipModule } from 'ng2-tooltip-directive';
     NgbModule,
     CrystalLightboxModule,
     TooltipModule,
+    FormsModule
   ],
 })
 export class SearchDoctorModule {}

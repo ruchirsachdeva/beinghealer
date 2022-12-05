@@ -284,7 +284,7 @@ export class DataService implements InMemoryDbService {
         id : 2,
         doctor_name : "Adarsh Sachdeva",
         specializations : ["Reiki", "Breathwork"],
-        services : ["Reiki Healing", "Crystal Healing", " Family Constellation","Breathwork"],
+        services : ["Reiki Healing", "Crystal Healing", "Breathwork"],
         work_experience : [{title: "Reiki Master", duration: "25 years"}],
         speciality_profile : 'assets/img/specialities/specialities-05.png',
         since : "Wed May 27 2002 09:41:48 GMT+0530 (India Standard Time)",
@@ -306,12 +306,12 @@ export class DataService implements InMemoryDbService {
       {
         id : 3,
         doctor_name : "Arun Chopra",
-        specializations : ["Reiki", "Breathwork"],
-        services : ["Reiki Healing", "Crystal Healing", "Breathwork"],
-        work_experience : [{title: "Reiki Master", duration: "25 years"}],
+        specializations : ["Hypnotherapy", "Reiki", "Midbrain activation", "Breathwork"],
+        services : ["Hypnotherapy", "Reiki Healing", "Midbrain activation", "Breathwork"],
+        work_experience : [{title: "Reiki Master", duration: "22 years"}, {title: "Clinical Hypnotherapist", duration: "10 years"}, {title: "Midbrain activation", duration: "10 years"}],
         speciality_profile : 'assets/img/specialities/specialities-05.png',
         since : "Wed May 27 2002 09:41:48 GMT+0530 (India Standard Time)",
-        Education : "Reiki Master, Crystal Healing, Breathwork",
+        Education : "Clinical Hypnotherapist, Reiki Master, Midbrain activation",
         Available : " Available on Fri, 22 Mar ",
         Earned : "₹3100.00",
         Price : "₹2000",
@@ -323,12 +323,13 @@ export class DataService implements InMemoryDbService {
         consulting_fees : "₹2000",
         booking_fees : "₹500",
         video_call : "₹1500",
-        description : "Arun runs various schools and specializes in child psychology, besides have decades of experience as a Reiki Master. He will analyse your aura, feelings, and bodily processes and show you the way to self-healing. His ability to heal others through reiki is extraordinary, and during energetic sessions he frequently receives visions and information being channelled. He will send powerful distance healing and clear all energy blocks in your body and chakras."
+        description : "Arun runs various schools and specializes in child psychology, besides have decades of experience as a Reiki Master, Clinical Hypnotherapist and a Mid brain activation expert. He will analyse your aura, feelings, and bodily processes and show you the way to self-healing. His ability to heal others through reiki is extraordinary, and during energetic sessions he frequently receives visions and information being channelled. He will send powerful distance healing and clear all energy blocks in your body and chakras." +
+          "Arun's area of expertise is stimulating the midbrain in children between the ages of 5 and 15. Through the process of \"blindfold activation,\" a child is taught to achieve the miraculous state of super sensory development that allows them to \"see\" even when their eyes are closed. A genius isn't necessarily someone with an IQ above 130; rather, it's someone who can achieve the alpha-theta state of mind, at which the brain can perform at its peak. If a child's brain is developing normally, he or she will have excellent performance across the board from their senses, including the ability to intuitively perform tasks. A child in the genius stage is able to read faster, memorise more information, and focus more intently."
       },
       {
         id : 4,
         doctor_name : "Neha Arora ",
-        specializations : ["Hypnotherapy", "Naturopathy", "Reiki"," Breathwork"],
+        specializations : ["Hypnotherapy", "Naturopathy", "Reiki","Breathwork"],
         services : ["Hypnotherapy", "Past Life Regression Therapy","Ancestral Healing", "Family Constellation","Inner Child", "Reiki Healing",
           "Crystal Healing", "Sound Therapy", "Theta healing","Accupressure", "Yoga"
         ],
@@ -341,7 +342,7 @@ export class DataService implements InMemoryDbService {
         Price : "₹2000",
         profile : "assets/img/doctors/doctor-thumb-04.jpg",
         status : "1",
-        type : "Male",
+        type : "Female",
         location : "Online & Chandigarh, India",
         availableTime : "10 am",
         consulting_fees : "₹2000",
@@ -364,7 +365,7 @@ export class DataService implements InMemoryDbService {
         Price : "₹2000",
         profile : "assets/img/doctors/doctor-thumb-05.jpg",
         status : "1",
-        type : "Male",
+        type : "Female",
         location : "Online & Chandigarh, India",
         availableTime : "10 am",
         consulting_fees : "₹2000",
@@ -833,7 +834,7 @@ export class DataService implements InMemoryDbService {
    {
      id : 1,
      title : "What is Hypnotherapy and how does it work?",
-     description : "Hypnosis is an effective and natural approach that allows for access to your subconscious mind by relaxing and bypassing the conscious (thinking, logical) mind. Hypnotherapy is the 'therapy' carried out during this altered state of awareness, which can be used to help you gain control over patterns, behaviors, fears, thoughts, feelings, and actions. It can be a guide to past experiences and clarify causes/reasons. It can help you gain a better understanding of yourself and your relationships with others and it can provide a glimpse into future life experiences, goals, and life purpose." +
+     description : "Hypnosis is an effective and natural approach that allows for access to your subconscious mind by relaxing and bypassing the conscious mind. Hypnotherapy is the 'therapy' carried out during this altered state of awareness, which can be used to help you gain control over patterns, behaviors, fears, thoughts, feelings, and actions. It can be a guide to past experiences and clarify causes/reasons. It can help you gain a better understanding of yourself and your relationships with others and it can provide a glimpse into future life experiences, goals, and life purpose." +
        "<br>Hypnosis itself is not a form of treatment. Instead, a therapy called hypnotherapy or hypno-psychotherapy is carried out while the patient is in hypnotic state. Hypnosis is a state of deep relaxation and focus combined with heightened awareness brought on by suggestion. It is a natural trance state, similar to daydreaming, where time moves very quickly and one experiences good feelings of profound body and mind relaxation." +
        "<br>The foundation of hypnotherapy is the idea that the mind and body are interdependent. The therapist's goal in guiding a person to hypnotic state, is to activate the body's hidden subconscious mechanisms for both mental and physical self-healing." +
        "<br>Anyone can be guided into a hypnotic state; the patient's gullibility or suggestibility is not a requirement. Practitioners of hypnotherapy assert that the relaxed and focused state it brings about is a natural result of the mind at work." +
@@ -1201,7 +1202,7 @@ export class DataService implements InMemoryDbService {
       {
         id: 1,
         title: "Hypno therapy",
-        description: "<p>Hypnosis is an effective and natural approach that allows for access to your subconscious mind by relaxing and bypassing the conscious (thinking, logical) mind. Hypnotherapy is the 'therapy' carried out during this altered state of awareness,\n" +
+        description: "<p>Hypnosis is an effective and natural approach that allows for access to your subconscious mind by relaxing and bypassing the conscious mind. Hypnotherapy is the 'therapy' carried out during this altered state of awareness,\n" +
           "which can be used to help you gain control over patterns, behaviors, fears, thoughts, feelings, and actions. It can be a guide to past experiences and clarify causes/reasons. It can help you gain a better understanding of yourself and your relationships with others and it can provide a glimpse into future life experiences, goals, and life purpose. </p>",
         image: "assets/img/service-img1.jpg",
         service: "Hypnotherapy"

@@ -94,7 +94,7 @@ export class CommonServiceService {
   }
 
   getDoctors() {
-    return this.http.get(this.SERVER_URL + 'doctors');
+    return this.http.get<any[]>(this.SERVER_URL + 'doctors');
   }
 
   getDoctorDetails(id:any) {
