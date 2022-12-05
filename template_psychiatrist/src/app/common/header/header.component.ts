@@ -29,11 +29,11 @@ export class HeaderComponent implements OnInit {
     this.commonService.message.subscribe((res) => {
       if (res === 'patientLogin') {
         this.auth = true;
-        
+
       }
       if (res === 'doctorLogin') {
         this.auth = true;
-        
+
       }
       if (res === 'logout') {
         this.auth = false;
@@ -44,12 +44,12 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
      // Sidebar
-	
+
 	if((window.innerWidth) <= 991){
     var Sidemenu = () => {
       this.$menuItem = $('.main-nav a');
     };
-    
+
     function init() {
       var $this = Sidemenu;
       $('.main-nav a').on('click', function(e) {
@@ -67,7 +67,7 @@ export class HeaderComponent implements OnInit {
         }
       });
     }
-  
+
     // Sidebar Initiate
     init();
     }
@@ -99,14 +99,14 @@ export class HeaderComponent implements OnInit {
           this.auth = true;
         } else {
           this.auth = false;
-         
+
         }
         if (this.base === 'doctor'){
           this.isPatient = false;
-        } 
+        }
         else if (this.base === 'patients'){
           this.isPatient = true;
-        } 
+        }
       }
     });
       this.router.events.subscribe((event: Event) => {
@@ -143,7 +143,7 @@ loadDynmicallyScript(js:any) {
   }
 
  addStyle(val:any) {
-    
+
   }
 
   logout() {
