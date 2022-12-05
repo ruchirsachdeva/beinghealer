@@ -1,25 +1,33 @@
 #https://www.linkedin.com/pulse/create-angular-app-using-deploy-aws-suite-andr%C3%A9s-casta%C3%B1o/
-version: 0.1
+version: 0.2
 environment_variables:
   plaintext:
     S3_BUCKET: "www.beinghealer.com"
     BUILD_ENV: "prod"
 phases:
   install:
+    runtime-versions:
+      nodejs: 12
     commands:
       - echo Installing source NPM dependencies...
+      - rm -rf node_modules
+#      - rm -f package-lock.json
+#
+#        # 👇️ clean npm cache
+      - npm cache clean --force
       - npm install
-      - npm install -g @angular/cli@1.0.4
+      - npm install -g @angular/cli@13.3.0
   build:
     commands:
       - echo Build started on `date`
-      - ng build --env=${BUILD_ENV}
+      - ng build --configuration=production
   post_build:
     commands:
-      - aws s3 cp dist s3://${S3_BUCKET} --recursive --region ap-south-1
+      - echo build process finished, we should upload to S3 now
+      - aws s3 cp dist/beinghealer s3://www.beinghealer.com --recursive --region ap-south-1
       - echo Build completed on `date`
 artifacts:
   files:
     - '**/*'
-  base-directory: 'dist*'
+  base-directory: 'dist/beinghealer'
   discard-paths: yes
