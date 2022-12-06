@@ -695,7 +695,7 @@ export class DataService implements InMemoryDbService {
      status : "active",
      img : "assets/img/blog/hypno-blog.jpg",
      doctor_name : "Anita Sachdeva",
-     doctor_pic : "assets/img/doctors/doctor-thumb-07.jpg"
+     doctor_pic : "assets/img/doctors/doctor-thumb-01.jpg"
    },
   {
     id : 2,
@@ -705,14 +705,14 @@ export class DataService implements InMemoryDbService {
       "<br><br>No matter how severe your anxiety is, know that there is support and assistance available. Rapid Transformational Therapy® (RTT®), a cutting-edge, outcome-driven hypnotherapy technique, can assist you in accessing your subconscious mind to determine the origin of your anxiety problem and where and when it was formed. Helping you understand what your subconscious mind was trying to defend you from by 'inventing' anxiety is the next step. After that, we assist you in modifying the false beliefs that continue to cause you to experience anxiety so that you can start living a life free of anxiety and its negative consequences. RTT® literally rewires your brain by introducing new, powerful, and positive beliefs to replace the old, out-of-date beliefs that have kept you imprisoned in a world of anxiety for far too long by going back in time to find the cause and the story of your anxiety." +
       "<br><br>Your hypnotherapy session will put you in a deep state of relaxation. Your subconscious mind will be guided to identify the root cause of your anxiety problem. You'll be able to pinpoint when it started and what triggered it. The first step to recovery is realising the source of your anxiety and its history. By literally rewiring and reframing your negative thought patterns into positive ones, RTT® hypnotherapy enables you to finally achieve your goal of permanently eradicating anxiety. The goal of RTT® is to help you identify the underlying causes of your anxiety, which is a liberating and healing experience. You will learn when, where, and why it began, which will give you the chance to finally let go of your anxiety." +
       "<br>,<br>",
-    createdBy : "Dr. Anita Sachdeva",
+    createdBy : "Anita Sachdeva",
     createdAt : "Wed May 27 2020 09:41:48 GMT+0530 (India Standard Time)",
     comments : 12,
     type : "Hypnotherapy",
     tags: ["Hypnotherapy", "Anxiety"],
     status : "active",
     img : "assets/img/blog/blog-01.jpg",
-    doctor_name : "Dr. Anita Sachdeva",
+    doctor_name : "Anita Sachdeva",
     doctor_pic : "assets/img/doctors/doctor-thumb-01.jpg"
 
   },
@@ -755,15 +755,15 @@ export class DataService implements InMemoryDbService {
       "<br><br>I want to address the last point. Solution Focused Hypnotherapy is an excellent tool for addressing the underlying causes of your feelings and issues as well as removing any subconscious barriers standing in your way. In actuality, hypnotherapy is among the best methods for controlling anger." +
       "<br><br>You can achieve a trance-like state that enables your subconscious to surface and discuss the source of your anger with your therapist using a combination of talking therapy and deep breathing exercises. The two of you can then collaborate to change your destructive thought patterns, your responses to anger triggers, and to create healthy coping mechanisms." +
       "<br><br>Solution Focused Hypnotherapy can support you in gaining control over your negative thoughts as well as in creating better coping mechanisms for the future. Together, we'll work to teach you how to respond to situations more benevolently. We'll also use guided imagery to create positive behavioural templates that will boost your self-esteem. If you're interested in learning more, please get in touch to schedule a free, private consultation to discuss your goals and determine whether Solution Focused Hypnotherapy might be able to assist you.",
-    createdBy : "Dr. Anita Sachdeva",
+    createdBy : "Anita Sachdeva",
     createdAt : "Wed May 27 2020 09:41:48 GMT+0530 (India Standard Time)",
     comments : 12,
     type : "Hypnotherapy",
     tags: ["Hypnotherapy", "Anger"],
     status : "active",
     img : "assets/img/blog/blog-02.jpg",
-    doctor_name : "Dr. Anita Sachdeva",
-    doctor_pic : "assets/img/doctors/doctor-thumb-02.jpg"
+    doctor_name : "Anita Sachdeva",
+    doctor_pic : "assets/img/doctors/doctor-thumb-01.jpg"
   },
   {
     id : 4,
@@ -779,14 +779,14 @@ export class DataService implements InMemoryDbService {
       "<br><br>In order to assist you in changing those negative thought patterns into more positive ones, we then consolidate sessions using hypnosis, which enables us to speak directly to your subconscious mind. I'll offer advice that will assist you in shifting your inner voice from one of criticism to one of support and encouragement while you are in that deeply relaxed state." +
       "<br><br>It's important to always keep in mind that hypnotherapy is not a magic wand; rather, it's a collaborative process that frequently calls for several sessions. It helps you rewire your thinking at the most fundamental level, making it a wonderful therapeutic tool that enables you to make the desired changes in a short amount of time." +
       "Although changing low self-esteem can be difficult, it is possible. I would be happy to assist you in increasing your confidence and self-worth. Contact us to schedule a free initial consultation so that we can learn more about your situation, offer guidance, and discuss what your individualised treatment plan might entail.",
-    createdBy : "Dr. Anita Sachdeva",
+    createdBy : "Arun Chopra",
     createdAt : "Wed May 27 2020 09:41:48 GMT+0530 (India Standard Time)",
     comments : 12,
     type : "Hypnotherapy",
     tags: ["Hypnotherapy", "Self-Esteem", "Low-Confidence"],
     status : "active",
     img : "assets/img/blog/blog-03.jpg",
-    doctor_name : "Dr. Anita Sachdeva",
+    doctor_name : "Arun Chopra",
     doctor_pic : "assets/img/doctors/doctor-thumb-03.jpg"
   },
   {
@@ -807,15 +807,15 @@ export class DataService implements InMemoryDbService {
       "  <li>Allow yourself time to get ready. Not necessarily by doing anything fancy, but at the very least by giving yourself enough time to unwind and mentally prepare without feeling rushed or under pressure. Likewise, instead of immediately moving on to the next thing after the session, try to give yourself 5 or 10 minutes to process and decompress.</li><br>" +
       "</ol>" +
       "If you've been thinking about hypnotherapy, now might be the ideal time to begin. Online hypnotherapy is incredibly efficient and practical, and online consultations are a great way to connect with therapists without having to schedule travel time. Please feel free to schedule an initial chat if you'd like to learn more about your options or to contact us with any questions or to request advice.<br>",
-    createdBy : "Dr. Anita Sachdeva",
+    createdBy : "Anita Sachdeva",
     createdAt : "Wed May 27 2020 09:41:48 GMT+0530 (India Standard Time)",
     comments : 12,
     type : "Hypnotherapy",
     tags: ["Hypnotherapy", "Online", "Distance"],
     status : "active",
     img : "assets/img/blog/blog-04.jpg",
-    doctor_name : "Dr. Anita Sachdeva",
-    doctor_pic : "assets/img/doctors/doctor-thumb-04.jpg"
+    doctor_name : "Anita Sachdeva",
+    doctor_pic : "assets/img/doctors/doctor-thumb-01.jpg"
   },
   {
     id : 6,
@@ -834,7 +834,7 @@ export class DataService implements InMemoryDbService {
     status : "active",
     img : "assets/img/blog/blog-05.jpg",
     doctor_name : "Adarsh Sachdeva",
-    doctor_pic : "assets/img/doctors/doctor-thumb-05.jpg"
+    doctor_pic : "assets/img/doctors/doctor-thumb-02.jpg"
   },
   {
     id : 7,
@@ -878,7 +878,7 @@ export class DataService implements InMemoryDbService {
     status : "active",
     img : "assets/img/blog/blog-06.jpg",
     doctor_name : "Adarsh Sachdeva",
-    doctor_pic : "assets/img/doctors/doctor-thumb-06.jpg"
+    doctor_pic : "assets/img/doctors/doctor-thumb-02.jpg"
   },
   {
     id : 8,
@@ -888,14 +888,14 @@ export class DataService implements InMemoryDbService {
       "<br>Distance Reiki can be sent to anyone, anywhere, at any time, but it must first be granted in some way. I usually invite the recipient on a video call or use the recipient's photo and a healing crystal when I'm giving reiki to someone who isn't present. However, other practitioners might argue that these items are superfluous because Reiki energy can be sent to anyone just by focusing thoughts and energy in their direction.<br>" +
       "<br>I'll admit that when I first began conducting Reiki circles and distance healing, I had some scepticism. Nevertheless, it got simpler for me to establish energetic connections with the people I was working with as I practised throughout my training. People have asked me if I was just working on a specific area during sessions, which I frequently conduct over the phone, or have said things like, 'I felt my toes tingling just now.' Indeed, that would be the location of my workplace. No matter how far away you are, Reiki can increase your feelings of ease, happiness, and relaxation.<br>" +
       "<br>We all have access to the vital energy, also known as chi, qi, or prana, that flows through all other living things. One of the many ways to connect with and channel this energy for the therapeutic benefit of others is through distance Reiki.<br>",
-    createdBy : "Adarsh Sachdeva",
+    createdBy : "Arun Chopra",
     createdAt : "Wed May 27 2020 09:41:48 GMT+0530 (India Standard Time)",
     comments : 12,
     type : "Reiki",tags: ["Reiki" , "Online", "Distance"],
     status : "active",
     img : "assets/img/blog/blog-07.jpg",
-    doctor_name : "Adarsh Sachdeva",
-    doctor_pic : "assets/img/doctors/doctor-thumb-07.jpg"
+    doctor_name : "Arun Chopra",
+    doctor_pic : "assets/img/doctors/doctor-thumb-03.jpg"
   },
   {
     id : 9,
@@ -905,14 +905,14 @@ export class DataService implements InMemoryDbService {
       "<br>The lessons we've learned, the perspectives we've adopted, and the dynamics of our relationships from past lifetimes are all unwittingly woven into our present lives. Remembering these events can help us dissipate the negative energy and emotions that have been holding us back. A typical past life regression therapy session consists of the therapist walking the client through the life's major events, the death experience, and a 'life review'.Here, from a more transcendental vantage point, one considers one's life's meaning, lessons, and choices." +
       "<br>Healing from past lives can have a positive effect on our present lives. Past life regression can help us see through the fog of this life. Past life regression allows us to heal and transform on the level of your higher consciousness, and it is typically far more rapid and effective than other forms of healing. Similarly, you can get in touch with your inner guidance and your identity's blueprint." +
       "<br>During a PLR session, you will be led away from the background noise and into a profoundly calm and serene condition. In this environment, it will be much simpler for you to access the memories that are stored in your subconscious mind. In this setting, it will be much easier for you to access the memories that are stored in your subconscious mind. This will make it easier for you to access and relive your birth, early childhood, and past lives. I can help you go back in time to the events that triggered the issues you're facing now, so you can finally resolve them. Healing occurs more rapidly when the patient has a thorough comprehension of the nature and origin of the problem. These moments of clarity can be life-changing and pave the way for rapid development here and now. It reveals parts of ourselves that were hidden in our unconscious, and when you do this, your whole view of life can change in a very deep way.",
-    createdBy : "Anita Sachdeva",
+    createdBy : "Arun Chopra",
     createdAt : "Wed May 27 2020 09:41:48 GMT+0530 (India Standard Time)",
     comments : 12,
     type : "Past Life Regression",tags: ["Past Life Regression" , "PLR", "Hypnotherapy"],
     status : "active",
     img : "assets/img/blog/blog-08.jpg",
-    doctor_name : "Anita Sachdeva",
-    doctor_pic : "assets/img/doctors/doctor-thumb-07.jpg"
+    doctor_name : "Arun Chopra",
+    doctor_pic : "assets/img/doctors/doctor-thumb-03.jpg"
   },
     {
       id : 10,
@@ -942,7 +942,7 @@ export class DataService implements InMemoryDbService {
       status : "active",
       img : "assets/img/blog/blog-08.jpg",
       doctor_name : "Anita Sachdeva",
-      doctor_pic : "assets/img/doctors/doctor-thumb-07.jpg"
+      doctor_pic : "assets/img/doctors/doctor-thumb-01.jpg"
     },
     {
       id : 11,
@@ -975,7 +975,7 @@ export class DataService implements InMemoryDbService {
       status : "active",
       img : "assets/img/blog/blog-08.jpg",
       doctor_name : "Anita Sachdeva",
-      doctor_pic : "assets/img/doctors/doctor-thumb-07.jpg"
+      doctor_pic : "assets/img/doctors/doctor-thumb-01.jpg"
     },
     {
       id : 12,
@@ -988,14 +988,14 @@ export class DataService implements InMemoryDbService {
         "<br><br>At this point, sometimes the client's spirit guides, angels, or ancestors show up. You might be able to see how your past life has affected the growth of your soul and get other information that is important to your life now." +
         "<br><br>The session of past life regression therapy will end on its own, and we will go back to the present. We will also help you figure out how to use what you've learned and the energy of transformation in your everyday life to solve problems." +
         "<br>",
-      createdBy : "Anita Sachdeva",
+      createdBy : "Arun Chopra",
       createdAt : "Wed May 27 2020 09:41:48 GMT+0530 (India Standard Time)",
       comments : 12,
       type : "Past Life Regression",tags: ["Past Life Regression" , "PLR", "Hypnotherapy"],
       status : "active",
       img : "assets/img/blog/blog-08.jpg",
-      doctor_name : "Anita Sachdeva",
-      doctor_pic : "assets/img/doctors/doctor-thumb-07.jpg"
+      doctor_name : "Arun Chopra",
+      doctor_pic : "assets/img/doctors/doctor-thumb-03.jpg"
     },
     {
       id : 13,
@@ -1006,14 +1006,14 @@ export class DataService implements InMemoryDbService {
         "<br><br>Bert Hellinger, a German psychologist, is the one who came up with the idea of family constellations. In the 1950s, when he was a missionary, Hellinger went to South Africa. He became interested in the Zulu way of life and a ceremony they used to communicate with each other. In Zulu culture, ancestors are holy, and healing the wounds of ancestors is important for strong family ties. He saw people in his family talk to each other honestly, without being passive-aggressive or getting angry. He wasn't used to seeing things like this in his own family back home." +
         "<br><br>This was not the final version of the family constellations method, but it was where the idea came from. Hellinger went back to Germany, where he spent the rest of his life studying how our family stories shape who we are. Most people who believe in family constellations are religious: It's more than just therapy to them. It's a way of life. It's seeing people from a different point of view and being okay with what you see (for example: learning to see your mother as a human being)." +
         "<br><br>In this kind of therapy, we look at each person as a part of a bigger system, like a family, rather than as a separate person. The way he acts, feels, and thinks as an individual must be understood in the context of this larger group. The person getting therapy chooses other people in the group to act as his or her real family members. The family constellation is a group with these people in it. The people who stand in for the person getting therapy hear about their family history or the problem that worries them. Then, the people playing the family members are asked to talk about how they feel or what they think about the relationship between the person getting therapy and the family members they are playing. This process often makes people feel like they understand and care about each other more.",
-      createdBy : "Anita Sachdeva",
+      createdBy : "Neha Arora",
       createdAt : "Wed May 27 2020 09:41:48 GMT+0530 (India Standard Time)",
       comments : 12,
       type : "Family Constellation",tags: ["Family Constellation", "Hypnotherapy"],
       status : "active",
       img : "assets/img/blog/blog-09.jpg",
       doctor_name : "Anita Sachdeva",
-      doctor_pic : "assets/img/doctors/doctor-thumb-07.jpg"
+      doctor_pic : "assets/img/doctors/doctor-thumb-04.jpg"
     },
     {
       id : 14,
@@ -1035,14 +1035,14 @@ export class DataService implements InMemoryDbService {
         "  <li>Family patterns or traumas from the past.</li><br>" +
         "</ul>" +
         "Family constellation therapy can also be used for more specific physical, mental, social, or spiritual problems, such as depression, anxiety, addictions, bad habits, failure at work, negative relationship patterns, family dysfunction, trauma, grief, obsessive thoughts, physical illnesses, financial problems, phobias, excessive guilt, etc.",
-      createdBy : "Anita Sachdeva",
+      createdBy : "Neha Arora",
       createdAt : "Wed May 27 2020 09:41:48 GMT+0530 (India Standard Time)",
       comments : 12,
       type : "Family Constellation",tags: ["Family Constellation", "Hypnotherapy"],
       status : "active",
       img : "assets/img/blog/blog-09.jpg",
       doctor_name : "Anita Sachdeva",
-      doctor_pic : "assets/img/doctors/doctor-thumb-07.jpg"
+      doctor_pic : "assets/img/doctors/doctor-thumb-04.jpg"
     }
 ]
 
