@@ -940,7 +940,7 @@ export class DataService implements InMemoryDbService {
       comments : 12,
       type : "Past Life Regression",tags: ["Past Life Regression" , "PLR", "Hypnotherapy"],
       status : "active",
-      img : "assets/img/blog/blog-08.jpg",
+      img : "assets/img/blog/innerchild-blog.jpg",
       doctor_name : "Anita Sachdeva",
       doctor_pic : "assets/img/doctors/doctor-thumb-01.jpg"
     },
@@ -1064,24 +1064,24 @@ export class DataService implements InMemoryDbService {
       },
       {
         id: 3,
-        title: "Ancestral Healing",
+        title: "Inner Child",
         description: "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
         image: "assets/img/service-img3.jpg",
-        service: "Ancestral Healing"
+        service: "Inner Child"
       },
       {
         id: 4,
-        title: "Family Constellation",
+        title: "Ancestral Healing",
         description: "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
         image: "assets/img/service-img4.jpg",
-        service: "Family Constellation"
+        service: "Ancestral Healing"
       },
       {
         id: 5,
-        title: "Inner Child",
+        title: "Family Constellation",
         description: "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
-        image: "assets/img/service-img4.jpg",
-        service: "Inner Child"
+        image: "assets/img/service-img5.jpg",
+        service: "Family Constellation"
       },
       {
         id: 6,
