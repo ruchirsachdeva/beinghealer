@@ -308,10 +308,10 @@ export class DataService implements InMemoryDbService {
         doctor_name : "Arun Chopra",
         specializations : ["Hypnotherapy", "Reiki", "Midbrain activation", "Breathwork"],
         services : ["Hypnotherapy", "Reiki Healing", "Midbrain activation", "Breathwork"],
-        work_experience : [{title: "Reiki Master", duration: "22 years"}, {title: "Clinical Hypnotherapist", duration: "10 years"}, {title: "Midbrain activation", duration: "10 years"}],
+        work_experience : [{title: "Reiki Grand Master", duration: "22 years"}, {title: "Clinical Hypnotherapist", duration: "10 years"}, {title: "Midbrain activation", duration: "10 years"}],
         speciality_profile : 'assets/img/specialities/specialities-05.png',
         since : "Wed May 27 2002 09:41:48 GMT+0530 (India Standard Time)",
-        Education : "Clinical Hypnotherapist, Reiki Master, Midbrain activation",
+        Education : "Clinical Hypnotherapist, Reiki Grand Master, Midbrain activation",
         Available : " Available on Fri, 22 Mar ",
         Earned : "₹3100.00",
         Price : "₹2000",
@@ -350,195 +350,43 @@ export class DataService implements InMemoryDbService {
         video_call : "₹1500",
         description : "Every week, Neha leads a workshop on singing bowl meditation for people in the public, private, and government sectors. She uses aocustic and sound therapy to help children with autism, tel cerebral palsy, and other developmental delays improve their behaviour and communication. She's making progress toward recovering from her drug habit. Through the use of sound therapies, she has helped many students and adults with high blood pressure bring it under control and improve their overall health. She has helped her students improve their concentration and focus through the use of singing bowl meditation and other spirtual and ancient Indian knowledge systems. She specialises in \"Inner Child Work,\" the practise of addressing underlying emotional, mental, and behavioural problems by examining how they originated in early life and how they are influenced by cultural, familial, and socioeconomic factors. Resolving our issues will require us to focus on issues we faced as children and to bring that memory into the light. My clients who have been able to overcome their difficulties are very grateful to her. They had life under control, having identified the fundamental, pervasive issues that had been at the heart of their problems and had kept them mired in a rut."
       },
-      {
-        id : 5,
-        doctor_name : "Dr. Pravin Kwatra",
-        specializations : ["Ayurveda", "Naturopathy", "Reiki", "Breathwork"],
-        services : ["Ayurveda", "Reiki Healing", "Crystal Healing", "Naturopathy", "Yoga", "Breathwork", "Accupressure", "Sujok"
-        ],
-        work_experience : [{title: "Clinical Hypnotherapist", duration: "10 years"}, {title: "Naturopathy", duration: "3 years"}],
-        speciality_profile : 'assets/img/specialities/specialities-05.png',
-        since : "Wed May 27 2002 09:41:48 GMT+0530 (India Standard Time)",
-        Education : "G.A.M.S(Ayurveda), A.D.N.Y, Reiki Master",
-        Available : " Available on Fri, 22 Mar ",
-        Earned : "₹3100.00",
-        Price : "₹2000",
-        profile : "assets/img/doctors/doctor-thumb-05.jpg",
-        status : "1",
-        type : "Female",
-        location : "Online & Chandigarh, India",
-        availableTime : "10 am",
-        consulting_fees : "₹2000",
-        booking_fees : "₹500",
-        video_call : "₹1500",
-        description : "I am the founder of SuNayam (Spiritual Understanding, Naturopathy, Ayurveda, Yoga, Alternate therapies and Meditation) Holistic Healing Center (#1533, Sector-42 B, Chandigarh) in which we provide Ayurveda, Naturopathy(Mud Therapy, Hydrotherapy, Cromotherapy and Massage) Panchkarma, Reiki Spiritual Healing, Meditation, Accupressure, Sujok and I have organized more than 14 different camps of SuNAYAM.\n" +
-          "\n" +
-          "I am also having the Classes of Reiki Spiritual & Holistic Healings. More than 300 students had already trained.\n" +
-          "\n" +
-          "On 2nd Saturday of every month we organize SuNAYAM meetings for good health and discussions about Healthy & Wealthy life.\n" +
-          "\n" +
-          "People can find me on YouTube for Hydrotherapy, Why we get ill and for Pregnancy also.\n" +
-          "\n" +
-          "Achievements: (i) Award of Honor on Mother’s Day\n" +
-          "\n" +
-          "(ii) Award for Ambassador Of Peace\n" +
-          "\n" +
-          "(iii) Samarpan Navjeevan Award.\n" +
-          "\n" +
-          "I am the author of Prakritik Chikitsa (Introductory book of Naturopathy)"
-      }
       // {
-        //     id : 3,
-        //     doctor_name : "Dr. John Gibbs",
-        //     speciality : "Dental",
-        //     speciality_profile : 'assets/img/specialities/specialities-05.png',
-        //     since : "Wed May 27 2020 09:41:48 GMT+0530 (India Standard Time)",
-        //     Earned : "3300.00",
-        //     Education : "MBBS, MD - General Medicine, DNB - Cardiology",
-        //     Available : " Available on Fri, 22 Mar ",
-        //     Price : "$210",
-        //     status : "1",
-        //     profile : "assets/img/doctors/doctor-thumb-09.jpg",
-        //     type : "Male",
-        //     location : "Georgia, USA",
-        //     availableTime : "3 pm",
-        //     consulting_fees : "$150",
-        //     booking_fees : "$10",
-        //     video_call : "$50"
-        // },
-        // {
-        //     id : 4,
-        //     doctor_name : "Dr. Katharine Berthold",
-        //     speciality : "Orthopaedics",
-        //     speciality_profile : "assets/img/specialities/specialities-03.png",
-        //     since : "Wed May 27 2020 09:41:48 GMT+0530 (India Standard Time)",
-        //     Earned : "3500.00",
-        //     Education : "MBBS, MD - General Medicine, DNB - Cardiology",
-        //     Available : " Available on Fri, 22 Mar ",
-        //     Price : "$310",
-        //     status : "1",
-        //     profile : "assets/img/doctors/doctor-thumb-06.jpg",
-        //     type : "Male",
-        //     location : "Newyork, USA",
-        //     availableTime : "12 am",
-        //     consulting_fees : "$250",
-        //     booking_fees : "$10",
-        //     video_call : "$50"
-        // },
-        // {
-        //     id:5,
-        //     doctor_name : "Dr. Linda Tobin",
-        //     speciality : "Neurology",
-        //     speciality_profile : "assets/img/specialities/specialities-02.png",
-        //     since : "Wed May 27 2020 09:41:48 GMT+0530 (India Standard Time)",
-        //     Earned : "3700.00",
-        //     Education : "MBBS, MD - General Medicine, DNB - Cardiology",
-        //     Available : " Available on Fri, 22 Mar ",
-        //     Price : "$260",
-        //     status : "1",
-        //     profile : "assets/img/doctors/doctor-thumb-07.jpg",
-        //     type : "Male",
-        //     location : "Florida, USA",
-        //     availableTime : "11 am",
-        //     consulting_fees : "$200",
-        //     booking_fees : "$10",
-        //     video_call : "$50"
-        // },
-        // {
-        //     id:6,
-        //     doctor_name : "Dr. Marvin Campbell",
-        //     speciality : "Orthopaedics",
-        //     speciality_profile : "assets/img/specialities/specialities-03.png",
-        //     since : "Wed May 27 2020 09:41:48 GMT+0530 (India Standard Time)",
-        //     Earned : "3700.00",
-        //     Education : "MBBS, MD - General Medicine, DNB - Cardiology",
-        //     Available : " Available on Fri, 22 Mar ",
-        //     Price : "$260",
-        //     status : "1",
-        //     profile : "assets/img/doctors/doctor-thumb-05.jpg",
-        //     type : "Male",
-        //     location : "Florida, USA",
-        //     availableTime : "11 am",
-        //     consulting_fees : "$200",
-        //     booking_fees : "$10",
-        //     video_call : "$50"
-        // },
-        // {
-        //     id:7,
-        //     doctor_name : "Dr. Olga Barlow",
-        //     speciality : "Dental",
-        //     speciality_profile : 'assets/img/specialities/specialities-05.png',
-        //     since : "Wed May 27 2020 09:41:48 GMT+0530 (India Standard Time)",
-        //     Earned : "3700.00",
-        //     Education : "MBBS, MD - General Medicine, DNB - Cardiology",
-        //     Available : " Available on Fri, 22 Mar ",
-        //     Price : "$260",
-        //     status : "1",
-        //     profile : "assets/img/doctors/doctor-thumb-10.jpg",
-        //     type : "Male",
-        //     location : "Florida, USA",
-        //     availableTime : "11 am",
-        //     consulting_fees : "$200",
-        //     booking_fees : "$10",
-        //     video_call : "$50"
-        // },
-        //  {
-        //     id:8,
-        //     doctor_name : "Dr. Paul Richard",
-        //     speciality : "Neurology",
-        //     speciality_profile : "assets/img/specialities/specialities-02.png",
-        //     since : "Wed May 27 2020 09:41:48 GMT+0530 (India Standard Time)",
-        //     Earned : "3700.00",
-        //     Education : "MBBS, MD - General Medicine, DNB - Cardiology",
-        //     Available : " Available on Fri, 22 Mar ",
-        //     Price : "$260",
-        //     status : "1",
-        //     profile : "assets/img/doctors/doctor-thumb-08.jpg",
-        //     type : "Male",
-        //     location : "Florida, USA",
-        //     availableTime : "11 am",
-        //     consulting_fees : "$200",
-        //     booking_fees : "$10",
-        //     video_call : "$50"
-        // },
-        // {
-        //     id:9,
-        //     doctor_name : "Dr. Ruby Perrin",
-        //     speciality : "Dental",
-        //     speciality_profile : 'assets/img/specialities/specialities-05.png',
-        //     since : "Wed May 27 2020 09:41:48 GMT+0530 (India Standard Time)",
-        //     Earned : "3700.00",
-        //     Education : "MBBS, MD - General Medicine, DNB - Cardiology",
-        //     Available : " Available on Fri, 22 Mar ",
-        //     Price : "$260",
-        //     status : "1",
-        //     profile : "assets/img/doctors/doctor-thumb-01.jpg",
-        //     type : "Male",
-        //     location : "Florida, USA",
-        //     availableTime : "11 am",
-        //     consulting_fees : "$200",
-        //     booking_fees : "$10",
-        //     video_call : "$50"
-        // },
-        // {
-        //     id:9,
-        //     doctor_name : "Dr. Sofia Brient",
-        //     speciality : " Urology",
-        //     speciality_profile : "assets/img/specialities/specialities-01.png",
-        //     since : "Wed May 27 2020 09:41:48 GMT+0530 (India Standard Time)",
-        //     Earned : "3700.00",
-        //     Education : "MBBS, MD - General Medicine, DNB - Cardiology",
-        //     Available : " Available on Fri, 22 Mar ",
-        //     Price : "$260",
-        //     status : "1",
-        //     profile : "assets/img/doctors/doctor-thumb-04.jpg",
-        //     type : "Male",
-        //     location : "Florida, USA",
-        //     availableTime : "11 am",
-        //     consulting_fees : "$200",
-        //     booking_fees : "$10",
-        //     video_call : "$50"
-        // }
+      //   id : 5,
+      //   doctor_name : "Dr. Pravin Kwatra",
+      //   specializations : ["Ayurveda", "Naturopathy", "Reiki", "Breathwork"],
+      //   services : ["Ayurveda", "Reiki Healing", "Crystal Healing", "Naturopathy", "Yoga", "Breathwork", "Accupressure", "Sujok"
+      //   ],
+      //   work_experience : [{title: "Clinical Hypnotherapist", duration: "10 years"}, {title: "Naturopathy", duration: "3 years"}],
+      //   speciality_profile : 'assets/img/specialities/specialities-05.png',
+      //   since : "Wed May 27 2002 09:41:48 GMT+0530 (India Standard Time)",
+      //   Education : "G.A.M.S(Ayurveda), A.D.N.Y, Reiki Master",
+      //   Available : " Available on Fri, 22 Mar ",
+      //   Earned : "₹3100.00",
+      //   Price : "₹2000",
+      //   profile : "assets/img/doctors/doctor-thumb-05.jpg",
+      //   status : "1",
+      //   type : "Female",
+      //   location : "Online & Chandigarh, India",
+      //   availableTime : "10 am",
+      //   consulting_fees : "₹2000",
+      //   booking_fees : "₹500",
+      //   video_call : "₹1500",
+      //   description : "I am the founder of SuNayam (Spiritual Understanding, Naturopathy, Ayurveda, Yoga, Alternate therapies and Meditation) Holistic Healing Center (#1533, Sector-42 B, Chandigarh) in which we provide Ayurveda, Naturopathy(Mud Therapy, Hydrotherapy, Cromotherapy and Massage) Panchkarma, Reiki Spiritual Healing, Meditation, Accupressure, Sujok and I have organized more than 14 different camps of SuNAYAM.\n" +
+      //     "\n" +
+      //     "I am also having the Classes of Reiki Spiritual & Holistic Healings. More than 300 students had already trained.\n" +
+      //     "\n" +
+      //     "On 2nd Saturday of every month we organize SuNAYAM meetings for good health and discussions about Healthy & Wealthy life.\n" +
+      //     "\n" +
+      //     "People can find me on YouTube for Hydrotherapy, Why we get ill and for Pregnancy also.\n" +
+      //     "\n" +
+      //     "Achievements: (i) Award of Honor on Mother’s Day\n" +
+      //     "\n" +
+      //     "(ii) Award for Ambassador Of Peace\n" +
+      //     "\n" +
+      //     "(iii) Samarpan Navjeevan Award.\n" +
+      //     "\n" +
+      //     "I am the author of Prakritik Chikitsa (Introductory book of Naturopathy)"
+      // }
     ]
 
     let patients = [
