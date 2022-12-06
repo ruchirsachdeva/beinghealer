@@ -733,6 +733,7 @@ button.bg-danger:hover {
 .show > .btn-outline-primary.dropdown-toggle {
 	background-color:#C18C5D;
 	border-color:#C18C5D;
+  color: #fff;
 }
 .btn-outline-primary:not(:disabled):not(.disabled):active:focus,
 .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
