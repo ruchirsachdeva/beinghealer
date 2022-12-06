@@ -2,16 +2,58 @@
 <div class="breadcrumb-bar">
 	<div class="container-fluid">
 		<div class="row align-items-center">
-			<div class="col-md-8 col-12">
-				<nav aria-label="breadcrumb" class="page-breadcrumb">
-					<ol class="breadcrumb">
-						<li class="breadcrumb-item"><a [routerLink]="''">Home</a></li>
-						<li class="breadcrumb-item active" aria-current="page">Search</li>
-					</ol>
-				</nav>
+			<div class="col-md-6 col-6">
+<!--				<nav aria-label="breadcrumb" class="page-breadcrumb">-->
+          <h2 class="breadcrumb-title">Your certified healers</h2>
+<!--					<ol class="breadcrumb">-->
+<!--						<li class="breadcrumb-item"><a [routerLink]="''">Home</a></li>-->
+<!--						<li class="breadcrumb-item active" aria-current="page">Search</li>-->
+<!--					</ol>-->
+<!--				</nav>-->
 <!--				<h2 class="breadcrumb-title">2245 matches found for : Pediatric In USA</h2>-->
-        <h2 class="breadcrumb-title">Your certified healers</h2>
+<!--        <h2 class="breadcrumb-title">Your certified healers</h2>-->
       </div>
+        <div class="col-md-6 col-6 text-end">
+          <!-- Search Filter -->
+          <div ngbDropdown class="d-inline-block" #myDrop="ngbDropdown">
+<!--            <div class="card-header" data-bs-toggle="collapse" data-bs-target="#search1" role="button">-->
+<!--              <h4 class="card-title mb-0">Search Filter</h4>-->
+<!--            </div>-->
+            <button type="button" class="btn btn-outline-primary btn-filter" id="dropdownBasic1" ngbDropdownToggle>
+              Filter Healer
+            </button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+<!--              <div class="filter-widget">-->
+<!--                <div class="cal-icon">-->
+<!--                  <input type="text" class="form-control" name="dp" (click)="d.toggle()" ngbDatepicker #d="ngbDatepicker" placeholder="Select Date">-->
+<!--                </div>-->
+<!--              </div>-->
+              <div class="ngbDropdownItem">
+                <h4>Gender</h4>
+                <div *ngFor="let type of types">
+                  <label class="custom_check">
+                    <input type="checkbox" name="gender_type" [(ngModel)]="type.isChecked">
+                    <span class="checkmark"></span> {{type.label}}
+                  </label>
+                </div>
+              </div>
+              <div class="ngbDropdownItem">
+                <h4>Select Specialist</h4>
+                <div *ngFor="let speciality of specialityList">
+                  <label class="custom_check">
+                    <input type="checkbox" name="select_specialist" [(ngModel)]="speciality.isChecked">
+                    <span class="checkmark"></span> {{speciality.label}}
+                  </label>
+                </div>
+              </div>
+              <div class="ngbDropdownItem btn-search">
+                <button type="submit" class="btn w-100" (click) = "$event.stopPropagation(); myDrop.close(); search()">Search</button>
+              </div>
+            </div>
+          </div>
+          <!-- /Search Filter -->
+
+        </div>
 <!--			<div class="col-md-4 col-12 d-md-block d-none">-->
 <!--				<div class="sort-by">-->
 
@@ -37,47 +79,11 @@
 	<div class="container-fluid">
 
 		<div class="row">
-			<div class="col-md-12 col-lg-4 col-xl-3 theiaStickySidebar">
+<!--			<div class="col-md-12 col-lg-4 col-xl-3 theiaStickySidebar">-->
 
-				<!-- Search Filter -->
-				<div class="card search-filter">
-					<div class="card-header">
-						<h4 class="card-title mb-0">Search Filter</h4>
-					</div>
-					<div class="card-body">
-<!--					<div class="filter-widget">-->
-<!--					<div class="cal-icon">-->
-<!--							<input type="text" class="form-control" name="dp" (click)="d.toggle()" ngbDatepicker #d="ngbDatepicker" placeholder="Select Date">-->
-<!--						</div>-->
-<!--					</div>-->
-					<div class="filter-widget">
-						<h4>Gender</h4>
-            <div *ngFor="let type of types">
-              <label class="custom_check">
-                <input type="checkbox" name="gender_type" [(ngModel)]="type.isChecked">
-                <span class="checkmark"></span> {{type.label}}
-              </label>
-            </div>
-					</div>
-					<div class="filter-widget">
-						<h4>Select Specialist</h4>
-						<div *ngFor="let speciality of specialityList">
-							<label class="custom_check">
-								<input type="checkbox" name="select_specialist" [(ngModel)]="speciality.isChecked">
-								<span class="checkmark"></span> {{speciality.label}}
-							</label>
-						</div>
-					</div>
-						<div class="btn-search">
-							<button type="button" class="btn w-100" (click) = search()>Search</button>
-						</div>
-					</div>
-				</div>
-				<!-- /Search Filter -->
+<!--			</div>-->
 
-			</div>
-
-			<div class="col-md-12 col-lg-8 col-xl-9">
+			<div class="col-md-12 col-lg-12 col-xl-12">
 
 				<!-- Doctor Widget -->
 				<div class="card" *ngFor="let doctor of doctors">

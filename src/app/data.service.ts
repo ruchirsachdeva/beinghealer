@@ -311,7 +311,7 @@ export class DataService implements InMemoryDbService {
         work_experience : [{title: "Reiki Grand Master", duration: "22 years"}, {title: "Clinical Hypnotherapist", duration: "10 years"}, {title: "Midbrain activation", duration: "10 years"}],
         speciality_profile : 'assets/img/specialities/specialities-05.png',
         since : "Wed May 27 2002 09:41:48 GMT+0530 (India Standard Time)",
-        Education : "Clinical Hypnotherapist, Reiki Grand Master, Midbrain activation",
+        Education : "Clinical Hypnotherapist, Reiki Grand Master",
         Available : " Available on Fri, 22 Mar ",
         Earned : "₹3100.00",
         Price : "₹2000",
