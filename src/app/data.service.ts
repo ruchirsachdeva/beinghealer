@@ -1086,10 +1086,10 @@ export class DataService implements InMemoryDbService {
       },
       {
         id: 3,
-        title: "Inner Child",
+        title: "Inner Child Regression",
         description: "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
         image: "assets/img/service-img3.jpg",
-        service: "Inner Child"
+        service: "Inner Child Regression"
       },
       {
         id: 4,
@@ -1118,10 +1118,10 @@ export class DataService implements InMemoryDbService {
       },
       {
         id: 7,
-        title: "Crystal Healing",
+        title: "Midbrain Activation",
         description: "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
         image: "assets/img/service-img4.jpg",
-        service: "Crystal Healing"
+        service: "Midbrain Activation"
       },
       {
         id: 8,
@@ -1132,10 +1132,52 @@ export class DataService implements InMemoryDbService {
       },
       {
         id: 9,
-        title: "Breath Work",
-        description: "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
-        image: "assets/img/service-img4.jpg",
-        service: "Breathwork"
+        title: "Other Therapies",
+        nestedServices: [
+          {
+            id: 10,
+            title: "Magneto Therapy",
+            description: "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
+            image: "assets/img/service-img5.jpg",
+            service: "Magneto therapy"
+          },
+          {
+            id: 11,
+            title: "Breath work",
+            description: "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
+            image: "assets/img/service-img6.jpg",
+            service: "Breath work"
+          },
+          {
+            id: 12,
+            title: "Sujok Therapy",
+            description: "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
+            image: "assets/img/service-img7.jpg",
+            service: "Sujok Therapy"
+          },
+          {
+            id: 13,
+            title: "Crystal Healing",
+            description: "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
+            image: "assets/img/service-img8.jpg",
+            service: "Crystal Healing"
+          },
+          {
+            id: 14,
+            title: "Acupressure",
+            description: "<p>PLR is a safe, intuitive, and healing way to gain a better understanding of self in this lifetime as it relates to previous life experiences. PLR is based on the idea of reincarnation. In essence, we are all pure and magical beings who come to the earth plane in order to learn lessons, gain experience, connect with our soul families and attain our true purpose, as well as to experience karmic lessons in order to grow and evolve. PLR is explored through hypnotic trance induction and you are guided through the experience in order to process and integrate.</p>",
+            image: "assets/img/service-img9.jpg",
+            service: "Acupressure"
+          },
+          {
+            id: 15,
+            title: "Color Therapy",
+            description: "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
+            image: "assets/img/service-img10.jpg",
+            service: "Color Therapy"
+          }
+          ],
+        service: "Other Therapies"
       }
       ]
 

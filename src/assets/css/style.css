@@ -1244,8 +1244,11 @@ button.bg-danger:hover {
 	border-color: #C18C5D;
 	color: #fff;
 }
-.tab-content {
-	padding-top: 20px;
+.tab-content:not(.inner-tab) {
+	padding-top: 15px;
+}
+.inner-tab {
+  padding-top: 10px;
 }
 .nav-tabs .nav-link {
 	border-radius: 0;
@@ -1259,11 +1262,23 @@ button.bg-danger:hover {
 	border-bottom-color: #ddd;
 }
 
-.nav-tabs.nav-justified.nav-tabs-solid > li > :not(a.active):not(a:hover) {
+.nav-tabs.nav-justified.nav-tabs-solid:not(.nav-inner-tabs) > li > :not(a.active):not(a:hover) {
 	border-color: transparent;
   background-image: -webkit-radial-gradient(circle, white, #A0BCE4);
   height: 100%;
 }
+
+.nav-tabs.nav-justified.nav-tabs-solid.nav-inner-tabs > li > :not(a.active):not(a:hover) {
+  border-color: transparent;
+  background-image: -webkit-radial-gradient(circle, white, #656077);
+  height: 100%;
+}
+
+/*.nav-inner-tabs.nav-justified.nav-inner-tabs-solid > li > :not(a.active):not(a:hover) {*/
+/*  border-color: transparent;*/
+/*  background-image: -webkit-radial-gradient(circle, white, #A0BCE4);*/
+/*  height: 100%;*/
+/*}*/
 
 .nav-tabs.nav-tabs-solid > li > a.active,
 .nav-tabs.nav-tabs-solid > li > a.active:hover,
@@ -2494,8 +2509,8 @@ html.menu-opened body {
 .service-wrapper .nav-tabs.nav-tabs-solid > li > a {
   color: #080c14;
 }
-.service-wrapper .tab-content {
-  padding: 60px 0 20px;
+.service-wrapper .tab-content:not(.inner-tab) {
+  /*padding: 60px 0 20px;*/
   border-right: 6px solid #C18C5D;
   border-left: 6px solid #C18C5D;
   border-top: 6px solid #C18C5D;
@@ -7295,9 +7310,9 @@ html.menu-opened body {
   .service-section {
     padding: 40px 0;
   }
-  .service-wrapper .tab-content {
-    padding: 40px 0 0;
-  }
+  /*.service-wrapper .tab-content {*/
+  /*  padding: 40px 0 0;*/
+  /*}*/
   .btn-red, .btn-gradient {
     font-size: 16px;
   }
@@ -7670,9 +7685,9 @@ html.menu-opened body {
   .service-wrapper .tab-content h3, .service-wrapper .tab-content p {
     margin: 20px 2px;
   }
-  .service-wrapper .tab-content {
-    padding: 30px 0 0;
-  }
+  /*.service-wrapper .tab-content {*/
+  /*  padding: 30px 0 0;*/
+  /*}*/
   .service-wrapper .service-tabs {
     padding-top: 1px;
   }
