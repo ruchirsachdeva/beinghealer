@@ -135,13 +135,17 @@
             <div class="service-tabs">
               <ul class="nav nav-tabs nav-tabs-solid nav-justified">
                 <li class="nav-item" *ngFor="let service of services; let i = index">
-                  <a class="nav-link" [ngClass]="{'active': service.service === 'Hypnotherapy'}" href="#solid-justified-tab{{i+1}}" data-bs-toggle="tab">{{service.title}}
+                  <a class="nav-link" [ngClass]="{'active': i === 0}" href="#solid-justified-tab{{i+1}}" data-bs-toggle="tab">{{service.title}}
                   </a>
                 </li>
+<!--                <li class="nav-item">-->
+<!--                  <a class="nav-link"  href="#solid-justified-tab-other" data-bs-toggle="tab">Other Therapies-->
+<!--                  </a>-->
+<!--                </li>-->
               </ul>
               <div class="tab-content">
-                <div *ngFor="let service of services; let i = index" class="tab-pane show" [ngClass]="{'active': service.service === 'Hypnotherapy'}" id="solid-justified-tab{{i+1}}">
-                  <div class="row align-items-center">
+                <div *ngFor="let service of services; let i = index" class="tab-pane show" [ngClass]="{'active': i === 0}" id="solid-justified-tab{{i+1}}">
+                  <div *ngIf="!service.nestedServices" class="row align-items-center">
                     <div class="col-12 col-md-6">
                       <img src="{{service.image}}" class="tab-img" alt="">
                     </div>
@@ -151,7 +155,107 @@
                       <a  (click)="navigateToBlogGridSearchResult(service.service)" class="btn-gradient" role="button">Get More Details</a>
                     </div>
                   </div>
+
+                  <div *ngIf="service.nestedServices" class="row align-items-center">
+                    <div class="justify-content-center" id="other-services">
+                      <div class="col-12 col-lg-12 col-md-12">
+                        <div class="service-wrapper">
+                          <div class="service-tabs">
+                            <ul class="nav nav-tabs nav-tabs-solid nav-justified nav-inner-tabs">
+                              <li class="nav-item" *ngFor="let nestedService of service.nestedServices; let j = index">
+                                <a class="nav-link" [ngClass]="{'active': j === 0}" href="#solid-justified-inner-tab-{{i+1}}-{{j+1}}" data-bs-toggle="tab">{{nestedService.title}}
+                                </a>
+                              </li>
+                            </ul>
+                            <div class="tab-content inner-tab">
+                              <div *ngFor="let nestedService of service.nestedServices; let j = index" class="tab-pane show" [ngClass]="{'active': j === 0}" id="solid-justified-inner-tab-{{i+1}}-{{j+1}}">
+                                <div class="row align-items-center">
+                                  <div class="col-12 col-md-6">
+                                    <img src="{{nestedService.image}}" class="tab-img" alt="">
+                                  </div>
+                                  <div class="col-12 col-md-6">
+                                    <!--                                <h3>{{service.title}}</h3>-->
+                                    <p [innerHTML]="nestedService.description"></p>
+                                    <a  (click)="navigateToBlogGridSearchResult(nestedService.service)" class="btn-gradient" role="button">Get More Details</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+<!--                <div class="tab-pane show"  id="solid-justified-tab-other">-->
+<!--                  <div class="row align-items-center">-->
+
+<!--                <div class="justify-content-center" id="other-services">-->
+<!--                  <div class="col-12 col-lg-12 col-md-12">-->
+<!--                    <div class="service-wrapper">-->
+<!--                      <div class="service-tabs">-->
+<!--                        <ul class="nav nav-tabs nav-tabs-solid nav-justified">-->
+<!--                          <li class="nav-item">-->
+<!--                            <a class="nav-link" [ngClass]="'active'" href="#solid-justified-tab-other1" data-bs-toggle="tab">"Other 1-->
+<!--                            </a>-->
+<!--                          </li>-->
+<!--                          <li class="nav-item">-->
+<!--                            <a class="nav-link"  href="#solid-justified-tab-other2" data-bs-toggle="tab">Other 2-->
+<!--                            </a>-->
+<!--                          </li>-->
+<!--                          <li class="nav-item">-->
+<!--                            <a class="nav-link"  href="#solid-justified-tab-other3" data-bs-toggle="tab">Other 3-->
+<!--                            </a>-->
+<!--                          </li>-->
+<!--                        </ul>-->
+<!--                        <div class="tab-content inner-tab">-->
+<!--                          <div  [ngClass]="'tab-pane show active'" id="solid-justified-tab-other1">-->
+<!--                            <div class="row align-items-center">-->
+<!--                              <div class="col-12 col-md-6">-->
+<!--                                <img src="assets/img/service-img1.jpg" class="tab-img" alt="">-->
+<!--                              </div>-->
+<!--                              <div class="col-12 col-md-6">-->
+<!--&lt;!&ndash;                                <h3>{{service.title}}</h3>&ndash;&gt;-->
+<!--                                <p [innerHTML]="'description of the service goes here'"></p>-->
+<!--&lt;!&ndash;                                <a  (click)="navigateToBlogGridSearchResult(service.service)" class="btn-gradient" role="button">Get More Details</a>&ndash;&gt;-->
+<!--                              </div>-->
+<!--                            </div>-->
+<!--                          </div>-->
+<!--                          <div class="tab-pane show" id="solid-justified-tab-other2">-->
+<!--                            <div class="row align-items-center">-->
+<!--                              <div class="col-12 col-md-6">-->
+<!--                                <img src="assets/img/service-img2.jpg" class="tab-img" alt="">-->
+<!--                              </div>-->
+<!--                              <div class="col-12 col-md-6">-->
+<!--                                &lt;!&ndash;                                <h3>{{service.title}}</h3>&ndash;&gt;-->
+<!--                                <p [innerHTML]="'description of the service 2 goes here'"></p>-->
+<!--                                &lt;!&ndash;                                <a  (click)="navigateToBlogGridSearchResult(service.service)" class="btn-gradient" role="button">Get More Details</a>&ndash;&gt;-->
+<!--                              </div>-->
+<!--                            </div>-->
+<!--                          </div>-->
+<!--                          <div class="tab-pane show" id="solid-justified-tab-other3">-->
+<!--                            <div class="row align-items-center">-->
+<!--                              <div class="col-12 col-md-6">-->
+<!--                                <img src="assets/img/service-img3.jpg" class="tab-img" alt="">-->
+<!--                              </div>-->
+<!--                              <div class="col-12 col-md-6">-->
+<!--                                &lt;!&ndash;                                <h3>{{service.title}}</h3>&ndash;&gt;-->
+<!--                                <p [innerHTML]="'description of the service 2 goes here'"></p>-->
+<!--                                &lt;!&ndash;                                <a  (click)="navigateToBlogGridSearchResult(service.service)" class="btn-gradient" role="button">Get More Details</a>&ndash;&gt;-->
+<!--                              </div>-->
+<!--                            </div>-->
+<!--                          </div>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
+
+<!--                </div>-->
+
+
+<!--                  </div>-->
+<!--                </div>-->
+
               </div>
             </div>
           </div>

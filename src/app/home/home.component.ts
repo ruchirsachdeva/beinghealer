@@ -24,8 +24,8 @@ export interface Doctors {
   // encapsulation : ViewEncapsulation.None
 })
 export class HomeComponent implements OnInit , AfterContentChecked{
-  @ViewChild("slickModal1") slickModal1!: SlickCarouselComponent;
-  @ViewChild("slickModal2") slickModal2!: SlickCarouselComponent;
+  // @ViewChild("slickModal1") slickModal1!: SlickCarouselComponent;
+  // @ViewChild("slickModal2") slickModal2!: SlickCarouselComponent;
   @ViewChild("slickModal3") slickModal3!: SlickCarouselComponent;
   services: any[] =[]
   specialityList: any = [];
@@ -466,13 +466,13 @@ export class HomeComponent implements OnInit , AfterContentChecked{
     }
   };
 
-  next() {
-    this.slickModal1.slickNext();
-  }
-
-  prev() {
-    this.slickModal1.slickPrev();
-  }
+  // next() {
+  //   this.slickModal1.slickNext();
+  // }
+  //
+  // prev() {
+  //   this.slickModal1.slickPrev();
+  // }
 
   getspeciality() {
     this.commonService.getSpeciality().subscribe((res) => {
@@ -601,13 +601,13 @@ export class HomeComponent implements OnInit , AfterContentChecked{
     },
   ];
 
-  nextslide() {
-    this.slickModal2.slickNext();
-  }
-
-  prevslide() {
-    this.slickModal2.slickPrev();
-  }
+  // nextslide() {
+  //   this.slickModal2.slickNext();
+  // }
+  //
+  // prevslide() {
+  //   this.slickModal2.slickPrev();
+  // }
 
   nextpage() {
     this.slickModal3.slickNext();
