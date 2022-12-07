@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonServiceService } from '../common-service.service';
 import {PaginationComponent} from "../common/pagination/pagination.component";
 import {ActivatedRoute, Router} from "@angular/router";
+import {GoogleAnalyticsService} from "ngx-google-analytics";
 
 @Component({
   selector: 'app-blog-grid',
@@ -16,7 +17,8 @@ export class BlogGridComponent extends PaginationComponent implements OnInit {
 
   constructor(public commonService: CommonServiceService,
               private route: ActivatedRoute,
-              public router: Router) {
+              public router: Router,
+              private gaService: GoogleAnalyticsService) {
     super(4);
   }
 
@@ -43,7 +45,7 @@ export class BlogGridComponent extends PaginationComponent implements OnInit {
           return p
         },  new Map([]))
 
-      this.tags = [...new Set(result.flatMap(r=>r.tags))]
+      this.tags = [...new Set<string>(result.flatMap(r=>r.tags))]
     })
   }
 
@@ -51,10 +53,12 @@ export class BlogGridComponent extends PaginationComponent implements OnInit {
     this.filterTerm = key;
     this.updateItemCount();
     this.goToTopOfPage();
+    this.gaService.event('filter_by_click_blog_grid', 'filter_blog', 'Filter By Click Blog Grid');
   }
 
   updateItemCount() {
     this.updateItemCountForBlogs(this.blogs)
+    this.gaService.event('filter_blog_grid', 'filter_blog', 'Filter Blog Grid');
   }
 
   private updateItemCountForBlogs(blogs: any[]) {
