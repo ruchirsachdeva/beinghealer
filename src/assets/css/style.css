@@ -1244,12 +1244,12 @@ button.bg-danger:hover {
 	border-color: #C18C5D;
 	color: #fff;
 }
-.tab-content:not(.inner-tab) {
-	padding-top: 15px;
-}
-.inner-tab {
-  padding-top: 10px;
-}
+/*.tab-content:not(.inner-tab) {*/
+/*	padding-top: 15px;*/
+/*}*/
+/*.inner-tab {*/
+/*  padding-top: 10px;*/
+/*}*/
 .nav-tabs .nav-link {
 	border-radius: 0;
 }
@@ -2517,7 +2517,7 @@ html.menu-opened body {
   border-bottom: 6px solid #C18C5D;
 }
 .service-wrapper .tab-content .tab-img {
-  border-radius: 6px;
+  /*border-radius: 6px;*/
   max-width: 100%;
 }
 .service-wrapper .tab-content h3, .service-wrapper .tab-content p {

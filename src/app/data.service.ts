@@ -1094,7 +1094,7 @@ export class DataService implements InMemoryDbService {
       {
         id: 4,
         title: "Ancestral Healing",
-        description: "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
+        description: "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
         image: "assets/img/service-img4.jpg",
         service: "Ancestral Healing"
       },
@@ -1113,21 +1113,21 @@ export class DataService implements InMemoryDbService {
           "If any of the chakras become congested or completely blocked, then the fresh, positive, balancing energy that the mind, body & spirit needs to function properly cannot flow efficiently throughout our body.\n" +
           "Blockages in chakras and energy flow can lead to a variety of emotional, behavioral, and physical symptoms.\n" +
           "The goal of Reiki healing is to balance chakras to clear out any congestion or blockages in the chakras, thus reaching a healthy place of balance between mind, body, spirit, earth, health, universality, and grounding.</p>\n",
-        image: "assets/img/service-img4.jpg",
+        image: "assets/img/service-img6.jpg",
         service: "Reiki"
       },
       {
         id: 7,
         title: "Midbrain Activation",
         description: "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
-        image: "assets/img/service-img4.jpg",
+        image: "assets/img/service-img7.jpg",
         service: "Midbrain Activation"
       },
       {
         id: 8,
         title: "Sound Therapy",
         description: "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
-        image: "assets/img/service-img4.jpg",
+        image: "assets/img/service-img8.jpg",
         service: "Sound Therapy"
       },
       {
@@ -1136,31 +1136,31 @@ export class DataService implements InMemoryDbService {
         nestedServices: [
           {
             id: 10,
-            title: "Magneto Therapy",
+            title: "Crystal Healing",
             description: "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
-            image: "assets/img/service-img5.jpg",
-            service: "Magneto therapy"
+            image: "assets/img/service-img9.jpg",
+            service: "Crystal Healing"
           },
           {
             id: 11,
-            title: "Breath work",
+            title: "Color Therapy",
             description: "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
-            image: "assets/img/service-img6.jpg",
-            service: "Breath work"
+            image: "assets/img/service-img10.jpg",
+            service: "Color Therapy"
           },
           {
             id: 12,
-            title: "Sujok Therapy",
+            title: "Magneto Therapy",
             description: "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
             image: "assets/img/service-img7.jpg",
-            service: "Sujok Therapy"
+            service: "Magneto Therapy"
           },
           {
             id: 13,
-            title: "Crystal Healing",
+            title: "Sujok Therapy",
             description: "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
             image: "assets/img/service-img8.jpg",
-            service: "Crystal Healing"
+            service: "Sujok Therapy"
           },
           {
             id: 14,
@@ -1171,10 +1171,10 @@ export class DataService implements InMemoryDbService {
           },
           {
             id: 15,
-            title: "Color Therapy",
+            title: "Breath work",
             description: "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
             image: "assets/img/service-img10.jpg",
-            service: "Color Therapy"
+            service: "Breath work"
           }
           ],
         service: "Other Therapies"
