@@ -89,10 +89,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "template:build:production"
+              "browserTarget": "beinghealer:build:production"
             },
             "development": {
-              "browserTarget": "template:build:development"
+              "browserTarget": "beinghealer:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -100,7 +100,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "template:build"
+            "browserTarget": "beinghealer:build"
           }
         },
         "test": {
@@ -125,7 +125,7 @@
       }
     }
   },
-  "defaultProject": "template",
+  "defaultProject": "beinghealer",
   "cli": {
     "analytics": false
   }
