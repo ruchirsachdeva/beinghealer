@@ -19,6 +19,7 @@ import { SlickCarouselModule } from "ngx-slick-carousel";
 import { LinkService } from "./link.service";
 import { PaginationComponent } from './common/pagination/pagination.component';
 import {Ng2SearchPipeModule} from "ng2-search-filter";
+import {NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule} from "ngx-google-analytics";
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent, PaginationComponent],
@@ -32,7 +33,9 @@ import {Ng2SearchPipeModule} from "ng2-search-filter";
     BrowserAnimationsModule,
     FormsModule,
     NgbModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    NgxGoogleAnalyticsModule.forRoot('G-4GPSWTMQXK'),
+    NgxGoogleAnalyticsRouterModule // https://github.com/maxandriani/ngx-google-analytics
   ],
   providers: [LinkService],
   bootstrap: [AppComponent],

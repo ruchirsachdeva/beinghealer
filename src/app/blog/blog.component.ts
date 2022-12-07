@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonServiceService } from '../common-service.service';
 import {PaginationComponent} from "../common/pagination/pagination.component";
 import {ActivatedRoute, Router} from "@angular/router";
+import {GoogleAnalyticsService} from "ngx-google-analytics";
 
 @Component({
   selector: 'app-blog',
@@ -16,7 +17,8 @@ export class BlogComponent extends PaginationComponent implements OnInit {
 
   constructor(public commonService: CommonServiceService,
               private route: ActivatedRoute,
-              public router: Router) {
+              public router: Router,
+              private gaService: GoogleAnalyticsService) {
     super(3);
   }
 
@@ -44,7 +46,7 @@ export class BlogComponent extends PaginationComponent implements OnInit {
           return p
         },  new Map([]))
 
-      this.tags = [...new Set(result.flatMap(r=>r.tags))]
+      this.tags = [...new Set<string>(result.flatMap(r=>r.tags))]
     })
   }
 
@@ -52,10 +54,13 @@ export class BlogComponent extends PaginationComponent implements OnInit {
     this.filterTerm = key;
     this.updateItemCount();
     this.goToTopOfPage();
+    this.gaService.event('filter_by_click_blog_list', 'filter_blog', 'Filter By Click Blog List');
   }
 
+  // Called when filter term is updated either through search input or tags or category click.
   updateItemCount() {
     this.updateItemCountForBlogs(this.blogs)
+    this.gaService.event('filter_blog_list', 'filter_blog', 'Filter Blog List');
   }
 
   private updateItemCountForBlogs(blogs: any[]) {

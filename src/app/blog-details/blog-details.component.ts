@@ -3,6 +3,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 import { CommonServiceService } from '../common-service.service';
 import { ToastrService } from 'ngx-toastr';
 import {MailService} from "../mail.service";
+import {GoogleAnalyticsService} from "ngx-google-analytics";
 
 @Component({
   selector: 'app-blog-details',
@@ -26,7 +27,8 @@ export class BlogDetailsComponent implements OnInit {
     public commonService: CommonServiceService,
     public mailService: MailService,
     private route: ActivatedRoute,
-    public router: Router
+    public router: Router,
+    private gaService: GoogleAnalyticsService
   ) {}
 
   ngOnInit(): void {
@@ -58,12 +60,12 @@ export class BlogDetailsComponent implements OnInit {
           return p
         },  new Map([]))
 
-      this.tags = [...new Set(result.flatMap(r=>r.tags))]
+      this.tags = [...new Set<string>(result.flatMap(r=>r.tags))]
     });
   }
 
   navigateToBlogGridSearchResult(key: string) {
-    // alert(key);
+    this.gaService.event('filter_blog_detail', 'filter_blog', 'Filter Blog Detail');
     this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
       this.router.navigateByUrl('/blog-grid?filterTerm=' + key);
     });
