@@ -19,7 +19,7 @@ phases:
   post_build:
     commands:
       - echo build process finished, we should upload to S3 now
-      - aws s3 cp dist/beinghealer s3://www.beinghealer.com --delete --recursive --region ap-south-1
+      - aws s3 sync dist/beinghealer s3://www.beinghealer.com --delete --region ap-south-1
       - echo Build completed on `date`
 artifacts:
   files:
