@@ -18,6 +18,8 @@ phases:
       - echo Build started on `date`
       - ng build --aot --configuration=production --build-optimizer
       - npm run gzipper-dist
+#      Above command will be picked from package.json. It will gzip dist files to beinghealer-gzip dist folder and sync the zip folder to s3 while setting content-encoding = gzip abd keeping file name and extension same as before.
+  #Such gzip files if havve content-encoding as gzip, and file extension as js, css, jpg, png, etc, then browser renders them based on content-type, but in the process we save a lot in size by doing file compression
   post_build:
     commands:
       - echo build process finished, we should upload to S3 now
