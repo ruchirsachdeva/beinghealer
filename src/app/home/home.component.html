@@ -147,7 +147,7 @@
                 <div *ngFor="let service of services; let i = index" class="tab-pane show" [ngClass]="{'active': i === 0}" id="solid-justified-tab{{i+1}}">
                   <div *ngIf="!service.nestedServices" class="row align-items-center">
                     <div class="col-12 col-md-6">
-                      <img src="{{service.image}}" class="tab-img" alt="">
+                      <img src="{{service.image}}" class="tab-img" alt="" loading="lazy">
                     </div>
                     <div class="col-12 col-md-6">
                       <h3>{{service.title}}</h3>
@@ -171,7 +171,7 @@
                               <div *ngFor="let nestedService of service.nestedServices; let j = index" class="tab-pane show" [ngClass]="{'active': j === 0}" id="solid-justified-inner-tab-{{i+1}}-{{j+1}}">
                                 <div class="row align-items-center">
                                   <div class="col-12 col-md-6">
-                                    <img src="{{nestedService.image}}" class="tab-img" alt="">
+                                    <img src="{{nestedService.image}}" class="tab-img" alt="" loading="lazy">
                                   </div>
                                   <div class="col-12 col-md-6">
                                     <!--                                <h3>{{service.title}}</h3>-->
@@ -271,7 +271,7 @@
     <div class="row m-0">
       <div class="col-md-12 col-lg-6 p-0" id="contactus">
         <div class="speak-expert-img">
-          <img src="assets/img/speak-expert.png" alt="Speak to Expert" class="img-fluid" />
+          <img src="assets/img/speak-expert.png" alt="Speak to Expert" class="img-fluid" loading="lazy"/>
         </div>
       </div>
       <div class="col-md-12 col-lg-6 speak-expert-text">
@@ -388,7 +388,7 @@
             <div class="doc-profile-widgets">
               <div class="doc-img">
                 <a [routerLink]="'/patients/doctor-profile'" [queryParams]="{id: doctor.id}">
-                  <img class="img-fluid" alt="User Image" src="{{doctor.profile}}">
+                  <img class="img-fluid" alt="User Image" src="{{doctor.profile}}" loading="lazy">
                 </a>
               </div>
               <div class="card">
@@ -466,7 +466,7 @@
           <!-- Item 1 -->
           <div class="carousel-item active">
             <div class="card-testi">
-              <img src="assets/img/testimonial/testi-01.jpeg" class="d-block" alt="..." (click) = "show($event)">
+              <img src="assets/img/testimonial/testi-01.jpeg" class="d-block" alt="..." (click) = "show($event)" loading="lazy">
               <h4>A Gupta</h4>
               <div class="rating">
                 <i class="fas fa-star filled"></i>
@@ -485,7 +485,7 @@
           <!-- Item 2 -->
           <div class="carousel-item">
             <div class="card-testi">
-              <img src="assets/img/testimonial/testi-02.jpg" class="d-block" alt="..." (click) = "show($event)">
+              <img src="assets/img/testimonial/testi-02.jpg" class="d-block" alt="..." (click) = "show($event)" loading="lazy">
               <h4>Unnamed</h4>
               <div class="rating">
                 <i class="fas fa-star filled"></i>
@@ -500,7 +500,7 @@
           <!-- Item 3 -->
           <div class="carousel-item">
             <div class="card-testi">
-              <img src="assets/img/testimonial/testi-03.jpg" class="d-block" alt="..." (click) = "show($event)">
+              <img src="assets/img/testimonial/testi-03.jpg" class="d-block" alt="..." (click) = "show($event)" loading="lazy">
               <h4>Kalpana & Ajay Pathak</h4>
               <div class="rating">
                 <i class="fas fa-star filled"></i>
@@ -517,7 +517,7 @@
           <!-- Item 4 -->
           <div class="carousel-item">
             <div class="card-testi">
-              <img src="assets/img/testimonial/testi-04.jpg" class="d-block" alt="..." (click) = "show($event)">
+              <img src="assets/img/testimonial/testi-04.jpg" class="d-block" alt="..." (click) = "show($event)" loading="lazy">
               <h4>Vijay Vishwanathan</h4>
               <div class="rating">
                 <i class="fas fa-star filled"></i>
@@ -534,7 +534,7 @@
           <!-- Item 5 -->
           <div class="carousel-item">
             <div class="card-testi">
-              <img src="assets/img/testimonial/testi-05.png" class="d-block" alt="..." (click) = "show($event)">
+              <img src="assets/img/testimonial/testi-05.png" class="d-block" alt="..." (click) = "show($event)" loading="lazy">
               <h4>Benish Fatima</h4>
               <div class="rating">
                 <i class="fas fa-star filled"></i>
@@ -554,7 +554,7 @@
           <!-- Item 6 -->
           <div class="carousel-item">
             <div class="card-testi">
-              <img src="assets/img/testimonial/testi-06.png" class="d-block" alt="..." (click) = "show($event)">
+              <img src="assets/img/testimonial/testi-06.png" class="d-block" alt="..." (click) = "show($event)" loading="lazy">
               <h4>Amit Misra</h4>
               <div class="rating">
                 <i class="fas fa-star filled"></i>
@@ -575,7 +575,7 @@
           <!-- Item 7 -->
           <div class="carousel-item">
             <div class="card-testi">
-              <img src="assets/img/testimonial/testi-07.jpeg" class="d-block" alt="..." (click) = "show($event)">
+              <img src="assets/img/testimonial/testi-07.jpeg" class="d-block" alt="..." (click) = "show($event)" loading="lazy">
               <h4>Dipti Verma</h4>
               <div class="rating">
                 <i class="fas fa-star filled"></i>
@@ -594,7 +594,7 @@
           <!-- Item 8 -->
           <div class="carousel-item">
             <div class="card-testi">
-              <img src="assets/img/testimonial/testi-08.jpeg" class="d-block" alt="..." (click) = "show($event)">
+              <img src="assets/img/testimonial/testi-08.jpeg" class="d-block" alt="..." (click) = "show($event)" loading="lazy">
               <h4>Vijey</h4>
               <div class="rating">
                 <i class="fas fa-star filled"></i>
@@ -612,7 +612,7 @@
           <!-- Item 9 -->
           <div class="carousel-item">
             <div class="card-testi">
-              <img src="assets/img/testimonial/testi-09.jpeg" class="d-block" alt="..." (click) = "show($event)">
+              <img src="assets/img/testimonial/testi-09.jpeg" class="d-block" alt="..." (click) = "show($event)" loading="lazy">
               <h4>A Ram</h4>
               <div class="rating">
                 <i class="fas fa-star filled"></i>
@@ -647,7 +647,7 @@
           <!-- Item 11 -->
           <div class="carousel-item">
             <div class="card-testi">
-              <img src="assets/img/testimonial/testi-11.jpeg" class="d-block" alt="..." (click) = "show($event)">
+              <img src="assets/img/testimonial/testi-11.jpeg" class="d-block" alt="..." (click) = "show($event)" loading="lazy">
               <h4>Arijit Patra</h4>
               <div class="rating">
                 <i class="fas fa-star filled"></i>
@@ -697,7 +697,7 @@
           <button type="button" class="btn btn-default m-r-0" data-dismiss="modal" (click) = "hide()">Close</button>
         </div>
         <div class="modal-body">
-          <img [src]="modalPath" id="imagepreview" style="width: 100%;">
+          <img [src]="modalPath" id="imagepreview" style="width: 100%;" loading="lazy">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal" (click) = "hide()">Close</button>
@@ -767,7 +767,7 @@
 					<div class="row mt-5" *ngIf="blogs">
 						<div class="col-md-4" *ngFor="let blog of blogs.slice(0,3)">
 							<div class="card">
-								<img src="{{blog.img}}" class="card-img-top" alt="News and Events">
+								<img src="{{blog.img}}" class="card-img-top" alt="News and Events" loading="lazy">
 								<div class="card-body">
 								  <h5 class="card-title">{{blog.type}}</h5>
 								    <h3>{{blog.title}}</h3>
