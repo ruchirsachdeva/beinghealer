@@ -6,8 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "gzipper-dist": "rm -rf ./dist/*-gzip && gzipper compress --output-file-format [filename].[ext] ./dist/beinghealer ./dist/beinghealer-gzip"
   },
+  "_comment": "gzipper-dist => https://saurabhgangamwar.medium.com/how-to-compress-gzip-angular-build-and-deploy-to-aws-s3-70-build-optimization-6b92aad28c26",
   "private": true,
   "dependencies": {
     "@angular/animations": "~13.3.0",
