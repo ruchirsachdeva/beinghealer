@@ -12,6 +12,19 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
+
+<!--  Preload home-bg.jpg and our-provide-2.jpg as they are first to be painted on homepage. Other images loaded on homepage are set as lazy, so that they load in the end.
+      If we preload all the images, it will block the loading of other important resources like js, css unnecessarily!
+      Further, since home-bg.jpg and our-provide-2.jpg are using background-image(url), so some tricks had to be done to preload them
+      https://stackoverflow.com/questions/74732788/why-is-the-the-background-image-url-name-different-from-the-local-image-name-a
+      1. With outputHashing = all "js and url(image_path), and url(font_path) etc resources get optimized and output-hashed, the purpose being to destroy the browser cache if there is one.
+         So the background-image: url('../img/home-bg.jpg'); was renderd in production as http://www.beinghealer.com/home-bg.1c0835203511d0a3.jpg
+         While the link preload below preloaded http://www.beinghealer.com/assets/img/home-bg.jpg"
+         So, outputHashing = all was changed to outputHashing = bundles, after which background-image was renderd without hash in production as http://www.beinghealer.com/home-bg.jpg
+      2. Further, notice that the preloaded image is http://www.beinghealer.com/assets/img/home-bg.jpg, and the rendered background image is http://www.beinghealer.com/home-bg.jpg
+         So, I made another copy of home-bg.jpg in the "src" folder, and then the below preloading works fine for the background-image in "assets"
+         Also note that this issue does nnot happen for <img src="assets/img/xx.jpeg" />, which is rendered with full path (http://www.beinghealer.com/assets/img/xx.jpg). Issue is only with "background-image"
+         -->
   <link rel="preload" as="image" href="home-bg.jpg">
   <link rel="preload" as="image" href="our-provide-2.jpg">
 
