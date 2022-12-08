@@ -41,7 +41,6 @@
               "src/assets/js/slick.js",
               "node_modules/datatables.net/js/jquery.dataTables.js",
               "node_modules/datatables.net-bs4/js/dataTables.bootstrap4.js",
-              "node_modules/moment/min/moment.min.js",
               "src/assets/js/moment.min.js",
               "src/assets/plugins/daterangepicker/daterangepicker.js",
               "./src/assets/js/circle-progress.min.js",
