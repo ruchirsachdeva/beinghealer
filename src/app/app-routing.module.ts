@@ -127,7 +127,7 @@ const routes: Routes = [
       anchorScrolling: 'enabled',
       // scrollOffset: [0, 50],
     onSameUrlNavigation: 'reload',
-    preloadingStrategy: PreloadAllModules,
+    // preloadingStrategy: PreloadAllModules,
     relativeLinkResolution: 'legacy'
 }),
   ],
