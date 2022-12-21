@@ -3,6 +3,7 @@ import { CommonServiceService } from '../common-service.service';
 import {PaginationComponent} from "../common/pagination/pagination.component";
 import {ActivatedRoute, Router} from "@angular/router";
 import {GoogleAnalyticsService} from "ngx-google-analytics";
+import {Blog} from "../model/domains";
 
 @Component({
   selector: 'app-blog',
@@ -10,7 +11,7 @@ import {GoogleAnalyticsService} from "ngx-google-analytics";
   styleUrls: ['./blog.component.css'],
 })
 export class BlogComponent extends PaginationComponent implements OnInit {
-  blogs: any[] = [];
+  blogs: Blog[] = [];
   categories: Map<string, number> = new Map([]);
   tags: string[] = [];
   filterTerm!: string;

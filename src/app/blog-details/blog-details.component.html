@@ -55,10 +55,17 @@
 									</ul>
 								</div>
 							</div>
-							<div class="blog-content">
-								<p [innerHTML]="blogdetails.description"></p>
-
-							</div>
+<!--              <div class="blog-content">-->
+<!--                <p [innerHTML]="blogdetails.description"></p>-->
+<!--              </div>-->
+<!--              <div>-->
+<!--                <quill-view [content]="blogdetails.description" format="html" theme="snow"></quill-view>-->
+<!--							</div>-->
+<!--              TODO INFO By using code below instead of inbuilt quill directive quill-view (above), we can reduce bundle siize of js by eliminatine quill.min.js which is 70kb zipped size-->
+              <div class="ql-container ql-snow" style="border-width: 0;">
+                <div class="ql-editor" [innerHTML]="blogdetails.description">
+                </div>
+              </div>
 						</div>
 
 						<div class="card blog-share clearfix">

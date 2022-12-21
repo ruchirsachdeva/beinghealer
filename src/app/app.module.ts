@@ -14,7 +14,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { ToastrModule } from "ngx-toastr";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
-import { FormsModule } from "@angular/forms";
+import {FormsModule} from "@angular/forms";
 import { SlickCarouselModule } from "ngx-slick-carousel";
 import { LinkService } from "./link.service";
 import { PaginationComponent } from './common/pagination/pagination.component';
@@ -29,13 +29,15 @@ import {NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule} from "ngx-goog
     HttpClientModule,
     SlickCarouselModule,
     ToastrModule.forRoot(),
-    HttpClientInMemoryWebApiModule.forRoot(DataService),
+    HttpClientInMemoryWebApiModule.forRoot(DataService, {
+      passThruUnknownUrl: true
+    }),
     BrowserAnimationsModule,
     FormsModule,
     NgbModule,
     Ng2SearchPipeModule,
     NgxGoogleAnalyticsModule.forRoot('G-4GPSWTMQXK'),
-    NgxGoogleAnalyticsRouterModule // https://github.com/maxandriani/ngx-google-analytics
+    NgxGoogleAnalyticsRouterModule, // https://github.com/maxandriani/ngx-google-analytics
   ],
   providers: [LinkService],
   bootstrap: [AppComponent],

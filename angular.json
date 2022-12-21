@@ -32,7 +32,11 @@
               "node_modules/select2/dist/css/select2.min.css",
               "src/assets/plugins/daterangepicker/daterangepicker.css",
               "src/assets/plugins/bootstrap-tagsinput/css/bootstrap-tagsinput.css",
-              "node_modules/datatables.net-bs4/css/dataTables.bootstrap4.css"
+              "node_modules/datatables.net-bs4/css/dataTables.bootstrap4.css",
+              "node_modules/quill/dist/quill.core.css",
+              "node_modules/quill/dist/quill.bubble.css",
+              "node_modules/quill/dist/quill.snow.css",
+              "node_modules/quill-mention/dist/quill.mention.min.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
@@ -48,9 +52,12 @@
               "./src/assets/js/script.js",
               "node_modules/select2/dist/js/select2.min.js",
               "node_modules/slick-carousel/slick/slick.min.js",
-              "node_modules/raphael/raphael.js"
+              "node_modules/raphael/raphael.min.js",
+              "node_modules/quill/dist/quill.min.js"
             ]
           },
+          "_comments": ["TODO Remove quill js and most css(check css class used in blogdetails) and keep them only for admin flow",
+          "ngx-dropzone is only used on doctor settings for uploading clinic images, see if it can be replaced by regular image upload like in admin/blog"],
           "configurations": {
             "production": {
               "budgets": [

@@ -177,6 +177,9 @@ p {
     font-size: inherit;
     line-height: inherit;
 }
+.ql-container {
+  height: auto !important;
+}
 
 /*-----------------
 	2. Table
