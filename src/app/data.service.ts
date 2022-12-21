@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import {InMemoryDbService} from 'angular-in-memory-web-api'
+import {Blog} from "./model/domains";
 
 
 @Injectable({
@@ -699,8 +700,8 @@ export class DataService implements InMemoryDbService {
     }
 
   ]
-
-  let blogs = [
+  // ctrl + shift + j : unintend multi lines into 1
+  let blogs: Blog[] = [
    {
      id : 1,
      title : "What is Hypnotherapy and how does it work?",

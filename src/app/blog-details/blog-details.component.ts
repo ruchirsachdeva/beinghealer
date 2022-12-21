@@ -4,6 +4,7 @@ import { CommonServiceService } from '../common-service.service';
 import { ToastrService } from 'ngx-toastr';
 import {MailService} from "../mail.service";
 import {GoogleAnalyticsService} from "ngx-google-analytics";
+import {Blog} from "../model/domains";
 
 @Component({
   selector: 'app-blog-details',
@@ -12,8 +13,8 @@ import {GoogleAnalyticsService} from "ngx-google-analytics";
 })
 export class BlogDetailsComponent implements OnInit {
   id:any;
-  blogdetails: any = [];
-  blogs: any = [];
+  blogdetails!: Blog;
+  blogs: Blog[] = [];
   categories: Map<string, number> = new Map([]);
   tags: string[] = [];
 
@@ -50,14 +51,14 @@ export class BlogDetailsComponent implements OnInit {
       this.blogs = result;
 
       this.categories = result
-        .reduce<Map<string, number>>((p,c,i,a)=>{
-          if(p.has(c.type)) {
+        .reduce<Map<string, number>>((allBlogsMap,blog,i,a)=>{
+          if(allBlogsMap.has(blog.type)) {
             // @ts-ignore
-            p.set(c.type, p.get(c.type) + 1)
+            allBlogsMap.set(blog.type, allBlogsMap.get(blog.type) + 1)
           } else {
-            p.set(c.type, 1)
+            allBlogsMap.set(blog.type, 1)
           }
-          return p
+          return allBlogsMap
         },  new Map([]))
 
       this.tags = [...new Set<string>(result.flatMap(r=>r.tags))]

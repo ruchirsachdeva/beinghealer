@@ -65,7 +65,7 @@
                                             </div>
                                         </td>
                                     </tr>
-                                  
+
                                 </tbody>
                             </table>
                         </div>
@@ -84,25 +84,33 @@
     <div class="modal-body">
         <form>
             <div class="row form-row">
-                <div class="col-12 col-sm-6">
+                <div class="col-6 col-sm-6">
                     <div class="form-group">
                         <label>Title</label>
                         <input type="text" class="form-control" name="speciality" [(ngModel)]="title">
                     </div>
                 </div>
-                <div class="col-12 col-sm-6">
-                    <div class="form-group">
-                        <label>Description</label>
-                        <input type="text" class="form-control" name="speciality" [(ngModel)]="description">
-                    </div>
-                </div>
-                 <div class="col-12 col-sm-6">
+                 <div class="col-6 col-sm-6">
                     <div class="form-group">
                         <label>Type</label>
                         <input type="text" class="form-control" name="type" [(ngModel)]="type">
                     </div>
                 </div>
-                
+              <div class="col-12 col-sm-12">
+                <div class="form-group">
+                  <label>Banner image</label>
+                  <div class="blog-image">
+                    <a href="javascript:void(0);"><img src="{{img}}" *ngIf="img" class="img-fluid"></a>
+                  </div>
+                  <label class="form-label" for="saveFile">Upload the image</label>
+                  <input type="file" class="form-control" id="saveFile" (change)="onFileChange($event)" />
+                </div>
+              </div>
+              <div class="col-12 col-sm-12">
+                <div class = "form-group">Description</div>
+                <quill-editor [(ngModel)]="description"></quill-editor>
+              </div>
+
             </div>
             <button type="submit" class="btn btn-primary w-100" (click)="save()">Save Changes</button>
         </form>
@@ -117,23 +125,31 @@
     <div class="modal-body">
         <form>
             <div class="row form-row">
-                <div class="col-12 col-sm-6">
+                <div class="col-6 col-sm-6">
                     <div class="form-group">
                         <label>Title</label>
                         <input type="text" class="form-control" name="speciality" [(ngModel)]="title">
                     </div>
                 </div>
-                <div class="col-12 col-sm-6">
-                    <div class="form-group">
-                        <label>Description</label>
-                        <input type="text" class="form-control" name="speciality" [(ngModel)]="description">
-                    </div>
+              <div class="col-6 col-sm-6">
+                <div class="form-group">
+                  <label>Type</label>
+                  <input type="text" class="form-control" name="type" [(ngModel)]="type">
                 </div>
-                 <div class="col-12 col-sm-6">
-                    <div class="form-group">
-                        <label>Type</label>
-                        <input type="text" class="form-control" name="type" [(ngModel)]="type">
-                    </div>
+              </div>
+              <div class="col-12 col-sm-12">
+                <div class="form-group">
+                  <label>Banner image</label>
+                  <div class="blog-image">
+                    <a href="javascript:void(0);"><img src="{{img}}" *ngIf="img" class="img-fluid"></a>
+                  </div>
+                  <label class="form-label" for="editFile">Change the image</label>
+                  <input type="file" class="form-control" id="editFile" (change)="onFileChange($event)" />
+                  </div>
+              </div>
+                <div class="col-12 col-sm-12">
+                  <div class = "form-group">Description</div>
+                  <quill-editor [(ngModel)]="description"></quill-editor>
                 </div>
             </div>
             <button type="submit" class="btn btn-primary w-100" (click)="update()">Edit</button>

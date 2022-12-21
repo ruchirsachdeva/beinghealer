@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { BehaviorSubject } from 'rxjs';
 import { map } from 'rxjs/operators';
+import {environment} from "../environments/environment";
+import {Blog} from "./model/domains";
 
 @Injectable({
   providedIn: 'root',
@@ -55,7 +57,8 @@ export class CommonServiceService {
   ];
 
   messages:any = '';
-  SERVER_URL: string = 'http://localhost:8080/api/';
+  SERVER_URL: string = `${environment.localServer}`;
+  BOOT_SERVER_URL: string = `${environment.bootServer}`;
   message: BehaviorSubject<String>;
   constructor(public http: HttpClient) {
     this.message = new BehaviorSubject(this.messages);
@@ -116,24 +119,24 @@ export class CommonServiceService {
     return this.http.get(this.SERVER_URL + 'patientsAppointment');
   }
 
-  createBlogs(data:any) {
-    return this.http.post(`${this.SERVER_URL + 'blogs'}`, data);
+  createBlogs(data:Blog) {
+    return this.http.post(`${this.BOOT_SERVER_URL + 'blogs'}`, data);
   }
 
   getBlogs() {
-    return this.http.get<any[]>(this.SERVER_URL + 'blogs');
+    return this.http.get<Blog[]>(this.BOOT_SERVER_URL + 'blogs');
   }
 
-  getBlogsDetails(id:any) {
-    return this.http.get(`${this.SERVER_URL + 'blogs'}/${id}`);
+  getBlogsDetails(id:Blog) {
+    return this.http.get<Blog>(`${this.BOOT_SERVER_URL + 'blogs'}/${id}`);
   }
 
-  updateBlog(data:any, id:any) {
-    return this.http.put(`${this.SERVER_URL + 'blogs'}/${id}`, data);
+  updateBlog(data: Blog, id: any) {
+    return this.http.put(`${this.BOOT_SERVER_URL + 'blogs'}/${id}`, data);
   }
 
   deleteBlog(id:any) {
-    return this.http.delete(`${this.SERVER_URL + 'blogs'}/${id}`);
+    return this.http.delete(`${this.BOOT_SERVER_URL + 'blogs'}/${id}`);
   }
 
   createDoctor(data:any) {

@@ -2,6 +2,7 @@ import { Component, OnInit,TemplateRef } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
 import { CommonServiceService } from '../../common-service.service'
+import {Blog} from "../../model/domains";
 
 @Component({
   selector: 'app-blog',
@@ -9,13 +10,16 @@ import { CommonServiceService } from '../../common-service.service'
   styleUrls: ['./blog.component.css']
 })
 export class BlogComponent implements OnInit {
-	blogs : any = [];
+	blogs : Blog[] = [];
 	title:any ;
 	description:any ;
-	type:any ;
+  file!: File;
+  type:any ;
+  img:any ;
 	modalRef!:BsModalRef ;
-	blogDetails:any;
-  	id:any;
+  imageNestedModalRef!:BsModalRef ;
+	blogDetails!:Blog;
+  id:any;
   constructor(private modalService: BsModalService,private commonService: CommonServiceService) { }
 
   ngOnInit(): void {
@@ -34,58 +38,71 @@ export class BlogComponent implements OnInit {
     this.modalRef.hide();
   }
 
+  imageModal(template: TemplateRef<any>) {
+    this.imageNestedModalRef = this.modalService.show(template,{class: 'modal-lg modal-dialog-centered'});
+  }
+
   editModal(template: TemplateRef<any>,blog:any) {
-  	let data = blog;
+    // Don't update blogDetails after.
   	this.blogDetails = blog;
+    // Save form changes in the variables below.
   	this.id = blog['id'];
   	this.title = blog['title'];
   	this.type = blog['type'];
-	   this.description = blog['description'];
-  
+    this.description = blog['description'];
+    this.img = blog['img'];
+
     this.modalRef = this.modalService.show(template,{class: 'modal-lg modal-dialog-centered'});
   }
 
   deleteModal(template: TemplateRef<any>,blog:any) {
+    this.id = blog['id'];
     this.modalRef = this.modalService.show(template,{class: 'modal-sm modal-dialog-centered'});
   }
 
   deleteBlog() {
-  	this.commonService.deleteBlog(this.id).subscribe((data : any)=>{      
+  	this.commonService.deleteBlog(this.id).subscribe((data : any)=>{
       this.modalRef.hide();
       this.getBlogs();
     })
   }
 
+  closeImageNestedModal() {
+    this.imageNestedModalRef.hide();
+  }
+
   update() {
-  	let params = {
-      	id : this.id,
-	    title : this.blogDetails.title,
-	    description : this.blogDetails.description,
-	    createdBy : "Dr. Deborah Angel",
-	    createdAt : new Date(),
-	    comments : 0,
-	    type : this.type,
-	    status : "active"
-    }
+    alert(this.file);
+    // copy all original blogDetails
+    let params = this.blogDetails;
+
+    // Overwrite all updated fields
+    params.id = this.blogs.length + 1;
+    params.title = this.title;
+    params.description = this.description;
+    params.type = this.type;
+    params.img = this.img;
+
     this.commonService.updateBlog(params,this.id).subscribe((data : any)=>{
-      	this.getBlogs();	
+      	this.getBlogs();
         this.modalRef.hide();
-        
     })
   }
 
   save() {
-  	let params = {
-  		id : this.blogs.length+1,
-	    title : this.title,
-	    description : this.description,
-	    createdBy : "Dr. Deborah Angel",
-	    createdAt : new Date(),
-	    comments : "",
-	    type : this.type,
-	    status : "active"
-  	}
-  	this.commonService.createBlogs(params).subscribe((data : any)=>{
+    const blog: Blog = {
+      id: this.blogs.length + 1,
+      img: this.img,
+      title: this.title,
+      description: this.description,
+      createdBy: "Anita Sachdeva",
+      createdAt: new Date(),
+      comments: 0,
+      type: this.type,
+      tags: [],
+      status: "active"
+    };
+  	this.commonService.createBlogs(blog).subscribe((data : any)=>{
       this.modalRef.hide();
       this.getBlogs();
     })
@@ -94,8 +111,31 @@ export class BlogComponent implements OnInit {
     getBlogs() {
 	  	this.commonService.getBlogs()
 	  		.subscribe(res=>{
-	  			this.blogs = res;
+	  			this.blogs = res
 	  		})
     }
 
+
+  private updateFormImageAsByteArray(addedFile: File) {
+    alert(addedFile);
+    let bytes
+    var reader = new FileReader();
+    reader.onload = (event: any) => {
+      bytes = event.target.result;
+      // Update the form image as byte array.
+      this.img = bytes;
+    };
+    reader.onerror = (event: any) => {
+      console.log("File could not be read: " + event.target.error.code);
+    };
+    reader.readAsDataURL(addedFile);
+    return bytes;
+  }
+
+  onFileChange(event: Event) {
+    // TODO add validations for file type and size and also chek how can image be optimized, maybe ng-optimized-image etc.
+    // File is converted to byte array and saved as img property in blog
+    // @ts-ignore
+    this.updateFormImageAsByteArray(event.target.files[0]);
+  }
 }
