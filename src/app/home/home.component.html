@@ -388,7 +388,7 @@
             <div class="doc-profile-widgets">
               <div class="doc-img">
                 <a [routerLink]="'/patients/doctor-profile'" [queryParams]="{id: doctor.id}">
-                  <img class="img-fluid" alt="User Image" src="{{doctor.profile}}" loading="lazy">
+                  <img class="img-fluid" alt="User Image" [src]="doctor.profile" loading="lazy">
                 </a>
               </div>
               <div class="card">

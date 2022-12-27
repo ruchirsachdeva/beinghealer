@@ -20,6 +20,7 @@ import { LinkService } from "./link.service";
 import { PaginationComponent } from './common/pagination/pagination.component';
 import {Ng2SearchPipeModule} from "ng2-search-filter";
 import {NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule} from "ngx-google-analytics";
+import {StorageService} from "./service/storage.service";
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent, PaginationComponent],
@@ -39,7 +40,7 @@ import {NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule} from "ngx-goog
     NgxGoogleAnalyticsModule.forRoot('G-4GPSWTMQXK'),
     NgxGoogleAnalyticsRouterModule, // https://github.com/maxandriani/ngx-google-analytics
   ],
-  providers: [LinkService],
+  providers: [LinkService,  StorageService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

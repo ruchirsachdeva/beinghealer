@@ -6,6 +6,7 @@ import {
 import { Event, NavigationStart, Router, NavigationEnd } from '@angular/router';
 import { Location } from '@angular/common';
 import { CommonServiceService } from './../../common-service.service';
+import {StorageService} from "../../service/storage.service";
 
 @Component({
   selector: 'app-header',
@@ -15,6 +16,8 @@ import { CommonServiceService } from './../../common-service.service';
 export class HeaderComponent implements OnInit {
   auth: boolean = false;
   isPatient: boolean = false;
+  isHealer: boolean = false;
+  isAdmin: boolean = false;
   splitVal:any;
   url:any;
   base:any;
@@ -24,16 +27,21 @@ export class HeaderComponent implements OnInit {
     private cdr: ChangeDetectorRef,
     public router: Router,
     location: Location,
-    public commonService: CommonServiceService
+    public commonService: CommonServiceService,
+    public storageService: StorageService
   ) {
     this.commonService.message.subscribe((res) => {
       if (res === 'patientLogin') {
         this.auth = true;
-
+        this.isPatient = true;
       }
-      if (res === 'doctorLogin') {
+      if (res === 'healerLogin') {
         this.auth = true;
-
+        this.isHealer = true;
+      }
+      if (res === 'adminLogin') {
+        this.auth = true;
+        this.isAdmin = true;
       }
       if (res === 'logout') {
         this.auth = false;
@@ -71,36 +79,37 @@ export class HeaderComponent implements OnInit {
     // Sidebar Initiate
     init();
     }
-    if (localStorage.getItem('auth') === 'true') {
+    if (this.storageService.isAuthenticated()) {
       this.auth = true;
-      this.isPatient =
-        localStorage.getItem('patient') === 'true' ? true : false;
+      this.isPatient = this.storageService.isPatient();
     }
     this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationStart) {
         this.splitVal = event.url.split('/');
         this.base = this.splitVal[1];
         this.page = this.splitVal[2];
-        if (
-          this.base === 'doctor' ||
-          (this.base === 'patients' && this.page === 'dashboard') ||
-          this.base === 'change-password' ||
-          this.base === 'voice-call' ||
-          this.base === 'video-call' ||
-          (this.base === 'patients' && this.page === 'favourites') ||
-          (this.base === 'patients' && this.page === 'message') ||
-          (this.base === 'patients' && this.page === 'settings') ||
-          (this.base === 'patients' && this.page === 'patient-profile') ||
-          (this.base === 'patients' && this.page === 'add-billing')  ||
-          (this.base === 'patients' && this.page === 'add-prescription')||
-          (this.base === 'patients' && this.page === 'edit-billing')||
-          (this.base === 'patients' && this.page === 'edit-prescription')
-        ) {
-          this.auth = true;
-        } else {
-          this.auth = false;
-
-        }
+        // alert(this.base)
+        // alert(event.url)
+        // if (
+        //   this.base === 'doctor' ||
+        //   (this.base === 'patients' && this.page === 'dashboard') ||
+        //   this.base === 'change-password' ||
+        //   this.base === 'voice-call' ||
+        //   this.base === 'video-call' ||
+        //   (this.base === 'patients' && this.page === 'favourites') ||
+        //   (this.base === 'patients' && this.page === 'message') ||
+        //   (this.base === 'patients' && this.page === 'settings') ||
+        //   (this.base === 'patients' && this.page === 'patient-profile') ||
+        //   (this.base === 'patients' && this.page === 'add-billing')  ||
+        //   (this.base === 'patients' && this.page === 'add-prescription')||
+        //   (this.base === 'patients' && this.page === 'edit-billing')||
+        //   (this.base === 'patients' && this.page === 'edit-prescription')
+        // ) {
+        //   this.auth = true;
+        // } else {
+        //   this.auth = false;
+        //
+        // }
         if (this.base === 'doctor'){
           this.isPatient = false;
         }
@@ -147,7 +156,7 @@ loadDynmicallyScript(js:any) {
   }
 
   logout() {
-    localStorage.clear();
+    this.storageService.clear();
     this.auth = false;
     this.isPatient = false;
     this.router.navigate(['/login-page']);

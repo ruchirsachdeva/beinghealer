@@ -4,7 +4,8 @@ import { Observable } from 'rxjs';
 import { BehaviorSubject } from 'rxjs';
 import { map } from 'rxjs/operators';
 import {environment} from "../environments/environment";
-import {Blog} from "./model/domains";
+import {Blog, Doctor} from "./model/domains";
+import {JsonHttpService} from "./service/json-http.service";
 
 @Injectable({
   providedIn: 'root',
@@ -60,7 +61,8 @@ export class CommonServiceService {
   SERVER_URL: string = `${environment.localServer}`;
   BOOT_SERVER_URL: string = `${environment.bootServer}`;
   message: BehaviorSubject<String>;
-  constructor(public http: HttpClient) {
+  constructor(public http: HttpClient,
+              private jsonHttp: JsonHttpService) {
     this.message = new BehaviorSubject(this.messages);
   }
 
@@ -97,11 +99,11 @@ export class CommonServiceService {
   }
 
   getDoctors() {
-    return this.http.get<any[]>(this.SERVER_URL + 'doctors');
+    return this.http.get<Doctor[]>(this.SERVER_URL + 'doctors');
   }
 
   getDoctorDetails(id:any) {
-    return this.http.get(`${this.SERVER_URL + 'doctors'}/${id}`);
+    return this.http.get<Doctor>(`${this.SERVER_URL + 'doctors'}/${id}`);
   }
 
   getAppointments() {
@@ -124,23 +126,23 @@ export class CommonServiceService {
   }
 
   getBlogs() {
-    return this.http.get<Blog[]>(this.BOOT_SERVER_URL + 'blogs');
+    return this.jsonHttp.get<Blog[]>(this.BOOT_SERVER_URL + 'blogs');
   }
 
   getBlogsDetails(id:Blog) {
-    return this.http.get<Blog>(`${this.BOOT_SERVER_URL + 'blogs'}/${id}`);
+    return this.jsonHttp.get<Blog>(`${this.BOOT_SERVER_URL + 'blogs'}/${id}`);
   }
 
   updateBlog(data: Blog, id: any) {
-    return this.http.put(`${this.BOOT_SERVER_URL + 'blogs'}/${id}`, data);
+    return this.jsonHttp.put(`${this.BOOT_SERVER_URL + 'blogs'}/${id}`, data);
   }
 
   deleteBlog(id:any) {
-    return this.http.delete(`${this.BOOT_SERVER_URL + 'blogs'}/${id}`);
+    return this.jsonHttp.delete(`${this.BOOT_SERVER_URL + 'blogs'}/${id}`);
   }
 
-  createDoctor(data:any) {
-    return this.http.post(`${this.SERVER_URL + 'doctors'}`, data);
+  createDoctor(data:Doctor) {
+    return this.http.post(`${this.BOOT_SERVER_URL + 'doctors'}`, data);
   }
 
   createPatient(data:any) {

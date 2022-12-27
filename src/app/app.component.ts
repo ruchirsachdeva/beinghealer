@@ -49,9 +49,9 @@ export class AppComponent implements OnInit, AfterViewChecked {
         if (
           event.url == "/login" ||
           event.url == "/forgot-password" ||
-          event.url == "/Register" || 
+          event.url == "/Register" ||
           event.url == "/doctor/doctor-register" ||
-          event.url == "/login-page" 
+          event.url == "/login-page"
         ) {
           document.body.classList.add("account-page");
           // document.querySelector('body').classList.remove('mat-typography');
@@ -85,10 +85,10 @@ export class AppComponent implements OnInit, AfterViewChecked {
       }
     });
     this.url = location.path();
-    this.show = this.url.includes("admin") ? false : true;
+    // this.show = this.url.includes("admin") ? false : true;
     this.commonServic.message.subscribe((res) => {
       if (res === "admin") {
-        this.show = false;
+        this.show = true;
         this.hideFooter = true;
       } else if (res === "main") {
         this.show = true;

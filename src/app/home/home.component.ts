@@ -7,6 +7,7 @@ import { map, startWith } from "rxjs/operators";
 import { SlickCarouselComponent } from "ngx-slick-carousel";
 import {MailService} from "../mail.service";
 import {ToastrService} from "ngx-toastr";
+import {Doctor} from "../model/domains";
 declare const $: any;
 
 export interface Doctors {
@@ -29,10 +30,10 @@ export class HomeComponent implements OnInit , AfterContentChecked{
   @ViewChild("slickModal3") slickModal3!: SlickCarouselComponent;
   services: any[] =[]
   specialityList: any = [];
-  doctors: any = [];
+  doctors: Doctor[] = [];
   slidepage: any;
   employeeCtrl = new FormControl();
-  filteredEmployee: Observable<Doctors[]>;
+  filteredEmployee: Observable<Doctor[]>;
   blogs: any = [];
   keyword = "name";
   searchDoctor = [];
@@ -328,7 +329,7 @@ export class HomeComponent implements OnInit , AfterContentChecked{
   }
 
 
-  private _filterEmployees(value: string): Doctors[] {
+  private _filterEmployees(value: string): Doctor[] {
     const filterValue = value.toLowerCase();
     return this.doctors.filter(
       (state:any) => state.doctor_name.toLowerCase().indexOf(filterValue) === 0
