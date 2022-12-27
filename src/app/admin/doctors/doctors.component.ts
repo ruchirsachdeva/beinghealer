@@ -3,6 +3,7 @@ import { CommonServiceService } from '../../common-service.service';
 import * as $ from 'jquery';
 import { DataTableDirective } from 'angular-datatables';
 import { Subject } from 'rxjs';
+import {Doctor} from "../../model/domains";
 
 @Component({
   selector: 'app-doctors',
@@ -14,7 +15,7 @@ export class DoctorsComponent implements OnInit, OnDestroy {
   public dtElement!: DataTableDirective;
   public dtOptions: DataTables.Settings = {};
   public dtTrigger: Subject<any> = new Subject();
-  doctorsList: any = [];
+  doctorsList: Doctor[] = [];
   errorMessage!: string;
 
   constructor(public commonService: CommonServiceService) {}

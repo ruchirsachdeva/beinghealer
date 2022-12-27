@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import {InMemoryDbService} from 'angular-in-memory-web-api'
-import {Blog} from "./model/domains";
+import {Blog, Doctor} from "./model/domains";
 
 
 @Injectable({
@@ -255,7 +255,7 @@ export class DataService implements InMemoryDbService {
     },
   ]
 
-    let doctors = [
+    let doctors: Doctor[] = [
                 {
             id : 1,
             doctor_name : "Anita Sachdeva",

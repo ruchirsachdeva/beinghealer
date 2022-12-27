@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { CommonServiceService } from '../common-service.service';
 
 import { ToastrService } from 'ngx-toastr';
+import {Doctor, Patient, Role, SignupForm} from "../model/domains";
+import {AuthenticationService} from "../service/authentication.service";
 
 @Component({
   selector: 'app-register',
@@ -14,18 +16,20 @@ export class RegisterComponent implements OnInit {
   name = '';
   mobile = '';
   password = '';
-  isPatient: boolean = true;
+  isPatient!: boolean;
   doctors: any = [];
   patients: any = [];
   reg_type = 'Patient Register';
   doc_patient = 'Are you a Doctor?';
   constructor(
     private toastr: ToastrService,
-    public commonService: CommonServiceService,
-    public router: Router
+    private commonService: CommonServiceService,
+    private  authService: AuthenticationService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
+    this.isPatient = true;
     this.getpatients();
     this.getDoctors();
   }
@@ -46,27 +50,32 @@ export class RegisterComponent implements OnInit {
     if (this.name === '' || this.mobile === '' || this.password === '') {
       this.toastr.error('', 'Please enter mandatory field!');
     } else {
-      if (!this.isPatient) {
-        let params = {
-          id: this.doctors.length + 1,
-          doctor_name: this.name,
-          password: this.password,
-        };
-        this.commonService.createDoctor(params).subscribe((res) => {
-          this.toastr.success('', 'Register successfully!');
-          this.router.navigate(['/login']);
-        });
-      } else {
-        let params = {
-          id: this.patients.length + 1,
-          name: this.name,
-          password: this.password,
-        };
-        this.commonService.createPatient(params).subscribe((res) => {
-          this.toastr.success('', 'Register successfully!');
-          this.router.navigate(['/login']);
-        });
+      let params: SignupForm = {
+        role: Role.Patient,
+        email: this.name,
+        username: this.name,
+        password: this.password
       }
+      if (!this.isPatient) {
+       params.role = Role.Healer;
+      }
+      this.authService.create(params)
+        .subscribe((res) => {
+          alert(res);
+            // this.toast.showSuccess('User successfully authenticated', 'Login successful');
+            this.toastr.success('User successfully registered', 'Register successfully!');
+            this.authService.checkAuthentication();
+            // return true;
+          },
+          (err) => {
+            let message = ''
+            if(JSON.stringify(err).indexOf('DuplicateKeyException') !== -1) {
+              message = 'Email already exists. Please choose a different email.'
+            }
+            this.toastr.error(message, 'Register unsuccessful!');
+            // this.toast.showError('Please try again..', 'Login unsuccessful');
+            // return false;
+          })
     }
   }
 
