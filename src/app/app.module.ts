@@ -22,6 +22,7 @@ import {Ng2SearchPipeModule} from "ng2-search-filter";
 import {NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule} from "ngx-google-analytics";
 import {StorageService} from "./service/storage.service";
 
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent, PaginationComponent],
   imports: [
@@ -39,6 +40,7 @@ import {StorageService} from "./service/storage.service";
     Ng2SearchPipeModule,
     NgxGoogleAnalyticsModule.forRoot('G-4GPSWTMQXK'),
     NgxGoogleAnalyticsRouterModule, // https://github.com/maxandriani/ngx-google-analytics
+    InfiniteScrollModule
   ],
   providers: [LinkService,  StorageService],
   bootstrap: [AppComponent],
