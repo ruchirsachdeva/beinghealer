@@ -16,6 +16,9 @@ export class BlogComponent extends PaginationComponent implements OnInit {
   tags: string[] = [];
   filterTerm!: string;
 
+  page: number = 1;
+  limit: number = 6;
+
   constructor(public commonService: CommonServiceService,
               private route: ActivatedRoute,
               public router: Router,
@@ -25,18 +28,23 @@ export class BlogComponent extends PaginationComponent implements OnInit {
 
   override ngOnInit(): void {
     this.filterTerm = this.route.snapshot.queryParams['filterTerm'];
-    this.getBlogs();
+    this.getBlogs(this.page, this.limit);
     super.ngOnInit();
     this.goToTopOfPage();
   }
 
-  getBlogs() {
-    this.commonService.getBlogs().subscribe((result) => {
-      this.blogs = result;
+  getAllBlogs(items: any[]): any[] {
+    return items;
+    debugger;
+  }
 
-      this.updateItemCountForBlogs(result);
-
-      this.categories = result
+  getBlogs(page: number, limit: number) {
+    this.commonService.getBlogs(this.filterTerm, page, limit).subscribe((result) => {
+      
+      this.blogs.push(...result);
+      // this.updateItemCountForBlogs(this.blogs);
+      
+      this.categories = this.blogs
         .reduce<Map<string, number>>((p,c,i,a)=>{
           if(p.has(c.type)) {
             // @ts-ignore
@@ -47,7 +55,7 @@ export class BlogComponent extends PaginationComponent implements OnInit {
           return p
         },  new Map([]))
 
-      this.tags = [...new Set<string>(result.flatMap(r=>r.tags))]
+      this.tags = [...new Set<string>(this.blogs.flatMap(r=>r.tags))]
     })
   }
 
@@ -60,7 +68,9 @@ export class BlogComponent extends PaginationComponent implements OnInit {
 
   // Called when filter term is updated either through search input or tags or category click.
   updateItemCount() {
-    this.updateItemCountForBlogs(this.blogs)
+    this.blogs = [];
+    this.getBlogs(this.page = 1, this.limit)
+    // this.updateItemCountForBlogs(this.blogs)
     this.gaService.event('filter_blog_list', 'filter_blog', 'Filter Blog List');
   }
 
@@ -68,5 +78,10 @@ export class BlogComponent extends PaginationComponent implements OnInit {
     this.setItemCount(blogs.filter(x=>{
       return this.filterTerm === undefined || JSON.stringify(x).indexOf(this.filterTerm) > -1
     }).length)
+  }
+
+  onScroll() {
+    // console.log("scrolled!!");
+    this.getBlogs(++this.page, this.limit)
   }
 }
