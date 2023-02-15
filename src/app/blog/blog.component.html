@@ -35,7 +35,8 @@
 	<div class="container"> 
 
 		<div class="row">
-				<div class="col-lg-8 col-md-12 search-results" infiniteScroll [infiniteScrollDistance]="5" [infiniteScrollThrottle]="3"
+				<div class="col-lg-8 col-md-12">
+					<div class="search-results" infiniteScroll [infiniteScrollDistance]="5" [infiniteScrollThrottle]="3"
 						(scrolled)="onScroll()">
 					<!-- Blog Post -->
 					<div class="blog" *ngFor="let blog of getAllBlogs(blogs | filter:filterTerm)">
@@ -61,6 +62,7 @@
 							<p [innerHTML]="blog.description.slice(0, blog.description.slice(0, 500).lastIndexOf('.'))"></p>
 						<a  [routerLink]="'/blog-details'" [queryParams]="{id: blog.id}" class="read-more">Read More</a>
 						</div>
+					</div>
 					</div>
 					<!-- /Blog Post -->
 
