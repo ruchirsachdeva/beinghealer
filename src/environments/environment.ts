@@ -5,8 +5,8 @@
 export const environment = {
   production: true,
   localServer: "http://localhost:8080/api/",
-  bootServer: "http://localhost:80/"
-  // bootServer: "http://ec2-43-205-119-73.ap-south-1.compute.amazonaws.com/"
+  // bootServer: "http://localhost:80/"
+   bootServer: "https://ec2-43-205-119-73.ap-south-1.compute.amazonaws.com:8443/"
 };
 
 /*
