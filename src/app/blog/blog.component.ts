@@ -40,9 +40,8 @@ export class BlogComponent extends PaginationComponent implements OnInit {
 
   getBlogs(page: number, limit: number) {
     this.commonService.getBlogs(this.filterTerm, page, limit).subscribe((result) => {
-      
-      this.blogs.push(...result);
-      // this.updateItemCountForBlogs(this.blogs);
+
+      this.blogs.push(...this.updateItemForBlogs(result));
       
       this.categories = this.blogs
         .reduce<Map<string, number>>((p,c,i,a)=>{
@@ -74,7 +73,15 @@ export class BlogComponent extends PaginationComponent implements OnInit {
     this.gaService.event('filter_blog_list', 'filter_blog', 'Filter Blog List');
   }
 
+  // filter blogs based on filterterm
+  private updateItemForBlogs(blogs: any[]) {
+    return blogs.filter(x => {
+      return this.filterTerm === undefined || JSON.stringify(x).indexOf(this.filterTerm) > -1
+    });
+  }
+
   private updateItemCountForBlogs(blogs: any[]) {
+    debugger;
     this.setItemCount(blogs.filter(x=>{
       return this.filterTerm === undefined || JSON.stringify(x).indexOf(this.filterTerm) > -1
     }).length)
