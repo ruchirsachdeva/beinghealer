@@ -39,7 +39,7 @@
 					<div class="search-results" infiniteScroll [infiniteScrollDistance]="5" [infiniteScrollThrottle]="3"
 						(scrolled)="onScroll()">
 					<!-- Blog Post -->
-					<div class="blog" *ngFor="let blog of getAllBlogs(blogs | filter:filterTerm)">
+						<div class="blog" *ngFor="let blog of getAllBlogs(blogs)">
 						<div class="blog-image">
 						<a  [routerLink]="'/blog-details'" [queryParams]="{id: blog.id}"><img class="img-fluid" src="{{blog.img}}" alt="Post Image"></a>
 						</div>
