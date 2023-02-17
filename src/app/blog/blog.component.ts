@@ -1,9 +1,11 @@
+import { AfterViewInit } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { CommonServiceService } from '../common-service.service';
 import {PaginationComponent} from "../common/pagination/pagination.component";
 import {ActivatedRoute, Router} from "@angular/router";
 import {GoogleAnalyticsService} from "ngx-google-analytics";
 import {Blog} from "../model/domains";
+
 
 @Component({
   selector: 'app-blog',
@@ -15,10 +17,12 @@ export class BlogComponent extends PaginationComponent implements OnInit {
   categories: Map<string, number> = new Map([]);
   tags: string[] = [];
   filterTerm!: string;
+  services: any[] = [];
 
+  active = 1;
   page: number = 1;
   limit: number = 6;
-
+  handleScrollEvent: boolean = false;
   constructor(public commonService: CommonServiceService,
               private route: ActivatedRoute,
               public router: Router,
@@ -27,15 +31,25 @@ export class BlogComponent extends PaginationComponent implements OnInit {
   }
 
   override ngOnInit(): void {
+    console.log("### ngOnInit");
     this.filterTerm = this.route.snapshot.queryParams['filterTerm'];
     this.getBlogs(this.page, this.limit);
+    this.getServices();
     super.ngOnInit();
     this.goToTopOfPage();
+
+    // Navigating from other pages, onScroll() is being called by default 
+    // and hence API call to load blogs happen without actual scrolling, to handle this added this
+    setTimeout(() => {
+      this.handleScrollEvent = true;
+    }, 1000);
   }
 
-  getAllBlogs(items: any[]): any[] {
-    return items;
-    debugger;
+  getServices() {
+    this.commonService.getServices().subscribe((res) => {
+      this.services = res;
+      this.active = this.services.findIndex((service) => service.service === this.filterTerm) + 2;
+    });
   }
 
   getBlogs(page: number, limit: number) {
@@ -68,20 +82,29 @@ export class BlogComponent extends PaginationComponent implements OnInit {
   // Called when filter term is updated either through search input or tags or category click.
   updateItemCount() {
     this.blogs = [];
-    this.getBlogs(this.page = 1, this.limit)
-    // this.updateItemCountForBlogs(this.blogs)
+    this.active = this.services.findIndex((service) => service.service === this.filterTerm) + 2; //+2 to make default index 1
+    this.getBlogs(this.page = 1, this.limit);
     this.gaService.event('filter_blog_list', 'filter_blog', 'Filter Blog List');
   }
 
   private updateItemCountForBlogs(blogs: any[]) {
-    debugger;
     this.setItemCount(blogs.filter(x=>{
       return this.filterTerm === undefined || JSON.stringify(x).indexOf(this.filterTerm) > -1
     }).length)
   }
 
   onScroll() {
-    // console.log("scrolled!!");
-    this.getBlogs(++this.page, this.limit)
+    if (this.handleScrollEvent) {
+      console.log("### scrolled!!");
+      this.getBlogs(++this.page, this.limit)
+    }
+  }
+
+  tabChanged(event: any) {
+    this.filterTerm = "";
+    if (event.nextId > 1) {
+      this.filterTerm = this.services[event.nextId - 2].service;
+    }
+    this.updateItemCount()
   }
 }

@@ -4,3 +4,20 @@
     /*margin-top: 6em;*/
     /*margin-top: 6em;*/
 }
+
+.nav-tabs {
+    flex-wrap: nowrap;
+    text-align: center;
+}
+
+.nav-link {
+    height: 100%;
+}
+
+.nav-item{
+    margin-bottom: -1px;
+}
+
+.blog{
+    border-top: none ;
+}
