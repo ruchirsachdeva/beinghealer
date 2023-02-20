@@ -18,6 +18,7 @@ export class BlogComponent extends PaginationComponent implements OnInit {
 
   page: number = 1;
   limit: number = 6;
+  handleScrollEvent: boolean = false;
 
   constructor(public commonService: CommonServiceService,
               private route: ActivatedRoute,
@@ -31,11 +32,16 @@ export class BlogComponent extends PaginationComponent implements OnInit {
     this.getBlogs(this.page, this.limit);
     super.ngOnInit();
     this.goToTopOfPage();
+
+    // Navigating from other pages, onScroll() is being called by default 
+    // and hence API call to load blogs happen without actual scrolling, to handle this added this
+    setTimeout(() => {
+      this.handleScrollEvent = true;
+    }, 1000);
   }
 
   getAllBlogs(items: any[]): any[] {
     return items;
-    debugger;
   }
 
   getBlogs(page: number, limit: number) {
@@ -74,7 +80,6 @@ export class BlogComponent extends PaginationComponent implements OnInit {
   }
 
   private updateItemCountForBlogs(blogs: any[]) {
-    debugger;
     this.setItemCount(blogs.filter(x=>{
       return this.filterTerm === undefined || JSON.stringify(x).indexOf(this.filterTerm) > -1
     }).length)
@@ -82,6 +87,9 @@ export class BlogComponent extends PaginationComponent implements OnInit {
 
   onScroll() {
     // console.log("scrolled!!");
-    this.getBlogs(++this.page, this.limit)
+    // this.getBlogs(++this.page, this.limit);
+    if (this.handleScrollEvent) {
+      this.getBlogs(++this.page, this.limit)
+    }
   }
 }

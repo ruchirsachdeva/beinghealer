@@ -152,6 +152,11 @@
 
 				<!-- </div> -->
 			</div>
+			<div class="col-lg-8 col-md-12" *ngIf="blogs.length < 1">
+				<div>
+					<ng-template [ngTemplateOutlet]="noData"></ng-template>
+				</div>
+			</div>
 			<!-- Blog Sidebar -->
 			<div class="col-lg-4 col-md-12 sidebar-right theiaStickySidebar">
 				<div class="sticky-grid">
@@ -177,6 +182,8 @@
 							</li>
 
 						</ul>
+						<ng-template [ngTemplateOutlet]="noData"></ng-template>
+
 					</div>
 				</div>
 				<!-- /Latest Posts -->
@@ -190,6 +197,7 @@
               <ul class="categories" *ngFor="let category of categories | keyvalue">
                 <li><a (click)="updateFilterTerm(category.key)">{{category.key}} <span>({{category.value}})</span></a></li>
               </ul>
+			<ng-template [ngTemplateOutlet]="noData"></ng-template>
             </div>
           </div>
           <!-- /Categories -->
@@ -203,6 +211,7 @@
               <ul class="tags">
                 <li *ngFor="let tag of tags"><a (click)="updateFilterTerm(tag)" class="tag">{{tag}}</a></li>
               </ul>
+				<ng-template [ngTemplateOutlet]="noData"></ng-template>
             </div>
           </div>
           <!-- /Tags -->
@@ -214,4 +223,7 @@
 	</div>
 
 </div>
+<ng-template #noData>
+	<div class=" text-center" *ngIf="blogs.length < 1">No Blogs found</div>
+</ng-template>
 <!-- /Page Content -->

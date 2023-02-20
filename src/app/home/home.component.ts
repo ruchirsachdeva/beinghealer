@@ -621,7 +621,8 @@ export class HomeComponent implements OnInit , AfterContentChecked{
   navigateToBlogGridSearchResult(key: string) {
     // alert(key);
     this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
-      this.router.navigateByUrl('/blog-grid?filterTerm=' + key);
+      // this.router.navigateByUrl('/blog-grid?filterTerm=' + key);
+      this.router.navigateByUrl('/blog?filterTerm=' + key);
     });
   }
 
