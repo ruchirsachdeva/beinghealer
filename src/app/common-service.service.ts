@@ -122,7 +122,7 @@ export class CommonServiceService {
   }
 
   createBlogs(data:Blog) {
-    return this.http.post(`${this.BOOT_SERVER_URL + 'blogs'}`, data);
+    return this.jsonHttp.post(`${this.BOOT_SERVER_URL + 'blogs'}`, data);
   }
 
   getBlogs(seacrhPhrase?: string, pg?: number, lmt?: number) {
