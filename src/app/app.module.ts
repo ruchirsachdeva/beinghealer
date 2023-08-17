@@ -6,7 +6,7 @@ import { AppComponent } from "./app.component";
 import { HeaderComponent } from "./common/header/header.component";
 import { FooterComponent } from "./common/footer/footer.component";
 
-import { HttpClientModule } from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 import { DataService } from "./data.service";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
@@ -23,6 +23,7 @@ import {NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule} from "ngx-goog
 import {StorageService} from "./service/storage.service";
 
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import {CacheControlInterceptor} from "./cache-control.interceptor";
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent, PaginationComponent],
   imports: [
@@ -42,7 +43,7 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     NgxGoogleAnalyticsRouterModule, // https://github.com/maxandriani/ngx-google-analytics
     InfiniteScrollModule
   ],
-  providers: [LinkService,  StorageService],
+  providers: [LinkService,  StorageService, { provide: HTTP_INTERCEPTORS, useClass: CacheControlInterceptor, multi: true }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
