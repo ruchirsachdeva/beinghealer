@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit, Renderer2} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CommonServiceService } from './../../common-service.service';
 import {MailService} from "../../mail.service";
@@ -11,7 +11,8 @@ declare var daterangepicker: any;
   templateUrl: './booking.component.html',
   styleUrls: ['./booking.component.css'],
 })
-export class BookingComponent implements OnInit {
+export class BookingComponent implements OnInit, OnDestroy {
+  private scriptElement: HTMLScriptElement | null = null;
   doctorId:any;
   doctorDetails:any;
   userDetails:any;
@@ -56,10 +57,22 @@ export class BookingComponent implements OnInit {
     private route: ActivatedRoute,
     public commonService: CommonServiceService,
     public mailService: MailService,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private renderer: Renderer2
   ) {}
 
+  ngOnDestroy(): void {
+      if (this.scriptElement) {
+        this.scriptElement.remove();
+     }
+    }
+
   ngOnInit(): void {
+    this.scriptElement = this.renderer.createElement('script') as HTMLScriptElement;
+    this.scriptElement.src = 'https://assets.calendly.com/assets/external/widget.js';
+    this.scriptElement.async = true;
+    this.renderer.appendChild(document.body, this.scriptElement);
+
     if($('.bookingrange').length > 0) {
       let start =  moment();
       let end = moment().add(6, 'days');
