@@ -7024,6 +7024,11 @@ html.menu-opened body {
 		-ms-transform: translateY(20px);
 		transform: translateY(20px);
 	}
+
+  /* Desktop view - Hide mobile-social */
+    .mobile-social {
+      display: none !important; /* Hide mobile-social on desktop view */
+    }
 }
 
 @media only screen and (max-width: 1399px) {
@@ -7128,7 +7133,7 @@ html.menu-opened body {
 		display: none;
 		list-style: none;
 		margin: 0;
-		padding-left: 0;
+		padding-left: 1rem;
 	}
 	.main-nav > li {
 		border-bottom: 1px solid #eaeaea;
@@ -7304,6 +7309,7 @@ html.menu-opened body {
 	.top-header {
 		display: none;
 	}
+
 	.speak-expert-img {
 		display: block;
 	}
