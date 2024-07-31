@@ -1073,61 +1073,56 @@ export class DataService implements InMemoryDbService {
       {
         id: 1,
         title: "Hypno therapy",
-        description: "<p>Hypnosis is an effective and natural approach that allows for access to your subconscious mind by relaxing and bypassing the conscious mind. Hypnotherapy is the 'therapy' carried out during this altered state of awareness,\n" +
-          "which can be used to help you gain control over patterns, behaviors, fears, thoughts, feelings, and actions. It can be a guide to past experiences and clarify causes/reasons. It can help you gain a better understanding of yourself and your relationships with others and it can provide a glimpse into future life experiences, goals, and life purpose. </p>",
+        description: "<p>Hypnosis is an effective and natural approach that allows access to your subconscious mind by relaxing and bypassing the conscious mind. Hypnotherapy is the 'therapy' carried out during this altered state of awareness, which can be used to help you gain control over patterns, behaviors, fears, thoughts, feelings, and actions. It can provide insights into past experiences, clarify causes/reasons, help you gain a better understanding of yourself and your relationships with others, and offer glimpses into future life experiences, goals, and life purpose.</p>",
         image: "assets/img/service-img1.jpg",
         service: "Hypnotherapy"
       },
       {
         id: 2,
         title: "Past Life Regression",
-        description: "<p>PLR is a safe, intuitive, and healing way to gain a better understanding of self in this lifetime as it relates to previous life experiences. PLR is based on the idea of reincarnation. In essence, we are all pure and magical beings who come to the earth plane in order to learn lessons, gain experience, connect with our soul families and attain our true purpose, as well as to experience karmic lessons in order to grow and evolve. PLR is explored through hypnotic trance induction and you are guided through the experience in order to process and integrate.</p>",
+        description: "<p>Past Life Regression (PLR) is a safe, intuitive, and healing way to gain a better understanding of yourself in this lifetime as it relates to previous life experiences. PLR is based on the idea of reincarnation. We are all pure and magical beings who come to the earth plane to learn lessons, gain experience, connect with our soul families, and attain our true purpose. PLR is explored through hypnotic trance induction, guiding you through the experience to process and integrate.</p>",
         image: "assets/img/service-img2.jpg",
         service: "Past Life Regression"
       },
       {
         id: 3,
         title: "Inner Child Regression",
-        description: "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
+        description: "<p>Inner Child Regression therapy involves connecting with and healing the inner child within you. This therapeutic approach aims to address past traumas, unresolved emotions, and negative patterns that originated in childhood. By revisiting these experiences in a safe and supportive environment, you can release emotional pain, gain insight into your behaviors, and foster self-compassion and healing.</p>",
         image: "assets/img/service-img3.jpg",
         service: "Inner Child Regression"
       },
       {
         id: 4,
         title: "Ancestral Healing",
-        description: "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
+        description: "<p>Ancestral Healing involves addressing and healing inherited family trauma and unresolved issues passed down through generations. This therapy helps to release emotional burdens, negative patterns, and limiting beliefs that have been carried forward. By connecting with and honoring your ancestors, you can gain a deeper understanding of yourself, heal family wounds, and create a more positive legacy for future generations.</p>",
         image: "assets/img/service-img4.jpg",
         service: "Ancestral Healing"
       },
       {
         id: 5,
         title: "Family Constellation",
-        description: "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
+        description: "<p>Family Constellation therapy is a therapeutic approach that helps individuals address and resolve family dynamics and issues that may be affecting their lives. It involves exploring family relationships, hidden patterns, and unresolved conflicts to bring about healing and transformation. By understanding and releasing these dynamics, you can create healthier relationships and improve overall well-being.</p>",
         image: "assets/img/service-img5.jpg",
         service: "Family Constellation"
       },
       {
         id: 6,
         title: "Reiki Healing",
-        description: "<p>Reiki and energy healing is an ancient-inspired, modern method of healing emotional and physical problems.\n" +
-          "There are seven main chakras, which you can think of as energy centers, which align the spine, starting from the base of the spine up to the crown of the head. Chakras filter energy continuously in and out of the body.\n" +
-          "If any of the chakras become congested or completely blocked, then the fresh, positive, balancing energy that the mind, body & spirit needs to function properly cannot flow efficiently throughout our body.\n" +
-          "Blockages in chakras and energy flow can lead to a variety of emotional, behavioral, and physical symptoms.\n" +
-          "The goal of Reiki healing is to balance chakras to clear out any congestion or blockages in the chakras, thus reaching a healthy place of balance between mind, body, spirit, earth, health, universality, and grounding.</p>\n",
+        description: "<p>Reiki is an ancient-inspired, modern method of healing emotional and physical problems through energy healing. There are seven main chakras, which you can think of as energy centers, aligning the spine from the base to the crown of the head. Chakras filter energy continuously in and out of the body. If any of the chakras become congested or blocked, the positive, balancing energy needed for mind, body, and spirit to function properly cannot flow efficiently. Blockages in chakras and energy flow can lead to various emotional, behavioral, and physical symptoms. Reiki healing aims to balance chakras, clear blockages, and achieve a healthy balance between mind, body, spirit, and overall well-being.</p>",
         image: "assets/img/service-img6.jpg",
         service: "Reiki"
       },
       {
         id: 7,
         title: "Midbrain Activation",
-        description: "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
+        description: "<p>Midbrain Activation is a technique that aims to enhance brain function by stimulating the midbrain. This therapy is believed to improve cognitive abilities, memory, and overall mental performance. It involves various exercises and activities designed to activate and balance the brain's hemispheres, leading to better focus, creativity, and problem-solving skills.</p>",
         image: "assets/img/service-img7.jpg",
         service: "Midbrain Activation"
       },
       {
         id: 8,
         title: "Sound Therapy",
-        description: "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
+        description: "<p>Sound Therapy uses sound vibrations to promote physical, emotional, and mental well-being. This therapy involves listening to and experiencing different sounds, such as music, singing bowls, tuning forks, and other instruments, to relax the mind and body. Sound therapy can reduce stress, enhance relaxation, improve sleep, and support overall health and healing.</p>",
         image: "assets/img/service-img8.jpg",
         service: "Sound Therapy"
       },
@@ -1138,49 +1133,49 @@ export class DataService implements InMemoryDbService {
           {
             id: 10,
             title: "Crystal Healing",
-            description: "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
-            image: "assets/img/service-img9.jpg",
+            description: "<p>Crystal Healing involves using crystals and gemstones to promote healing and balance within the body. Each crystal has unique properties and energies that can influence physical, emotional, and spiritual well-being. This therapy involves placing crystals on or around the body to align the energy field, remove blockages, and promote healing.</p>",
+            image: "assets/img/service-crystal-healing.jpg",
             service: "Crystal Healing"
           },
           {
             id: 11,
             title: "Color Therapy",
-            description: "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
-            image: "assets/img/service-img10.jpg",
+            description: "<p>Color Therapy, also known as Chromotherapy, uses colors to balance and enhance physical and emotional health. Each color has specific properties that can affect mood, energy levels, and overall well-being. This therapy involves exposure to colored lights, visualizations, and other techniques to promote healing and balance.</p>",
+            image: "assets/img/service-color-therapy.jpg",
             service: "Color Therapy"
           },
           {
             id: 12,
             title: "Magneto Therapy",
-            description: "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
-            image: "assets/img/service-img7.jpg",
+            description: "<p>Magneto Therapy involves using magnets to promote healing and relieve pain. This therapy is based on the idea that magnetic fields can influence the body's energy flow and improve circulation. Magneto therapy is used to treat various conditions, including chronic pain, inflammation, and stress-related disorders.</p>",
+            image: "assets/img/service-magneto-therapy.jpg",
             service: "Magneto Therapy"
           },
           {
             id: 13,
             title: "Sujok Therapy",
-            description: "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
-            image: "assets/img/service-img8.jpg",
+            description: "<p>Sujok Therapy is a form of alternative medicine that uses acupressure points on the hands and feet to treat various ailments. This therapy is based on the principle that the hands and feet reflect the entire body, and stimulating specific points can promote healing and balance. Sujok therapy is used to treat pain, stress, and other health issues.</p>",
+            image: "assets/img/service-sujok-therapy.jpg",
             service: "Sujok Therapy"
           },
           {
             id: 14,
             title: "Acupressure",
-            description: "<p>PLR is a safe, intuitive, and healing way to gain a better understanding of self in this lifetime as it relates to previous life experiences. PLR is based on the idea of reincarnation. In essence, we are all pure and magical beings who come to the earth plane in order to learn lessons, gain experience, connect with our soul families and attain our true purpose, as well as to experience karmic lessons in order to grow and evolve. PLR is explored through hypnotic trance induction and you are guided through the experience in order to process and integrate.</p>",
-            image: "assets/img/service-img9.jpg",
+            description: "<p>Acupressure is a traditional healing technique that involves applying pressure to specific points on the body to relieve pain and promote wellness. It is based on the same principles as acupuncture but uses finger pressure instead of needles. Acupressure is used to treat various conditions, including pain, anxiety, and digestive issues.</p>",
+            image: "assets/img/service-acupressure.jpg",
             service: "Acupressure"
           },
           {
             id: 15,
             title: "Breath work",
-            description: "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo remque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>",
-            image: "assets/img/service-img10.jpg",
+            description: "<p>Breath work involves using specific breathing techniques to promote physical, emotional, and mental well-being. This therapy can help reduce stress, improve concentration, and enhance overall health. Breath work practices include deep breathing, pranayama, and other methods to increase oxygen flow and balance the body's energy.</p>",
+            image: "assets/img/service-breathwork.jpg",
             service: "Breath work"
           }
-          ],
+        ],
         service: "Other Therapies"
       }
-      ]
+    ]
 
   let transactions = [
       {
