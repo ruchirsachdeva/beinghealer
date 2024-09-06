@@ -323,7 +323,7 @@ export class DataService implements InMemoryDbService {
         type : "Male",
         location : "Online & Panipat, India",
         availableTime : "10 am",
-        consulting_fees : "₹₹1500",
+        consulting_fees : "₹1500",
         booking_fees : "₹500",
         video_call : "₹1500",
         description : "Another Being Healer co-founder, Adarsh, has spent the past four decades in the financial industry, so he is sensitive to the importance of cultivating compassion and introspection in today's tense and unbalanced workplace. He is a Reiki Master who has helped many people through crystal energy healings and Reiki energy healings. " +
@@ -346,7 +346,7 @@ export class DataService implements InMemoryDbService {
         type : "Male",
         location : "Online & Panipat, India",
         availableTime : "10 am",
-        consulting_fees : "₹₹1500",
+        consulting_fees : "₹1500",
         booking_fees : "₹500",
         video_call : "₹1500",
         description : "Arun runs various schools and specializes in child psychology, besides have decades of experience as a Reiki Master, Clinical Hypnotherapist and a Mid brain activation expert. He will analyse your aura, feelings, and bodily processes and show you the way to self-healing. His ability to heal others through reiki is extraordinary, and during energetic sessions he frequently receives visions and information being channelled. He will send powerful distance healing and clear all energy blocks in your body and chakras." +
