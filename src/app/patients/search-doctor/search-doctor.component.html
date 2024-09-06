@@ -86,7 +86,7 @@
 			<div class="col-md-12 col-lg-12 col-xl-12">
 
 				<!-- Doctor Widget -->
-				<div class="card" *ngFor="let doctor of doctors">
+				<div class="card" *ngFor="let doctor of filteredDoctors">
 					<div class="card-body">
 						<div class="doctor-widget">
 							<div class="doc-info-left">
@@ -105,8 +105,10 @@
 										<i class="fas fa-star filled me-1"></i>
 										<i class="fas fa-star filled me-1"></i>
 										<i class="fas fa-star filled me-1"></i>
-										<i class="fas fa-star me-1"></i>
-										<span class="d-inline-block average-rating">(17)</span>
+                    <i class="fas fa-star filled me-1"></i>
+<!--                TODO Uncomment for an empty star and for number of ratings-->
+                    <!--										<i class="fas fa-star me-1"></i>-->
+<!--										<span class="d-inline-block average-rating">(17)</span>-->
 									</div>
 									<div class="clinic-details">
 										<p class="doc-location"><i class="fas fa-map-marker-alt"></i> {{doctor.location}}</p>
@@ -124,10 +126,10 @@
 							<div class="doc-info-right">
 								<div class="clini-infos">
 									<ul>
-										<li><i class="far fa-thumbs-up"></i> 98%</li>
-										<li><i class="far fa-comment"></i> 17 Feedback</li>
+                    <!--<li><i class="far fa-thumbs-up"></i> 98%</li>
+                    <li><i class="far fa-comment"></i> 17 Feedback</li>-->
 										<li><i class="fas fa-map-marker-alt"></i> {{doctor.location}}</li>
-										<li><i class="far fa-money-bill-alt"></i> {{doctor.location}} per hour <i class="fas fa-info-circle" data-bs-toggle="tooltip" title="Lorem Ipsum"></i> </li>
+										<li><i class="far fa-money-bill-alt"></i> {{doctor.consulting_fees}} per hour <i class="fas fa-info-circle" data-bs-toggle="tooltip" title="Lorem Ipsum"></i> </li>
 									</ul>
 								</div>
 								<div class="clinic-booking">

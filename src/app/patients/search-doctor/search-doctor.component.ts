@@ -11,6 +11,7 @@ import { CommonServiceService } from './../../common-service.service'
 })
 export class SearchDoctorComponent implements OnInit {
   doctors: any = [];
+  filteredDoctors: any = [];
   specialityList: any[] = [];
   types: any[] = []
   selDate:any;
@@ -37,6 +38,7 @@ export class SearchDoctorComponent implements OnInit {
   getDoctors() {
     this.commonService.getDoctors().subscribe(res => {
       this.doctors = res;
+      this.filteredDoctors = this.doctors;
 
       this.specialityList = this.toCheckedLabels(res, r => r.specializations)
       this.types = this.toCheckedLabels(res, r => r.type)
@@ -63,7 +65,7 @@ export class SearchDoctorComponent implements OnInit {
   }
 
   search() {
-    this.doctors = this.doctors.filter((a:any) => this.types.filter(t=>t.isChecked).map(t=>t.label).includes(a.type) &&
+    this.filteredDoctors = this.doctors.filter((a:any) => this.types.filter(t=>t.isChecked).map(t=>t.label).includes(a.type) &&
       this.intersects(this.specialityList.filter(s=>s.isChecked).map(t=>t.label), a.specializations))
   }
 

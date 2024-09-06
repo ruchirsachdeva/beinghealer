@@ -25,7 +25,7 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     data: {
       role: 'patient',
-      exclude: ['/patients/search-doctor', '/patients/doctor-profile'],
+      exclude: ['/patients/search-doctor', '/patients/doctor-profile', '/patients/booking'],
     },
   },
   {
