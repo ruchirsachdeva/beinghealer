@@ -8,6 +8,7 @@ import {Blog, Doctor} from "./model/domains";
   providedIn: 'root'
 })
 export class DataService implements InMemoryDbService {
+   formattedDate = this.getTodayString();
 
   constructor() { }
 
@@ -43,7 +44,7 @@ export class DataService implements InMemoryDbService {
         speciality : "Dentist",
         since : "Wed May 27 2020 09:41:48 GMT+0530 (India Standard Time)",
         Education : "MDS - Periodontology and Oral Implantology, BDS",
-        Available : " Available on Fri, 22 Mar ",
+        Available : `Available on ${this.formattedDate}`,
         Earned : "3100.00",
         Price : "$160",
         profile : "assets/img/doctors/doctor-01.jpg",
@@ -61,7 +62,7 @@ export class DataService implements InMemoryDbService {
         speciality : "Surgery",
         since : "Wed May 27 2020 09:41:48 GMT+0530 (India Standard Time)",
         Education : "BDS, MDS - Oral & Maxillofacial Surgery",
-        Available : " Available on Fri, 22 Mar ",
+        Available : `Available on ${this.formattedDate}`,
         Earned : "3900.00",
         Price : "$190",
         profile : "assets/img/doctors/doctor-02.jpg",
@@ -79,7 +80,7 @@ export class DataService implements InMemoryDbService {
         speciality : "Cardiology",
         since : "Wed May 27 2020 09:41:48 GMT+0530 (India Standard Time)",
         Education : "MBBS, MD - General Medicine, DNB - Cardiology",
-        Available : " Available on Fri, 22 Mar ",
+        Available : `Available on ${this.formattedDate}`,
         Earned : "3700.00",
         Price : "$170",
         profile : "assets/img/doctors/doctor-03.jpg",
@@ -97,7 +98,7 @@ export class DataService implements InMemoryDbService {
         speciality : "BDS, MDS - Oral & Maxillofacial Surgery",
         since : "Wed May 27 2020 09:41:48 GMT+0530 (India Standard Time)",
         Education : "MBBS, MS - General Surgery, MCh - Urology",
-        Available : " Available on Fri, 22 Mar ",
+        Available : `Available on ${this.formattedDate}`,
         Earned : "3000.00",
         Price : "$110",
         profile : "assets/img/doctors/doctor-04.jpg",
@@ -115,7 +116,7 @@ export class DataService implements InMemoryDbService {
       speciality : "MBBS, MD - Ophthalmology, DNB - Ophthalmology",
       since : "Wed May 27 2020 09:41:48 GMT+0530 (India Standard Time)",
       Education : "MBBS, MD - Ophthalmology, DNB - Ophthalmology",
-      Available : " Available on Fri, 22 Mar ",
+      Available : `Available on ${this.formattedDate}`,
       Earned : "3150.00",
       Price : "$130",
       profile : "assets/img/doctors/doctor-05.jpg",
@@ -133,7 +134,7 @@ export class DataService implements InMemoryDbService {
       speciality : "Dentist",
       since : "Wed May 27 2020 09:41:48 GMT+0530 (India Standard Time)",
       Education : "MS - Orthopaedics, MBBS, M.Ch - Orthopaedics",
-      Available : " Available on Fri, 22 Mar ",
+      Available : `Available on ${this.formattedDate}`,
       Earned : "2900.00",
       Price : "$180",
       profile : "assets/img/doctors/doctor-06.jpg",
@@ -151,7 +152,7 @@ export class DataService implements InMemoryDbService {
       speciality : "Dentist",
       since : "Wed May 27 2020 09:41:48 GMT+0530 (India Standard Time)",
       Education : "MBBS, MD - General Medicine, DM - Neurology",
-      Available : " Available on Fri, 22 Mar ",
+      Available : `Available on ${this.formattedDate}`,
       Earned : "2900.00",
       Price : "$160",
       profile : "assets/img/doctors/doctor-07.jpg",
@@ -169,7 +170,7 @@ export class DataService implements InMemoryDbService {
       speciality : "Dentist",
       since : "Wed May 27 2020 09:41:48 GMT+0530 (India Standard Time)",
       Education : "MBBS, MD - General Medicine, DM - Endocrinology",
-      Available : " Available on Fri, 22 Mar ",
+      Available : `Available on ${this.formattedDate}`,
       Earned : "3200.00",
       Price : "$140",
       profile : "assets/img/doctors/doctor-08.jpg",
@@ -187,7 +188,7 @@ export class DataService implements InMemoryDbService {
       speciality : "Dentist",
       since : "Wed May 27 2020 09:41:48 GMT+0530 (India Standard Time)",
       Education : "MBBS, MD - Dermatology , Venereology & Lepros",
-      Available : " Available on Fri, 22 Mar ",
+      Available : `Available on ${this.formattedDate}`,
       Earned : "3000.00",
       Price : "$150",
       profile : "assets/img/doctors/doctor-09.jpg",
@@ -205,7 +206,7 @@ export class DataService implements InMemoryDbService {
       speciality : "Dentist",
       since : "Wed May 27 2020 09:41:48 GMT+0530 (India Standard Time)",
       Education : "MBBS, MD - Dermatology , Venereology & Lepros",
-      Available : " Available on Fri, 22 Mar ",
+      Available : `Available on ${this.formattedDate}`,
       Earned : "3000.00",
       Price : "$150",
       profile : "assets/img/doctors/doctor-10.jpg",
@@ -223,7 +224,7 @@ export class DataService implements InMemoryDbService {
       speciality : "Dentist",
       since : "Wed May 27 2020 09:41:48 GMT+0530 (India Standard Time)",
       Education : "MBBS, MD - Dermatology , Venereology & Lepros",
-      Available : " Available on Fri, 22 Mar ",
+      Available : `Available on ${this.formattedDate}`,
       Earned : "3000.00",
       Price : "$150",
       profile : "assets/img/doctors/doctor-11.jpg",
@@ -241,7 +242,7 @@ export class DataService implements InMemoryDbService {
       speciality : "Dentist",
       since : "Wed May 27 2020 09:41:48 GMT+0530 (India Standard Time)",
       Education : "MBBS, MD - Dermatology , Venereology & Lepros",
-      Available : " Available on Fri, 22 Mar ",
+      Available : `Available on ${this.formattedDate}`,
       Earned : "3000.00",
       Price : "$150",
       profile : "assets/img/doctors/doctor-12.jpg",
@@ -267,9 +268,9 @@ export class DataService implements InMemoryDbService {
             speciality_profile : 'assets/img/specialities/specialities-05.png',
             since : "Wed May 27 2002 09:41:48 GMT+0530 (India Standard Time)",
             Education : "Clinical Hypnotherapist, Doctor of Naturopathy, Reiki Master",
-            Available : " Available on Fri, 22 Mar ",
+            Available : `Available on ${this.formattedDate}`,
             Earned : "₹3100.00",
-            Price : "₹2000",
+            Price : "₹3000",
             profile : "assets/img/doctors/doctor-thumb-01.jpg",
             status : "1",
             type : "Female",
@@ -283,6 +284,30 @@ export class DataService implements InMemoryDbService {
         },
       {
         id : 2,
+        doctor_name : "Anubha Rana",
+        specializations : ["Hypnotherapy", "Past Life Regression Therapy", "Breathwork"],
+        services : ["Hypnotherapy", "Past Life Regression Therapy","Ancestral Healing", "Family Constellation","Inner Child","Breathwork"
+        ],
+        work_experience : [ {title: "Clinical Hypnotherapist", duration: "3 years"}, {title: "Product Manager", duration: "10 years"}],
+        speciality_profile : 'assets/img/specialities/specialities-05.png',
+        since : "Wed May 27 2021 07:41:48 GMT+0530 (India Standard Time)",
+        Education : "Clinical Hypnotherapist, Mindfulness expert",
+        Available : `Available on ${this.formattedDate}`,
+        Earned : "₹3100.00",
+        Price : "₹2000",
+        profile : "assets/img/doctors/doctor-thumb-anubha.jpg",
+        status : "1",
+        type : "Female",
+        location : "Online & Stockholm, Sweden",
+        availableTime : "10 am",
+        consulting_fees : "₹2000",
+        booking_fees : "₹1000",
+        video_call : "₹3000",
+        description : "Anubha is an experienced hypnotherapist, having spent the last three years honing her skills in hypnotherapy, past life regression, and inner child healing. " +
+          "Her passion for this field stems from her deep understanding of the human mind's ability to heal and transform through these therapeutic practices. Anubha's approach is holistic, focusing on helping clients release past traumas, reconnect with their inner selves, and find emotional and spiritual balance. She is dedicated to guiding clients towards inner peace, personal growth, and empowerment, tailoring each session to meet their unique needs and goals.\n"
+      },
+      {
+        id : 3,
         doctor_name : "Adarsh Sachdeva",
         specializations : ["Reiki", "Breathwork"],
         services : ["Reiki Healing", "Crystal Healing", "Breathwork"],
@@ -290,22 +315,22 @@ export class DataService implements InMemoryDbService {
         speciality_profile : 'assets/img/specialities/specialities-05.png',
         since : "Wed May 27 2002 09:41:48 GMT+0530 (India Standard Time)",
         Education : "Reiki Master, Crystal Healing, Breathwork",
-        Available : " Available on Fri, 22 Mar ",
+        Available : `Available on ${this.formattedDate}`,
         Earned : "₹3100.00",
-        Price : "₹2000",
+        Price : "₹1500",
         profile : "assets/img/doctors/doctor-thumb-02.jpg",
         status : "1",
         type : "Male",
         location : "Online & Panipat, India",
         availableTime : "10 am",
-        consulting_fees : "₹2000",
+        consulting_fees : "₹₹1500",
         booking_fees : "₹500",
         video_call : "₹1500",
         description : "Another Being Healer co-founder, Adarsh, has spent the past four decades in the financial industry, so he is sensitive to the importance of cultivating compassion and introspection in today's tense and unbalanced workplace. He is a Reiki Master who has helped many people through crystal energy healings and Reiki energy healings. " +
           "The length of the session can be anywhere from 30 minutes to 1 hour. Both in-person and distance healing are possible. He pays close attention to issues brought up by the client and anything else they may require, whether or not they realise it."
       },
       {
-        id : 3,
+        id : 4,
         doctor_name : "Arun Chopra",
         specializations : ["Hypnotherapy", "Reiki", "Midbrain activation", "Breathwork"],
         services : ["Hypnotherapy", "Reiki Healing", "Midbrain activation", "Breathwork"],
@@ -313,22 +338,22 @@ export class DataService implements InMemoryDbService {
         speciality_profile : 'assets/img/specialities/specialities-05.png',
         since : "Wed May 27 2002 09:41:48 GMT+0530 (India Standard Time)",
         Education : "Clinical Hypnotherapist, Reiki Grand Master",
-        Available : " Available on Fri, 22 Mar ",
+        Available : `Available on ${this.formattedDate}`,
         Earned : "₹3100.00",
-        Price : "₹2000",
+        Price : "₹1500",
         profile : "assets/img/doctors/doctor-thumb-03.jpg",
         status : "1",
         type : "Male",
         location : "Online & Panipat, India",
         availableTime : "10 am",
-        consulting_fees : "₹2000",
+        consulting_fees : "₹₹1500",
         booking_fees : "₹500",
         video_call : "₹1500",
         description : "Arun runs various schools and specializes in child psychology, besides have decades of experience as a Reiki Master, Clinical Hypnotherapist and a Mid brain activation expert. He will analyse your aura, feelings, and bodily processes and show you the way to self-healing. His ability to heal others through reiki is extraordinary, and during energetic sessions he frequently receives visions and information being channelled. He will send powerful distance healing and clear all energy blocks in your body and chakras." +
           "Arun's area of expertise is stimulating the midbrain in children between the ages of 5 and 15. Through the process of \"blindfold activation,\" a child is taught to achieve the miraculous state of super sensory development that allows them to \"see\" even when their eyes are closed. A genius isn't necessarily someone with an IQ above 130; rather, it's someone who can achieve the alpha-theta state of mind, at which the brain can perform at its peak. If a child's brain is developing normally, he or she will have excellent performance across the board from their senses, including the ability to intuitively perform tasks. A child in the genius stage is able to read faster, memorise more information, and focus more intently."
       },
       {
-        id : 4,
+        id : 5,
         doctor_name : "Sadhana Rana",
         specializations : ["Reiki", "Magneto therapy", "Acupressure"],
         services : ["Reiki Healing", "Crystal Healing", "Magneto therapy", "Acupressure"],
@@ -336,7 +361,7 @@ export class DataService implements InMemoryDbService {
         speciality_profile : 'assets/img/specialities/specialities-05.png',
         since : "Wed May 27 2002 09:41:48 GMT+0530 (India Standard Time)",
         Education : "Reiki Master, Magneto therapy, Acupressure",
-        Available : " Available on Fri, 22 Mar ",
+        Available : `Available on ${this.formattedDate}`,
         Earned : "₹3100.00",
         Price : "₹2000",
         profile : "assets/img/doctors/doctor-thumb-04.jpg",
@@ -350,7 +375,7 @@ export class DataService implements InMemoryDbService {
         description : "Sadhana Rana is passionate about sharing her knowledge of holistic healing modalities as a Reiki master, magneto therapy specialist, and accupressure practitioner. Since 1996, she has been helping people through the practise of alternative medicine, which includes techniques like Reiki, Pranic healing, Crystal therapy, Magneto therapy, Acupressure, and Acupuncture. She is the recipient of multiple honours and has presented her research at multiple conferences and seminars. Since 1996, she has been treating thousands of patients at her Rana Magnetotherapy Centre in Lalpur, Ranchi."
       },
       {
-        id : 5,
+        id : 6,
         doctor_name : "Neha Arora ",
         specializations : ["Hypnotherapy", "Naturopathy", "Reiki","Breathwork"],
         services : ["Hypnotherapy", "Past Life Regression Therapy","Ancestral Healing", "Family Constellation","Inner Child", "Reiki Healing",
@@ -360,7 +385,7 @@ export class DataService implements InMemoryDbService {
         speciality_profile : 'assets/img/specialities/specialities-05.png',
         since : "Wed May 27 2002 09:41:48 GMT+0530 (India Standard Time)",
         Education : "Clinical Hypnotherapist, Doctor of Naturopathy, Reiki Master",
-        Available : " Available on Fri, 22 Mar ",
+        Available : `Available on ${this.formattedDate}`,
         Earned : "₹3100.00",
         Price : "₹2000",
         profile : "assets/img/doctors/doctor-thumb-05.jpg",
@@ -383,7 +408,7 @@ export class DataService implements InMemoryDbService {
       //   speciality_profile : 'assets/img/specialities/specialities-05.png',
       //   since : "Wed May 27 2002 09:41:48 GMT+0530 (India Standard Time)",
       //   Education : "G.A.M.S(Ayurveda), A.D.N.Y, Reiki Master",
-      //   Available : " Available on Fri, 22 Mar ",
+      //   Available : `Available on ${this.formattedDate}`,
       //   Earned : "₹3100.00",
       //   Price : "₹2000",
       //   profile : "assets/img/doctors/doctor-thumb-05.jpg",
@@ -1282,4 +1307,9 @@ export class DataService implements InMemoryDbService {
     return {transactions:transactions,comments:comments,favourites:favourites,blogs:blogs,specialityList:specialityList,appointments:appointments,patientsAppointment:patientsAppointment,doctors:doctors,patients:patients,reviews:reviews,services:services};
 
    }
+
+  getTodayString(): string {
+    const options: Intl.DateTimeFormatOptions = { weekday: 'short', day: 'numeric', month: 'short' };
+    return new Date().toLocaleDateString('en-US', options);
+  }
 }
