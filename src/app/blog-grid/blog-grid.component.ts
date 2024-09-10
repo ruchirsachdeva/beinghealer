@@ -16,7 +16,7 @@ export class BlogGridComponent extends PaginationComponent implements OnInit {
   tags: string[] = [];
   filterTerm!: string;
 
-  page: number = 1;
+  page: number = 0;
   limit: number = 8;
 
   constructor(public commonService: CommonServiceService,
@@ -63,7 +63,7 @@ export class BlogGridComponent extends PaginationComponent implements OnInit {
   // Called when filter term is updated either through search input or tags or category click.
   updateItemCount() {
     this.blogs = [];
-    this.getBlogs(this.page = 1, this.limit)
+    this.getBlogs(this.page = 0, this.limit)
     // this.updateItemCountForBlogs(this.blogs)
     this.gaService.event('filter_blog_grid', 'filter_blog', 'Filter Blog Grid');
   }
