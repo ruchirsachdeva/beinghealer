@@ -16,7 +16,7 @@ export class BlogComponent extends PaginationComponent implements OnInit {
   tags: string[] = [];
   filterTerm!: string;
 
-  page: number = 1;
+  page: number = 0;
   limit: number = 6;
 
   constructor(public commonService: CommonServiceService,
@@ -42,7 +42,7 @@ export class BlogComponent extends PaginationComponent implements OnInit {
     this.commonService.getBlogs(this.filterTerm, page, limit).subscribe((result) => {
 
       this.blogs.push(...result);
-      
+
       this.categories = this.blogs
         .reduce<Map<string, number>>((p,c,i,a)=>{
           if(p.has(c.type)) {
@@ -68,7 +68,7 @@ export class BlogComponent extends PaginationComponent implements OnInit {
   // Called when filter term is updated either through search input or tags or category click.
   updateItemCount() {
     this.blogs = [];
-    this.getBlogs(this.page = 1, this.limit)
+    this.getBlogs(this.page = 0, this.limit)
     // this.updateItemCountForBlogs(this.blogs)
     this.gaService.event('filter_blog_list', 'filter_blog', 'Filter Blog List');
   }

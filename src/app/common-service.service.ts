@@ -127,11 +127,11 @@ export class CommonServiceService {
 
   getBlogs(seacrhPhrase?: string, pg?: number, lmt?: number) {
     const PHRASE = seacrhPhrase || undefined;
-    const PAGE = pg || 1;
+    const PAGE = pg || 0;
     const LIMIT = lmt || 6;
 
     const GET_URL = PHRASE
-      ? `${this.BOOT_SERVER_URL}blogs/search?phrase=${PHRASE}&page=${PAGE}&limit=${LIMIT}`
+      ? `${this.BOOT_SERVER_URL}blogs/textsearch?phrase=${PHRASE}&page=${PAGE}&limit=${LIMIT}`
       : `${this.BOOT_SERVER_URL}blogs?page=${PAGE}&limit=${LIMIT}`;
 
     return this.jsonHttp.get<Blog[]>(GET_URL);

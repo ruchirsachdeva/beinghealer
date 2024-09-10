@@ -7,7 +7,7 @@ import {Component, Inject, OnInit} from '@angular/core';
 })
 export class PaginationComponent implements OnInit {
   // Pagination parameters.
-  currentPage: number = 1;
+  currentPage: number = 0;
   count: number = 10;
   pageSize: number;
   pageNumbers: number[] = [1,2,3];
@@ -62,7 +62,7 @@ export class PaginationComponent implements OnInit {
   }
 
   protected resetCurrentPage() {
-    this.currentPage = 1;
+    this.currentPage = 0;
     this.setItemRangeIndexesForPage();
   }
 
