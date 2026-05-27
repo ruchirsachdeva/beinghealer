@@ -344,7 +344,7 @@ export class HomeComponent implements OnInit , AfterContentChecked{
       reviews: "(66)",
       address: "Panipat, India",
       date: "Available on Fri, 20 Mar",
-      amount: "₹3000 per Hour",
+      amount: "₹3500 per Hour",
     },
     {
       name: "Adarsh Sachdeva",
@@ -353,7 +353,7 @@ export class HomeComponent implements OnInit , AfterContentChecked{
       reviews: "(23)",
       address: "Panipat, India",
       date: "Available on Fri, 20 Mar",
-      amount: "₹1500 per Hour",
+      amount: "₹2500 per Hour",
     },
     {
       name: "Gennaro Weiner",
